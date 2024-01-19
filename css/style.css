@@ -1,0 +1,10 @@
+:root {
+    /*font-weight*/
+    --font-300: 300;
+    --font-500: 500;
+
+    --font-light: var(--font-300);
+    --font-medium: var(--font-500);
+}
+
+body {font-family: 'Roboto', sans-serif; font-weight: var(--font-light);}

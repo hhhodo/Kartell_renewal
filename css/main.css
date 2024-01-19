@@ -1,0 +1,164 @@
+/*main page first section------------------------*/
+.main_01 {
+    width: 100%;
+    height: 1100px;
+    position: relative;
+}
+.main_background {
+    width: 100%;
+    height: 900px;
+    background: #fafafa;
+    position: relative;
+}
+    .main_text {
+        width: 50rem;
+        height: 13rem;
+        position: absolute;
+        left: 200px;
+        top: 390px;
+    }
+        .main_text_title {
+            font-size: 8rem;
+            height: 9rem;
+            line-height: 9rem;
+        }
+        .main_text_button {
+            display: flex;
+            height: 2.4rem;
+            margin-top: 1.4rem;
+        }
+            .main_text_button span {
+                font-size: 1.6rem;
+                margin-right: 0.4rem;
+            }
+            .main_text_button span, img {
+                vertical-align: middle;
+            }
+    .page_arrow {
+        width: 100%;
+        position: absolute;
+        left: 0px;
+        top: 460px;
+        padding: 0 100px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .main_01_num {
+        position: absolute;
+        left: 200px;
+        bottom: 140px;
+        width: 81px;
+        height: 80px;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+    }
+        .main_num li {
+            width: 10px;
+            height: 80px;
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: space-between;
+        }
+        .main_num {
+            font-size: 16px;
+            display: none;
+            position: absolute;
+        }
+            .main_num.show {
+                display: block;
+            }
+        .main_num_bar {
+            width: 1px;
+            height: 16px;
+            background: #000;
+            margin: 7px 0;
+            position: absolute;
+            bottom: 0;
+        }
+/*main 02번 파트---------------------------------------*/
+.main_02 {
+    width: 100%;
+    height: 1000px;
+}
+    .main_02_box {
+        width: 870px;
+        height: 600px;
+        margin: 0 auto;
+        display: flex;
+    }
+        .main_02_img {
+            width: 430px;
+            height: 600px;
+            background: url(../images/panorama_01.png);
+        }
+        .main_02_con {
+            width: 400px;
+            height: 600px;
+            padding-left: 60px;
+        }
+            .main_02_text_01 {
+                font-size: 3rem;
+                line-height: 4rem;
+                padding-top: 160px;
+            }
+            .main_02_text_02 {
+                font-size: 1.6rem;
+                line-height: 2.2rem;
+                padding-top: 15px;
+                padding-bottom: 10px;
+            }
+
+            .main_02_bar {
+                width: 370px;
+                height: 290px;
+                display: flex;
+                justify-content: space-between;
+                padding-top: 213px;
+            }
+                .main_02_bar_base {
+                    width: 270px;
+                    height: 1px;
+                    background: #d9d9d9;
+                    margin-top: 11px;
+                }
+                    .main_02_bar_con {
+                        width: 90px;
+                        height: 1px;
+                        background: #000;
+                    }
+                .main_02_bar_page {
+                    display: flex;
+                    flex-flow: row nowrap;
+                }
+        /*main_02 아이템 슬라이드 ----------------*/
+        .main_02_item {
+            width: 100%;
+            height: 750px;
+            position: relative;
+        }
+            .main_02_item_title {
+                font-size: 2.4rem;
+                line-height: 4rem;
+                width: 135px;
+                height: 4rem;
+                margin: 0 auto;
+                padding-top: 165px;
+            }
+            .main_02_item_01 {
+                width: 286px;
+                height: 417px;
+                border: #000 1px solid;
+            }
+
+
+        .main_page_arrow {
+            width: 100%;
+            position: absolute;
+            left: 0px;
+            top: 430px;
+            padding: 0 100px;
+            display: flex;
+            justify-content: space-between;
+        }

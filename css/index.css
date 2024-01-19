@@ -1,0 +1,17 @@
+* {font-size: 62.5%; margin: 0; padding: 0; box-sizing: border-box;}
+ul {list-style: none;}
+
+/*header part==========================*/
+.header_box {
+    width: 100%;
+    padding: 0 10rem;
+    display: flex;
+    justify-content: space-between;
+}
+    .header_menu_01 {
+        display: flex;
+        flex-wrap: nowrap;
+        font-size: 1.6rem;
+        height: 80px;
+        line-height: 80px;
+    }
