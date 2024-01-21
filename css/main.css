@@ -43,7 +43,7 @@
         display: flex;
         justify-content: space-between;
     }
-
+    /*main 01 page numbering code--------------*/
     .main_01_num {
         position: absolute;
         left: 200px;
@@ -54,15 +54,17 @@
         flex-flow: row nowrap;
         justify-content: space-between;
     }
-        .main_num li {
-            width: 10px;
+        .main_01_num li {
+            width: 15px;
             height: 80px;
             display: flex;
             flex-flow: column wrap;
             justify-content: space-between;
         }
         .main_num {
+            width: 15px;
             font-size: 16px;
+            text-align: center;
             display: none;
             position: absolute;
         }
@@ -73,7 +75,7 @@
             width: 1px;
             height: 16px;
             background: #000;
-            margin: 7px 0;
+            margin: 0 7px;
             position: absolute;
             bottom: 0;
         }
@@ -137,6 +139,7 @@
             width: 100%;
             height: 750px;
             position: relative;
+            padding-top: 165px;
         }
             .main_02_item_title {
                 font-size: 2.4rem;
@@ -144,13 +147,20 @@
                 width: 135px;
                 height: 4rem;
                 margin: 0 auto;
-                padding-top: 165px;
             }
-            .main_02_item_01 {
-                width: 286px;
-                height: 417px;
-                border: #000 1px solid;
+            .main_02_item_all {
+                width: 100%;
+                height: 500px;
+                padding: 0 100px;
+                margin-top: 50px;
+                display: grid;
+                grid-template-columns: repeat(6,);
             }
+                .main_02_item_01 {
+                    max-width: 286px;
+                    height: 417px;
+                    border: #000 1px solid;
+                }
 
 
         .main_page_arrow {
