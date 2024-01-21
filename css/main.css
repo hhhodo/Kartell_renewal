@@ -82,7 +82,9 @@
 /*main 02번 파트---------------------------------------*/
 .main_02 {
     width: 100%;
-    height: 1000px;
+    height: auto;
+    position: relative;
+    clear: both;
 }
     .main_02_box {
         width: 870px;
@@ -150,18 +152,68 @@
             }
             .main_02_item_all {
                 width: 100%;
-                height: 500px;
+                height: auto;
                 padding: 0 100px;
                 margin-top: 50px;
                 display: grid;
-                grid-template-columns: repeat(6,);
+                grid-template-columns: repeat(6,minmax(0, auto));
             }
                 .main_02_item_01 {
-                    max-width: 286px;
-                    height: 417px;
+                    width: auto;
+                    border: #fff 1px solid;
+                }
+                .main_02_item_01:hover {
                     border: #000 1px solid;
                 }
-
+                    .main_02_item_text {
+                        width: 100%;
+                        padding: 22px 0;
+                    }
+                        .main_02_item_text_01 {
+                            width: 100%;
+                            height: 22px;
+                            font-size: 16px;
+                            line-height: 22px;
+                            text-align: center;
+                        }
+                        .main_02_item_text_02 {
+                            width: 100%;
+                            height: 22px;
+                            font-size: 13px;
+                            line-height: 22px;
+                            margin-bottom: 10px;
+                            text-align: center;
+                            font-weight: var(--font-medium);
+                        }
+                /*아이템 이미지 및 호버시 이미지 변경 설정*/
+                .main_02_item_img_01 {
+                    width: auto;
+                    height: auto;
+                }
+                    .main_02_img_01 {
+                        width: 100%;
+                        object-fit: cover;
+                    }
+                    .main_02_img_01:hover {
+                        /*content: url();*/
+                    }
+                /*item page bar*/
+                .main_02_item_bar_all {
+                    width: 100%;
+                    height: 1px;
+                    padding: 0 100px;
+                    margin-top: 80px;
+                }
+                .main_02_item_bar_base {
+                    width: 100%;
+                    height: 1px;
+                    background: #d9d9d9;
+                }
+                    .main_02_item_bar_con {
+                        width: 30%;
+                        height: 1px;
+                        background: #000;
+                    }
 
         .main_page_arrow {
             width: 100%;
@@ -171,4 +223,36 @@
             padding: 0 100px;
             display: flex;
             justify-content: space-between;
+        }
+        /*js로 product 호버 시 나오도록 설정*/
+/*main 03 코너 시작---------------------------------------*/
+.main_03 {
+    width: 100%;
+    padding: 0 50px;
+    height: auto;
+    position: relative;
+    clear: both;
+    margin-top: 375px;
+}
+    .main_03_container {
+        display: grid;
+        grid-template-areas:
+        "a b"
+        "a c"
+        "d c";
+        grid-template-rows:202px 758px 322px;
+        grid-template-columns: repeat(2, minmax(0, auto));
+        grid-column-gap: 80px;
+    }
+        .main_03_img_01 {
+            grid-area: a;
+        }
+        .main_03_text_01 {
+            grid-area: b;
+        }
+        .main_03_img_02 {
+            grid-area: c;
+        }
+        .main_03_text_02 {
+            grid-area: d;
         }
