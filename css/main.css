@@ -1,3 +1,13 @@
+/*공통 item page slide arrow--------------------------*/
+.main_page_arrow {
+    width: 100%;
+    position: absolute;
+    left: 0px;
+    top: 40%;
+    padding: 0 100px;
+    display: flex;
+    justify-content: space-between;
+}
 /*main page first section------------------------*/
 .main_01 {
     width: 100%;
@@ -30,19 +40,8 @@
             .main_text_button span {
                 font-size: 1.6rem;
                 margin-right: 0.4rem;
-            }
-            .main_text_button span, img {
                 vertical-align: middle;
             }
-    .page_arrow {
-        width: 100%;
-        position: absolute;
-        left: 0px;
-        top: 460px;
-        padding: 0 100px;
-        display: flex;
-        justify-content: space-between;
-    }
     /*main 01 page numbering code--------------*/
     .main_01_num {
         position: absolute;
@@ -116,10 +115,10 @@
 
             .main_02_bar {
                 width: 370px;
-                height: 290px;
+                height: 24px;
                 display: flex;
                 justify-content: space-between;
-                padding-top: 213px;
+                margin-top: 213px;
             }
                 .main_02_bar_base {
                     width: 270px;
@@ -135,22 +134,26 @@
                 .main_02_bar_page {
                     display: flex;
                     flex-flow: row nowrap;
+                    width: auto;
+                    height: 24px;
                 }
-        /*main_02 아이템 슬라이드 ----------------*/
+        /*main_02 SHINE WHITE 하단 아이템 슬라이드 ----------------*/
         .main_02_item {
             width: 100%;
-            height: 750px;
+            height: 600px;
             position: relative;
             padding-top: 165px;
         }
             .main_02_item_title {
                 font-size: 2.4rem;
                 line-height: 4rem;
-                width: 135px;
+                width: 100%;
                 height: 4rem;
-                margin: 0 auto;
+                text-align: center;
             }
             .main_02_item_all {
+                position: relative;
+                clear: both;
                 width: 100%;
                 height: auto;
                 padding: 0 100px;
@@ -158,29 +161,29 @@
                 display: grid;
                 grid-template-columns: repeat(6,minmax(0, auto));
             }
-                .main_02_item_01 {
+                .main_item_01 {
                     width: auto;
                     border: #fff 1px solid;
                 }
-                .main_02_item_01:hover {
+                .main_item_01:hover {
                     border: #000 1px solid;
                 }
-                    .main_02_item_text {
+                    .main_item_text {
                         width: 100%;
                         padding: 22px 0;
                     }
-                        .main_02_item_text_01 {
+                        .main_item_text_01 {
                             width: 100%;
                             height: 22px;
                             font-size: 16px;
                             line-height: 22px;
                             text-align: center;
                         }
-                        .main_02_item_text_02 {
+                        .main_item_text_02 {
                             width: 100%;
-                            height: 22px;
+                            height: 21px;
                             font-size: 13px;
-                            line-height: 22px;
+                            line-height: 21px;
                             margin-bottom: 10px;
                             text-align: center;
                             font-weight: var(--font-medium);
@@ -197,6 +200,7 @@
                     .main_02_img_01:hover {
                         /*content: url();*/
                     }
+            
                 /*item page bar*/
                 .main_02_item_bar_all {
                     width: 100%;
@@ -214,16 +218,6 @@
                         height: 1px;
                         background: #000;
                     }
-
-        .main_page_arrow {
-            width: 100%;
-            position: absolute;
-            left: 0px;
-            top: 430px;
-            padding: 0 100px;
-            display: flex;
-            justify-content: space-between;
-        }
         /*js로 product 호버 시 나오도록 설정*/
 /*main 03 코너 시작---------------------------------------*/
 .main_03 {
@@ -235,24 +229,369 @@
     margin-top: 375px;
 }
     .main_03_container {
+        width: 100%;
+        height: auto;
         display: grid;
         grid-template-areas:
         "a b"
         "a c"
         "d c";
-        grid-template-rows:202px 758px 322px;
+        grid-template-rows:328px 872px 328px;
         grid-template-columns: repeat(2, minmax(0, auto));
-        grid-column-gap: 80px;
+        grid-column-gap: 4%;
     }
         .main_03_img_01 {
             grid-area: a;
+            background: url(../images/main_03_01.png) no-repeat;
         }
         .main_03_text_01 {
             grid-area: b;
+            width: 40rem;
+            height: 104px;
+            display: flex;
+            flex-flow: row wrap;
+            align-content: space-between;
+
+            margin-top: 30px;
         }
+            .main_03_text_title {
+                font-size: 3rem;
+                height: 4rem;
+                line-height: 4rem;
+            }
+            .main_03_text_content {
+                width: 400px;
+                height: 44px;
+                line-height: 22px;
+                font-size: 1.6rem;
+            }
         .main_03_img_02 {
             grid-area: c;
+            background: url(../images/main_03_02.png) no-repeat;
         }
         .main_03_text_02 {
             grid-area: d;
+            padding-top: 170px;
+        }
+        .main_03_text_all {
+            width: 40rem;
+            height: 104px;
+            display: flex;
+            flex-flow: row wrap;
+            align-content: space-between;
+            position: relative;
+            float: right;
+        }
+
+/*main 04 special project start--------------------------*/
+.main_04 {
+    width: 100%;
+    height: auto;
+    position: relative;
+    clear: both;
+}
+    .main_04_title {
+        width: 100%;
+        height: 40px;
+        font-size: 3rem;
+        line-height: 40px;
+        text-align: center;
+
+        margin-top: 190px;
+        margin-bottom: 60px;
+    }
+    .main_04_banner {
+        position: relative;
+        clear: both;
+        width: 100%;
+        height: 790px;
+        background: url(../images/special_project_01.png) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+        .main_04_dimd {
+            position: absolute;
+            left: 0;
+            top: 0
+            ;
+            width: 100%;
+            height: 790px;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(15px);
+        }
+        .main_04_title_img {
+            margin: 0 auto;
+            width: 610px;
+            height: 790px;
+            background: url(../images/special_project_01.png);
+        }
+        .main_04_text_all {
+            width: 365px;
+            height: 239px;
+            position: absolute;
+            left: 10%;
+            top: 275px;
+        }  
+            .main_04_text_01 {
+                font-size: 3rem;
+                font-weight: 100;
+                line-height: 40px;
+                transform : rotate(0.04deg);
+                color: #fff;
+
+                width: 365px;
+                height: 40px;
+            }
+            .main_04_text_02 {
+                font-size: 1.6rem;
+                font-weight: var(--font-light-white);
+                line-height: 22px;
+                transform : rotate(0.04deg);
+                color: #fff;
+
+                width: 365px;
+                height: 44px;
+
+                margin-top: 20px;
+            }
+            .main_04_text_button {
+                margin-top: 120px;
+            }
+                .main_04_text_button span {
+                    font-size: 1.6rem;
+                    font-weight: var(--font-light-white);
+                    line-height: 22px;
+                    transform : rotate(0.04deg);
+                    color: #fff;
+                }
+                .main_04_text_button span, img {
+                    vertical-align: middle;
+                }
+/*main 04 item 제품 추천---------------*/
+.main_04_item_all {
+    position: relative;
+    clear: both;
+    width: 100%;
+    height: auto;
+    padding: 0 100px;
+    margin-top: 80px;
+    display: grid;
+    grid-template-columns: repeat(6,minmax(0, auto));
+}
+    .main_04_item_01 {
+        width: auto;
+        border: #fff 1px solid;
+    }
+    .main_04_item_01:hover {
+        border: #000 1px solid;
+    }
+    /*아이템 이미지 및 호버시 이미지 변경 설정*/
+    .main_02_item_img_01 {
+        width: auto;
+        height: auto;
+    }
+        .main_02_img_01 {
+            width: 100%;
+            object-fit: cover;
+        }
+        .main_02_img_01:hover {
+            /*content: url();*/
+        }
+
+/*main 05 start---------------------------------*/
+.main_05 {
+    width: 100%;
+    height: 950px;
+    padding: 0 100px;
+    margin-top: 510px;
+}
+    .main_05_container {
+        width: 100%;
+        height: 950px;
+        display: flex;
+    }
+        .main_05_img {
+            width: 800px;
+            height: 950px;
+            background: url(../images/shop_by_look_01.jpg) no-repeat;
+        }
+        .main_05_content {
+            width: 1020px;
+            height: 950px;
+        }
+            .main_05_title {
+                width: 100%;
+                height: 100px;
+                line-height: 100px;
+                font-size: 3rem;
+                padding-left: 90px;
+            }
+            .main_05_bar {
+                width: 100%;
+                height: 1px;
+                background: #d9d9d9;
+            }
+            .main_05_item_01 {
+                width: 100%;
+                height: 849px;
+                position: relative;
+            }
+                .main_05_item_img_01 {
+                    width: 500px;
+                    height: 550px;
+                    margin: 0 auto;
+                    margin-top: 50px;
+                    background: url(../images/shop_by_look_item_01.png);
+                }
+                .main_05_item_title_01 {
+                    width: 500px;
+                    height: 24px;
+                    line-height: 24px;
+                    text-align: center;
+                    margin: 0 auto;
+                    margin-top: 70px;
+                    font-size: 1.6rem;
+                }
+                .main_05_item_price_01 {
+                    width: 500px;
+                    height: 22px;
+                    line-height: 22px;
+                    text-align: center;
+                    margin: 0 auto;
+                    margin-top: 10px;
+                    font-size: 1.4rem;
+                    font-weight: var(--font-medium);
+                }
+/*main 06 page start---------------------------------------------*/
+.main_06 {
+    width: 100%;
+    height: auto;
+}
+    .main_06_container {
+        width: 100%;
+        height: auto;
+        margin-top: 480px;
+    }
+        .main_06_title_all {
+            width: 100%;
+            height: 80px;
+            padding: 0 100px;
+            display: flex;
+            justify-content: space-between;
+        }
+            .main_06_title {
+                height: 80px;
+                line-height: 80px;
+                font-size: 3rem;
+            }
+            .main_06_bar_page {
+                height: 24px;
+                margin: 28px;
+                display: flex;
+                flex-wrap: nowrap;
+            }
+            .main_06_bar_page li,.main_06_bar_page li img {
+                vertical-align: middle;
+            }
+        .main_100_bar {
+            width: 100%;
+            height: 1px;
+            background: #d9d9d9;
+        }
+            /*main 06 1번 카탈로그*/
+            .main_06_contents {
+                width: 100%;
+                height: 376px;
+                margin-top: 40px;
+                padding-left: 100px;
+                display: flex;
+                flex-wrap: nowrap;
+                overflow: hidden;
+            }
+            .main_06_01_all {
+                width: 573px;
+                height: 376px;
+                display: flex;
+                flex-wrap: nowrap;
+            }
+                .main_06_01_img {
+                    width: 289px;
+                    height: 376px;
+                    background: url(../images/main_06_01.png);
+                }
+                .main_06_01_text {
+                    width: 284px;
+                    height: 376px;
+                    padding-left: 35px;
+                    display: flex;
+                    flex-flow: column wrap;
+                }
+                    .main_06_text_01 {
+                        width: 200px;
+                        height: 32px;
+                        font-size: 2.4rem;
+                        margin-top: 30px;
+                    }
+                    .main_06_text_02 {
+                        width: 200px;
+                        height: 100px;
+                        font-size: 1.4rem;
+                        line-height: 2rem;
+                        margin-top: 10px;
+                    }
+                    .main_06_text_03 {
+                        width: 225px;
+                        height: 28px;
+                        font-size: 20px;
+                        line-height: 28px;
+                        margin-top: 114px;
+                    }
+                    .main_06_text_04 {
+                        width: 225px;
+                        height: 32px;
+                        font-size: 2.4rem;
+                        line-height: 32px;
+                    }
+/*main 07 section start------------------------*/
+.main_07 {
+    width: 100%;
+    position: relative;
+    padding-top: 460px;
+}
+    .main_07_content_01 {
+        width: 100%;
+        height: 500px;
+        padding-left: 100px;
+
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+
+        border-top: 1px solid #d9d9d9;
+    }
+        .main_07_text_01 {
+            width: 300px;
+            height: 64px;
+            display: flex;
+            flex-flow: row wrap;
+        }
+            .main_07_title {
+                width: 100%;
+                height: 40px;
+                line-height: 40px;
+                font-size: 3rem;
+            }
+            .main_07_text_button {
+                display: flex;
+                height: 2.4rem;
+            }
+            .main_07_text_button span {
+                font-size: 1.6rem;
+                vertical-align: middle;
+            }
+        .main_07_img_01 {
+            width: 50%;
+            height: 500px;
+            background: #666;
         }

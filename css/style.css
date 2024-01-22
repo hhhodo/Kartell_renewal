@@ -1,8 +1,10 @@
 :root {
     /*font-weight*/
+    --font-100: 100;
     --font-300: 300;
     --font-500: 500;
 
+    --font-light-white: var(--font-100);
     --font-light: var(--font-300);
     --font-medium: var(--font-500);
 }
