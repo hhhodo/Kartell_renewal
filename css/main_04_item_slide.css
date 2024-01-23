@@ -1,0 +1,111 @@
+/*main 04 화살표 작성------------*/
+.main04_page_arrow {
+    width: 100%;
+    position: absolute;
+    left: 0px;
+    top: 40%;
+    display: flex;
+    justify-content: space-between;
+    z-index: 10;
+}
+/*main 04 item 제품 추천---------------*/
+.slide_wrapper {
+    width: auto;
+    height: 417px;
+    margin: 0 100px;
+    margin-top: 80px;
+    position: relative;
+    overflow: hidden;
+}
+.main_04_item_slides {
+    position: absolute;
+    left: 0;
+    top: 0;
+    max-height: 417px;
+}
+.main_04_item_slides.animated {
+    transition: all 0.5s ease-out;
+}
+    .main_04_slide_con {
+        width: 286px;
+        height: auto;
+        position: relative;
+        float: left;
+        border: #fff 1px solid;
+    }
+    .main_04_slide_con:hover {
+        border: #000 1px solid;
+    }
+    /*아이템 이미지 및 호버시 이미지 변경 설정*/
+        .main_04_img_01 {
+            width: 284px;
+            object-fit: cover;
+            transition: all 0.3s;
+        }
+        .main_04_img_01:hover {
+            content: url(../images/eyewear01_texture.png);
+            transition: all 0.3s;
+        }
+        .main_04_img_02 {
+            width: 284px;
+            object-fit: cover;
+            transition: all 0.3s;
+        }
+        .main_04_img_02:hover {
+            content: url(../images/eyewear02_texture.png);
+            transition: all 0.3s;
+        }
+        .main_04_img_03 {
+            width: 284px;
+            object-fit: cover;
+            transition: all 0.3s;
+        }
+        .main_04_img_03:hover {
+            content: url(../images/eyewear03_texture.png);
+            transition: all 0.3s;
+        }
+        .main_04_img_04 {
+            width: 284px;
+            object-fit: cover;
+            transition: all 0.3s;
+        }
+        .main_04_img_04:hover {
+            content: url(../images/eyewear04_texture.png);
+            transition: all 0.3s;
+        }
+        .main_04_img_05 {
+            width: 284px;
+            object-fit: cover;
+            transition: all 0.3s;
+        }
+        .main_04_img_05:hover {
+            content: url(../images/eyewear05_texture.png);
+            transition: all 0.3s;
+        }
+        .main_04_img_06 {
+            width: 284px;
+            object-fit: cover;
+            transition: all 0.3s;
+        }
+        .main_04_img_06:hover {
+            content: url(../images/eyewear06_texture.png);
+            transition: all 0.3s;
+        }
+        .main_04_img_07 {
+            width: 284px;
+            object-fit: cover;
+            transition: all 0.3s;
+        }
+        .main_04_img_07:hover {
+            content: url(../images/eyewear07_texture.png);
+            transition: all 0.3s;
+        }
+        .main_04_img_08 {
+            width: 284px;
+            object-fit: cover;
+            transition: all 0.3s;
+        }
+        .main_04_img_08:hover {
+            content: url(../images/eyewear08_texture.png);
+            transition: all 0.3s;
+        }

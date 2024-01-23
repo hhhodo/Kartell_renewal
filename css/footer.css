@@ -5,7 +5,7 @@
 }
 .footer_container {
     width: 100%;
-    height: 600px;
+    height: 630px;
     position: relative;
     clear: both;
 }
@@ -14,11 +14,100 @@
         height: 600px;
         position: relative;
         float: left;
+        padding: 80px 0px 100px 100px;
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: space-between;
     }
+    /*footer faq--------------------*/
+        .footer_faqs {
+            min-width: 151px;
+            height: 178px;
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: space-between;
+        }
+            .footer_faq_title {
+                width: 100%;
+                height: 5rem;
+                font-size: 4rem;
+                line-height: 5rem;
+            }
+            .footer_faqs li a {
+                width: 100%;
+                height: 2.2rem;
+                line-height: 2.2rem;
+                font-size: 1.6rem;
+                text-decoration: underline;
+                color: #666;
+            }
+        
+    /*left footer ewsletter----------*/
+        .footer_newsletter {
+                width: 100%;
+                height: 4.4rem;
+        }
+            .footer_newsletter_01 {
+                    display: flex;
+                    height: 2.4rem;
+            }
+            .footer_newsletter_01 span {
+                    font-size: 1.6rem;
+                    vertical-align: middle;
+            }
+            .footer_newsletter_02 {
+                    min-width: 205px;
+                    white-space: nowrap;
+                    height: 2rem;
+                    margin-top: 4px;
+                    font-size: 1.4rem;
+                    line-height: 2rem;
+                    color: #555;
+            }
+    /*footer sns part---------------*/
+        .footer_sns {
+            min-width: 150px;
+            width: 100%;
+            line-height: 2.2rem;
+            font-size: 1.6rem;
+        }
+            .footer_sns_con {
+                min-width: 150px;
+                height: auto;
+                margin-top: 5px;
+                display: flex;
+                flex-flow: row wrap;
+            }
+                .footer_sns_con li {
+                    width: auto;
+                    height: 2rem;
+                    line-height: 2rem;
+                    font-size: 1.2rem;
+
+                    margin-right: 10px;
+                    color: #555;
+                }
     .footer_right {
         width: 75%;
-        height: 600px;
+        height: 630px;
+        padding: 85px 100px 0px 100px;
         background: #fafafa;
         position: relative;
         float: left;
+        display: flex;
+        justify-content: space-between;
     }
+        .footer_right_01 {
+            max-width: 159px;
+            height: 2.2rem;
+            line-height: 2.2rem;
+            font-size: 1.6rem;
+        }
+        .footer_right_02 {
+            max-width: 159px;
+            min-height: 2rem;
+            margin-top: 24px;
+            line-height: 2rem;
+            font-size: 1.4rem;
+            color: #555;
+        }
