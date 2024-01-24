@@ -18,7 +18,7 @@
     width: 100%;
     height: 900px;
     background: #fafafa;
-    position: relative;
+    position: absolute;
 }
     .main_text {
         width: 50rem;
@@ -28,9 +28,9 @@
         top: 390px;
     }
         .main_text_title {
-            font-size: 8rem;
-            height: 9rem;
-            line-height: 9rem;
+            font-size: 6rem;
+            height: 7rem;
+            line-height: 7rem;
         }
         .main_text_button {
             display: flex;
@@ -45,8 +45,8 @@
     /*main 01 page numbering code--------------*/
     .main_01_num {
         position: absolute;
-        left: 200px;
-        bottom: 140px;
+        right: 250px;
+        bottom: 80px;
         width: 81px;
         height: 80px;
         display: flex;
@@ -94,7 +94,7 @@
         .main_02_img {
             width: 430px;
             height: 600px;
-            background: url(../images/panorama_01.png);
+            background: url(../images/panorama_02.png);
         }
         .main_02_con {
             width: 400px;
@@ -137,92 +137,6 @@
                     width: auto;
                     height: 24px;
                 }
-        /*main_02 SHINE WHITE 하단 아이템 슬라이드 ----------------*/
-        .main_02_item_wrapper {
-            width: 100%;
-            padding: 0 100px;
-            margin-top: 80px;
-            position: relative;
-            overflow: hidden;
-        }
-        .main_02_item {
-            width: 100%;
-            height: 600px;
-            position: relative;
-            padding-top: 165px;
-        }
-            .main_02_item_title {
-                font-size: 2.4rem;
-                line-height: 4rem;
-                width: 100%;
-                height: 4rem;
-                text-align: center;
-            }
-            .main_02_item_all {
-                position: relative;
-                clear: both;
-                width: 2288px;
-                max-height: 417px;
-                display: flex;
-            }
-                .main_item_01 {
-                    width: auto;
-                    border: #fff 1px solid;
-                }
-                .main_item_01:hover {
-                    border: #000 1px solid;
-                }
-                    .main_item_text {
-                        width: 100%;
-                        padding: 22px 0;
-                    }
-                        .main_item_text_01 {
-                            width: 100%;
-                            height: 22px;
-                            font-size: 16px;
-                            line-height: 22px;
-                            text-align: center;
-                        }
-                        .main_item_text_02 {
-                            width: 100%;
-                            height: 21px;
-                            font-size: 13px;
-                            line-height: 21px;
-                            margin-bottom: 10px;
-                            text-align: center;
-                            font-weight: var(--font-medium);
-                        }
-                /*아이템 이미지 및 호버시 이미지 변경 설정*/
-                .main_02_item_img_01 {
-                    width: auto;
-                    height: auto;
-                }
-                    .main_02_img_01 {
-                        width: 100%;
-                        object-fit: cover;
-                    }
-                    .main_02_img_01:hover {
-                        /*content: url();*/
-                    }
-            
-                /*item page bar*/
-                .main_02_item_bar_all {
-                    width: 100%;
-                    height: 1px;
-                    padding: 0 100px;
-                    margin-top: 80px;
-                }
-                .main_02_item_bar_base {
-                    width: 100%;
-                    height: 1px;
-                    background: #d9d9d9;
-                }
-                    .main_02_item_bar_con {
-                        width: 30%;
-                        height: 1px;
-                        background: #000;
-                    }
-        /*js로 product 호버 시 나오도록 설정*/
 /*main 03 코너 시작---------------------------------------*/
 .main_03 {
     width: 100%;
@@ -301,14 +215,14 @@
         line-height: 40px;
         text-align: center;
 
-        margin-top: 190px;
+        margin-top: 300px;
         margin-bottom: 60px;
     }
     .main_04_banner {
         position: relative;
         clear: both;
         width: 100%;
-        height: 790px;
+        height: 650px;
         background: url(../images/special_project_01.png) no-repeat;
         background-size: cover;
         background-position: center;
@@ -316,18 +230,18 @@
         .main_04_dimd {
             position: absolute;
             left: 0;
-            top: 0
-            ;
+            top: 0;
             width: 100%;
-            height: 790px;
+            height: 650px;
             background: rgba(0, 0, 0, 0.5);
             backdrop-filter: blur(15px);
         }
         .main_04_title_img {
             margin: 0 auto;
-            width: 610px;
-            height: 790px;
-            background: url(../images/special_project_01.png);
+            width: 500px;
+            height: 650px;
+            background: url(../images/special_project_01.png) no-repeat;
+            background-size: contain
         }
         .main_04_text_all {
             width: 365px;
@@ -377,7 +291,7 @@
     width: 100%;
     height: 950px;
     padding: 0 100px;
-    margin-top: 510px;
+    margin-top: 600px;
 }
     .main_05_container {
         width: 100%;

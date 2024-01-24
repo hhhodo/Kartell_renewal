@@ -1,0 +1,9 @@
+.main_01_wrapper {
+    width: 100vw;
+    height: 1100px;
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    z-index: 10;
+}
