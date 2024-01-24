@@ -35,7 +35,6 @@
         .main_text_button {
             display: flex;
             height: 2.4rem;
-            margin-top: 1.4rem;
         }
             .main_text_button span {
                 font-size: 1.6rem;
@@ -45,7 +44,7 @@
     /*main 01 page numbering code--------------*/
     .main_01_num {
         position: absolute;
-        right: 250px;
+        left: 200px;
         bottom: 80px;
         width: 81px;
         height: 80px;
@@ -442,23 +441,22 @@
                     }
 /*main 07 section start------------------------*/
 .main_07 {
-    width: 100%;
     position: relative;
+    width: 100%;
     padding-top: 460px;
+    display: flex;
 }
     .main_07_content_01 {
-        width: 100%;
-        height: 500px;
-        padding-left: 100px;
-
+        position: relative;
+        width: 50%;
+        height: 830px;
         display: flex;
-        flex-wrap: nowrap;
-        justify-content: space-between;
         align-items: center;
 
-        border-top: 1px solid #d9d9d9;
+        background: url(../images/main_07_1.png);
     }
         .main_07_text_01 {
+            margin-left: 100px;
             width: 300px;
             height: 64px;
             display: flex;
@@ -478,8 +476,48 @@
                 font-size: 1.6rem;
                 vertical-align: middle;
             }
-        .main_07_img_01 {
-            width: 50%;
-            height: 500px;
-            background: #666;
+        
+        .main_07_text_01 {
+            margin-left: 100px;
+            width: 300px;
+            height: 64px;
+            display: flex;
+            flex-flow: row wrap;
         }
+        .main_07_text_02 {
+            margin-left: 50px;
+            width: 300px;
+            height: 64px;
+            display: flex;
+            flex-flow: row wrap;
+        }
+        .main_07_text_03 {
+            margin-left: 50px;
+            width: 300px;
+            height: 64px;
+            display: flex;
+            flex-flow: row wrap;
+        }
+        .main_07_dim {
+                position: absolute;
+                width: 100%;
+                height: 830px;
+                background-color: rgba(0, 0, 0, 0.3);
+        }
+    
+    .main_07_content_02 {
+        width: 30%;
+        height: 830px;
+        display: flex;
+        align-items: center;
+
+        background: url(../images/main_07_2.png);
+    }
+    .main_07_content_03 {
+        width: 20%;
+        height: 830px;
+        display: flex;
+        align-items: center;
+
+        background: url(../images/main_07_3.png);
+    }

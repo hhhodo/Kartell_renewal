@@ -1,5 +1,5 @@
 .main_01_wrapper {
-    width: 100vw;
+    width: 100%;
     height: 1100px;
     position: absolute;
     left: 0;
@@ -7,3 +7,18 @@
 
     z-index: 10;
 }
+/*슬라이드 01번--------------------------*/
+    .main_01_slide01 {
+        position: absolute;
+        left: 620px;
+        width: 850px;
+        height: 900px;
+        background-image: url(../images/main_01.png);
+    }
+        .main_01_slide01_bg {
+            position: absolute;
+            left: 180px;
+            width: 850px;
+            height: 900px;
+            background-image: url(../images/main_01_blur.png);
+        }
