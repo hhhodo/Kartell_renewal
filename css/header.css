@@ -46,21 +46,16 @@
     width: 83px;
     height: 80px;
 }
-.shop_page_up {
-    width: 100%;
-    height: 80px;
-    position: absolute;
-    left: 0;
-    top: 0;
-}
-.shop_page_up:hover .shop_page_all {
-    height: 300px;
-    transition: all 300ms;
-}
-    .shop_page_all {
-        width: 100%;
-        height: 0px;
-        overflow: hidden;
-        background-color: #f90;
-        transition: all 300ms;
+    .shop_page_up {
+        width: 83px;
+        height: 80px;
     }
+        .shop_page_all {
+            position: absolute;
+            left: 0;
+            top: 80px;
+            width: 100%;
+            height: 640px;
+            background-color: #f90;
+            transition: all 300ms;
+        }
