@@ -2,23 +2,52 @@
     width: 100%;
     height: 1100px;
     position: absolute;
-    left: 0;
-    top: 0;
+    overflow: hidden;
 
     z-index: 10;
 }
 /*슬라이드 01번--------------------------*/
     .main_01_slide01 {
-        position: absolute;
-        left: 620px;
-        width: 850px;
+        position: relative;
+        float: right;
+        margin-right: 200px;
+        width: 1050px;
         height: 900px;
-        background-image: url(../images/main_01.png);
+        overflow: hidden;
     }
+        .main_01_slide01_img {
+            position: absolute;
+            left: 100px;
+            top: 0px;
+            width: 850px;
+            height: 900px;
+            background-image: url(../images/main_01.png);
+            background-size: contain;
+        }
         .main_01_slide01_bg {
             position: absolute;
-            left: 180px;
+            left: 200px;
+            top: 0px;
             width: 850px;
             height: 900px;
             background-image: url(../images/main_01_blur.png);
+            z-index: -1;
         }
+    .main_01_slide02 {
+        display: none;
+        position: absolute;
+        left: 1920px;
+        width: 850px;
+        height: 900px;
+        background-image: url(../images/main_01_02-2.png);
+        background-size: contain;
+    }
+    .main_01_slide03 {
+        display: none;
+        position: absolute;
+        left: -850px;
+        width: 850px;
+        height: 900px;
+        background-image: url(../images/main_01_03-2.png);
+        background-size: contain;
+    }
