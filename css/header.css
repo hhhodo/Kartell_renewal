@@ -1,4 +1,4 @@
-
+/*헤더 메뉴 디자인*/
 .header_box {
     width: 100%;
     height: 80px;
@@ -17,15 +17,16 @@
         align-items: center;
     }
     .header_menu_01 {
-        width: 800px;
+        width: fit-content;
         height: 80px;
         line-height: 80px;
         display: flex;
         flex-wrap: nowrap;
-        justify-content: space-between;
     }
         .header_menu_01 a {
             font-size: 1.6rem;
+            line-height: 2.2rem;
+            padding: 29px 23px;
             color: #000;
             font-weight: var(--font-light);
         }
@@ -38,4 +39,28 @@
         display: flex;
         flex-wrap: nowrap;
         justify-content: space-between;
+    }
+/*헤더 드롭다운 메뉴 코드------------------------*/
+/*shop 메뉴 드롭다운 코드*/
+.shop_page {
+    width: 83px;
+    height: 80px;
+}
+.shop_page_up {
+    width: 100%;
+    height: 80px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.shop_page_up:hover .shop_page_all {
+    height: 300px;
+    transition: all 300ms;
+}
+    .shop_page_all {
+        width: 100%;
+        height: 0px;
+        overflow: hidden;
+        background-color: #f90;
+        transition: all 300ms;
     }
