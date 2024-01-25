@@ -442,81 +442,40 @@
 .main_07 {
     position: relative;
     width: 100%;
-    padding-top: 460px;
-    display: flex;
+    height: 350px;
+    margin-top: 460px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 1px;
+    background-color: #d9d9d9;
 }
-    .main_07_content_01 {
+    .main_07_content {
         position: relative;
-        width: 50%;
-        height: 830px;
+        width: 100%;
+        height: 350px;
+
+        background-color: #fff;
         display: flex;
         align-items: center;
-
-        background: url(../images/main_07_1.png);
     }
-        .main_07_text_01 {
-            margin-left: 100px;
-            width: 300px;
+        .main_07_text {
+            width: 100%;
             height: 64px;
-            display: flex;
-            flex-flow: row wrap;
         }
-            .main_07_title {
-                width: 100%;
-                height: 40px;
-                line-height: 40px;
-                font-size: 3rem;
-            }
-            .main_07_text_button {
-                display: flex;
-                height: 2.4rem;
-            }
-            .main_07_text_button span {
-                font-size: 1.6rem;
-                vertical-align: middle;
-            }
-        
-        .main_07_text_01 {
-            margin-left: 100px;
-            width: 300px;
-            height: 64px;
-            display: flex;
-            flex-flow: row wrap;
-        }
-        .main_07_text_02 {
-            margin-left: 50px;
-            width: 300px;
-            height: 64px;
-            display: flex;
-            flex-flow: row wrap;
-        }
-        .main_07_text_03 {
-            margin-left: 50px;
-            width: 300px;
-            height: 64px;
-            display: flex;
-            flex-flow: row wrap;
-        }
-        .main_07_dim {
-                position: absolute;
-                width: 100%;
-                height: 830px;
-                background-color: rgba(0, 0, 0, 0.3);
-        }
-    
-    .main_07_content_02 {
-        width: 30%;
-        height: 830px;
-        display: flex;
-        align-items: center;
-
-        background: url(../images/main_07_2.png);
-    }
-    .main_07_content_03 {
-        width: 20%;
-        height: 830px;
-        display: flex;
-        align-items: center;
-
-        background: url(../images/main_07_3.png);
-    }
+                .main_07_title {
+                    width: 100%;
+                    height: 40px;
+                    line-height: 40px;
+                    font-size: 3rem;
+                    text-align: center;
+                }
+                .main_07_text_button {
+                    width: fit-content;
+                    padding-left: 6px;
+                    margin: 0 auto;
+                    height: 2.4rem;
+                }
+                .main_07_text_button span {
+                    font-size: 1.6rem;
+                    vertical-align: middle;
+                }

@@ -1,3 +1,10 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const slideCon = document.querySelector('.main_04_img_01');
-});
+$(function(){
+    var slide01 = $(".main_01_slide01")
+
+    document.$(bgMoving);
+    function bgMoving(){
+        var mouseX = e.offsetX;
+        var mouseY = e.offsetY;
+        var pageWidth = slide01.width;
+    }
+})
