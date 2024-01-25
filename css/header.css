@@ -23,7 +23,7 @@
         display: flex;
         flex-wrap: nowrap;
     }
-        .header_menu_01 a {
+        .header_menu_01 >li> a {
             font-size: 1.6rem;
             line-height: 2.2rem;
             padding: 29px 23px;
@@ -56,6 +56,40 @@
             top: 80px;
             width: 100%;
             height: 640px;
-            background-color: #f90;
-            transition: all 300ms;
+            padding-top: 24px;
+            background-color: #fff;
+
+            display: grid;
+            grid-template-areas:
+            "a b c d e";
+            grid-template-columns: 580px 260px 280px 260px auto;
         }
+            .shop_menu_left {
+                grid-area: b;
+            }
+                .shop_menu_left li a, .shop_menu_right li a {
+                    width: 260px;
+                    height: 50px;
+                    padding: 1.4rem 0;
+                    font-size: 1.6rem;
+                    line-height: 2.2rem;
+
+                    display: flex;
+                    justify-content: space-between;
+                    border-bottom: 1px solid #d9d9d9;
+                }
+                /*호버시 내용은 자바스크립트로 작성*/
+            .shop_list_left {
+                grid-area: c;
+            }
+                .shop_list_left li {
+                    width: 28rem;
+                    height: 5rem;
+                    line-height: 5rem;
+                    padding-left: 7rem;
+                    font-size: 1.5rem;
+                    color: #555;
+                }
+            .shop_menu_right {
+                grid-area: d;
+            }
