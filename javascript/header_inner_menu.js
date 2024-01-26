@@ -22,6 +22,13 @@ $(function(){
             // 서브 메뉴 등장
             shopListEach.siblings().css({opacity:"0",display:"none"});
             shopLi.css({opacity:"1", display:"block"});
+            shopLi.hover({
+                function(){
+                    
+            shopLi.css({opacity:"1", display:"block"});
+            console.log(shopLi)
+                }
+            })
             
             shopLine.stop(true).css({width:"0%"})
             arrowAni.stop(true).css({opacity:"0"})
