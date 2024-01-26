@@ -19,17 +19,9 @@
     .header_menu_01 {
         width: fit-content;
         height: 80px;
-        line-height: 80px;
         display: flex;
         flex-wrap: nowrap;
     }
-        .header_menu_01 >li> a {
-            font-size: 1.6rem;
-            line-height: 2.2rem;
-            padding: 29px 23px;
-            color: #000;
-            font-weight: var(--font-light);
-        }
     .header_menu_02 {
         position: relative;
         float: right;
@@ -43,53 +35,106 @@
 /*헤더 드롭다운 메뉴 코드------------------------*/
 /*shop 메뉴 드롭다운 코드*/
 .shop_page {
-    width: 83px;
-    height: 80px;
+    width: 8.3rem;
+    height: 8rem;
 }
-    .shop_page_up {
-        width: 83px;
-        height: 80px;
+/*page 공통 사이즈 코드 ----------------*/
+    .page_up {
+        width: auto;
+        height: 8rem;
+        display: flex;
+        padding: 2.9rem 2.3rem;
+
+        font-size: 1.6rem;
+        line-height: 2.2rem;
     }
-        .shop_page_all {
+        .page_all {
             position: absolute;
             left: 0;
-            top: 80px;
+            top: 8rem;
             width: 100%;
-            height: 640px;
-            padding-top: 24px;
+            height: auto;
+            padding: 2.4rem 0 10rem 0;
             background-color: #fff;
 
             display: grid;
             grid-template-areas:
-            "a b c d e";
-            grid-template-columns: 580px 260px 280px 260px auto;
+            "a b c d e f";
+            grid-template-columns: 580px 260px 260px 50px 260px auto;
         }
+            .shop_img {
+                grid-area: a;
+                width: auto;
+                height: auto;
+                background-color: #555;
+                margin: 48px 120px 90px 150px;
+            }
             .shop_menu_left {
                 grid-area: b;
+                width: auto;
+                height: fit-content;
+                position: absolute;
             }
                 .shop_menu_left li a, .shop_menu_right li a {
-                    width: 260px;
-                    height: 50px;
+                    width: 26rem;
+                    height: 5rem;
                     padding: 1.4rem 0;
                     font-size: 1.6rem;
                     line-height: 2.2rem;
 
                     display: flex;
                     justify-content: space-between;
-                    border-bottom: 1px solid #d9d9d9;
                 }
-                /*호버시 내용은 자바스크립트로 작성*/
+                    .menu-line {
+                        width: 0%;
+                        height: 1px;
+                        background-color: #d9d9d9;
+                    }
+                    .shop_menu_left img {
+                        display: block;
+                        opacity: 0;
+                    }
+            /*호버시 내용은 자바스크립트로 작성*/
             .shop_list_left {
                 grid-area: c;
+                width: auto;
+                height: auto;
+                position: absolute;
             }
-                .shop_list_left li {
-                    width: 28rem;
-                    height: 5rem;
-                    line-height: 5rem;
-                    padding-left: 7rem;
-                    font-size: 1.5rem;
-                    color: #555;
+                .shop_list_left ul, .shop_list_right ul {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    opacity: 0;
+                    transition: all 300ms;
                 }
-            .shop_menu_right {
+                    .shop_list_left a, .shop_list_right a {
+                        width: 26rem;
+                        height: 5rem;
+                        padding: 1.4rem 0;
+                        padding-left: 5rem;
+
+                        font-size: 1.5rem;
+                        line-height: 2.2rem;
+                        color: #555;
+
+                        display: block;
+                    }
+            .shop_line {
                 grid-area: d;
+                width: 5rem;
+                height: 42rem;
+                border-left: 1px solid #d9d9d9;
+            }
+            .shop_menu_right {
+                grid-area: e;
+                width: auto;
+                height: fit-content;
+                position: absolute;
+            }
+            .shop_list_right {
+                grid-area: f;
+                width: auto;
+                height: fit-content;
+                position: absolute;
             }

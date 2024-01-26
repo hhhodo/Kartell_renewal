@@ -20,9 +20,10 @@
     <link href="./css/main_02_item_slide.css" rel="stylesheet">
 
     <!--JQuery------->
-    <script src="./jquery-3.7.1.min.js"></script>
+    <script src="./javascript/jquery-3.7.1.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <!--javascript-->
+    <script src="./javascript/header_inner_menu.js"></script>
     <script src="./javascript/main_04_scroll.js"></script>
 </head>
 <body>
@@ -32,54 +33,116 @@
             <img src="./images/kartell_logo.svg">
             <ul class="header_menu_01">
                 <li class="shop_page">
-                    <a href="#" class="shop_page_up">Shop</a>
-                    <div class="shop_page_all">
-                        <div class="shop_img">이미지 코너</div>
+                    <!--shop page all------------>
+                    <a href="#" class="page_up">Shop</a>
+                    <div class="page_all">
+                        <div class="shop_img"></div>
+                        <!--좌측메뉴-->
                         <ul class="shop_menu_left">
+                            <!--0.Seating-->
                             <li>
                                 <a href="#">Seating<img src="./images/arrow_small_right.svg"></a>
                             </li>
-                            <li>
-                                <a>Soft Funishings and Couches<img src="./images/arrow_small_right.svg"></a>
-                                <!--seating menu-->
+                            <!--1.Soft Funishings-->
+                            <li><a>Soft Funishings and Couches<img src="./images/arrow_small_right.svg"></a>
                             </li>
-                            <li>
-                                <a>Tables<img src="./images/arrow_small_right.svg"></a>
-                                <!--seating menu-->
+                            <!--2.Tables-->
+                            <li><a>Tables<img src="./images/arrow_small_right.svg"></a>
                             </li>
-                            <li>
-                                <a>Lighting<img src="./images/arrow_small_right.svg"></a>
-                                <!--seating menu-->
+                            <!--3.Lighting-->
+                            <li><a>Lighting<img src="./images/arrow_small_right.svg"></a>
                             </li>
-                            <li>
-                                <a>Storage Funiture<img src="./images/arrow_small_right.svg"></a>
-                                <!--seating menu-->
+                            <!--4.Storage Funiture-->
+                            <li><a>Storage Funiture<img src="./images/arrow_small_right.svg"></a>
                             </li>
-                            <li>
-                                <a>Funishing Accesories<img src="./images/arrow_small_right.svg"></a>
-                                <!--seating menu-->
+                            <!--5.Funishing Accesories-->
+                            <li><a>Funishing Accesories<img src="./images/arrow_small_right.svg"></a>
                             </li>
-                            <li>
-                                <a>Tableware<img src="./images/arrow_small_right.svg"></a>
-                                <!--seating menu-->
+                            <!--6.Tableware-->
+                            <li><a>Tableware<img src="./images/arrow_small_right.svg"></a>
                             </li>
-                            <li>
-                                <a>Accessories<img src="./images/arrow_small_right.svg"></a>
-                                <!--seating menu-->
+                            <!--7.Accessories-->
+                            <li><a>Accessories<img src="./images/arrow_small_right.svg"></a>
                             </li>
-                            <li>
-                                <a>Kids<img src="./images/arrow_small_right.svg"></a>
-                                <!--seating menu-->
+                            <!--8.Kids-->
+                            <li><a>Kids<img src="./images/arrow_small_right.svg"></a>
                             </li>
                         </ul>
+                        <!--좌측 소메뉴-->
                         <div class="shop_list_left">
-                            <!--seating menu-->
+                            <!--0.seating menu-->
                             <ul>
-                                <li>Chairs</li>
-                                <li>Small armchairs</li>
-                                <li>Stools</li>
+                                <li><a href="#">Chairs</a></li>
+                                <li><a href="#">Small armchairs</a></li>
+                                <li><a href="#">Stools</a></li>
+                            </ul>
+                            <!--1.Soft Funishings and Couches-->
+                            <ul>
+                                <li><a href="#">Sofas & Pouf</a></li>
+                                <li><a href="#">Armchairs</a></li>
+                                <li><a href="#">Cushions</a></li>
+                            </ul>
+                            <!--2.Tables-->
+                            <ul>
+                                <li><a href="#">Tables</a></li>
+                                <li><a href="#">Desks</a></li>
+                                <li><a href="#">Bar tables</a></li>
+                                <li><a href="#">Side tables</a></li>
+                            </ul>
+                            <!--3.Lighting-->
+                            <ul>
+                                <li><a href="#">Table Lamps</a></li>
+                                <li><a href="#">Floor Lamps</a></li>
+                                <li><a href="#">Suspension Lamps</a></li>
+                                <li><a href="#">Wall Lights</a></li>
+                            </ul>
+                            <!--4.Storage Funiture-->
+                            <ul>
+                                <li><a href="#">Componibili x uno</a></li>
+                                <li><a href="#">Componibili</a></li>
+                                <li><a href="#">Mobile</a></li>
+                                <li><a href="#">Other Storage Funiture</a></li>
+                            </ul>
+                            <!--5.Funishing Accesories-->
+                            <ul>
+                                <li><a href="#">Coat Stands</a></li>
+                                <li><a href="#">Trolleys</a></li>
+                                <li><a href="#">Baskets</a></li>
+                                <li><a href="#">Vase & Maxi-vase</a></li>
+                                <li><a href="#">Umbrella stands</a></li>
+                                <li><a href="#">Stepladders</a></li>
+                                <li><a href="#">Mirrors</a></li>
+                                <li><a href="#">Rugs</a></li>
+                                <li><a href="#">Bookcases</a></li>
+                            </ul>
+                            <!--6.Tableware-->
+                            <ul>
+                                <li><a href="#">Centrepiece</a></li>
+                                <li><a href="#">Trays</a></li>
+                                <li><a href="#">Placemats</a></li>
+                                <li><a href="#">Candelabra</a></li>
+                                <li><a href="#">Cups</a></li>
+                                <li><a href="#">Set of dishes and coffee</a></li>
+                            </ul>
+                            <!--7.Accessories-->
+                            <ul>
+                                <li><a href="#">Clocks</a></li>
+                                <li><a href="#">Bottle holders</a></li>
+                                <li><a href="#">Magazine racks</a></li>
+                                <li><a href="#">Bathroom accessories</a></li>
+                                <li><a href="#">Vase & Maxi-vase</a></li>
+                                <li><a href="#">Centrepiece</a></li>
+                            </ul>
+                            <!--8.kids-->
+                            <ul>
+                                <li><a href="#">Chairs</a></li>
+                                <li><a href="#">Tables</a></li>
+                                <li><a href="#">Funishing accessories</a></li>
                             </ul>
                         </div>
+                        <!--중간 라인-->
+                        <div class="shop_line"></div>
+                        <!--우측 메뉴-->
                         <ul class="shop_menu_right">
                             <li>
                                 <a>Fashion<img src="./images/arrow_small_right.svg"></a>
@@ -88,14 +151,27 @@
                                 <a>Shop by Mood<img src="./images/arrow_small_right.svg"></a>
                             </li>
                         </ul>
+                        <!--우측 소메뉴-->
+                        <div class="shop_list_right">
+                            <!--0.Fashion-->
+                            <ul>
+                                <li><a href="#">Eyewear</a></li>
+                            </ul>
+                            <!--1.Shop by Mood-->
+                            <ul>
+                                <li><a href="#">Sustainable Selection</a></li>
+                                <li><a href="#">Kartell Outdoor</a></li>
+                                <li><a href="#">Hiray collection</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </li>
-                <li><a href="#">K World</a></li>
-                <li><a href="#">News</a></li>
-                <li><a href="#">Spcial Projects</a></li>
-                <li><a href="#">Contact Room</a></li>
-                <li><a href="#">Museum</a></li>
-                <li><a href="#">K Loves the Planet</a></li>
+                <li><a href="#" class="page_up">K World</a></li>
+                <li><a href="#" class="page_up">News</a></li>
+                <li><a href="#" class="page_up">Spcial Projects</a></li>
+                <li><a href="#" class="page_up">Contact Room</a></li>
+                <li><a href="#" class="page_up">Museum</a></li>
+                <li><a href="#" class="page_up">K Loves the Planet</a></li>
             </ul>
             <ul class="header_menu_02">
                 <li>검색</li>
