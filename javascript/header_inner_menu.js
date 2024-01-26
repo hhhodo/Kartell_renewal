@@ -1,6 +1,7 @@
 $(function(){
     var shopEach = $(".shop_menu_left li a, .shop_menu_right li a");
     var shopListEach = $(".shop_list_left ul, .shop_list_right ul");
+    var shopList = $(".shop_list_left, .shop_list_right");
     //헤더 애니메이션 제작
     var $line = $("<div class='menu-line'></div>"); // 새로운 div 요소 생성
     $(shopEach).parent().append($line); // 현재 호버된 링크에 추가
@@ -19,9 +20,11 @@ $(function(){
             var arrowAni = arrowLine.eq(shopIndex);
             
             // 서브 메뉴 등장
-            shopListEach.siblings().css({opacity:"0"});
-            shopLi.css({opacity:"1"});
-
+            shopListEach.siblings().css({opacity:"0",display:"none"});
+            shopLi.css({opacity:"1", display:"block"});
+            
+            shopLine.stop(true).css({width:"0%"})
+            arrowAni.stop(true).css({opacity:"0"})
             //animation line
             shopLine.animate({
                 width:"100%"
@@ -44,6 +47,8 @@ $(function(){
             shopListEach.siblings().css({opacity:"0"});
             shopLi.css({opacity:"0"});
 
+            shopLine.stop(true).css({width:"0%"})
+            arrowAni.stop(true).css({opacity:"0"})
             //animation line
             arrowAni.animate({
                 opacity:"0"
@@ -54,14 +59,4 @@ $(function(){
             })
         }
     );
-    shopLi.hover(
-        function(){
-            $(this).siblings().css({display:"none"});
-            $(this).css({display:"block"});
-        },
-        function(){
-            $(this).siblings().css({display:"none"});
-            $(this).css({display:"none"});
-        }
-    )
 });
