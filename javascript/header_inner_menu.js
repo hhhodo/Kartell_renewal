@@ -7,23 +7,33 @@ $(function(){
     shopPage.hover(
         function(){
             pageAll.css({opacity:"1"});
-            var menuLeft = $(this).find(".menu_left").height();
+            var maxHeight = 0;
             var headerHeight = $(".header_box").height();
-            var autoHeight = menuLeft+headerHeight;
 
-            $(this).find(".page_all").css({height:autoHeight, padding:"2.4rem 0 10rem 0"});
+            $(this).find("div").each(function(){
+                var currentHeight = $(this).height();
+                maxHeight = Math.max(maxHeight, currentHeight);
+            })
+            
+            var autoHeight = maxHeight+headerHeight;
+            console.log(autoHeight)
+            
+
+            $(this).find(".page_all").css({height:autoHeight, padding:"12rem 0 10rem 0"});
+            $(".header_box").css({"border-bottom":"1px solid #d9d9d9"})
         },
         function() {
             // 마우스가 벗어났을 때의 동작
             pageAll.css({height:"0", padding:"0"});
             pageAll.css({opacity:"0"});
+            $(".header_box").css({"border-bottom":"1px solid #fff"})
         }
     )
     //호버 이후 페이지 내용들(공통)
     pageAll.hover(
         function(){
             pageAll.css({opacity:"1"});
-            $(this).find(".page_all").css({height:"auto", padding:"2.4rem 0 10rem 0"});
+            $(this).find(".page_all").css({height:"auto", padding:"12rem 0 10rem 0"});
   
         },
         function() {
