@@ -9,17 +9,18 @@ $(function(){
             pageAll.css({opacity:"1"});
             var maxHeight = 0;
             var headerHeight = $(".header_box").height();
+            var pagePadding = 100;
 
-            $(this).find("div").each(function(){
+            $(this).children(pageAll).children("div").each(function(){
                 var currentHeight = $(this).height();
                 maxHeight = Math.max(maxHeight, currentHeight);
             })
             
-            var autoHeight = maxHeight+headerHeight;
+            var autoHeight = maxHeight+headerHeight+pagePadding;
             console.log(autoHeight)
             
 
-            $(this).find(".page_all").css({height:autoHeight, padding:"12rem 0 10rem 0"});
+            $(this).find(".page_all").css({height:autoHeight, padding:"4rem 0 10rem 0"});
             $(".header_box").css({"border-bottom":"1px solid #d9d9d9"})
         },
         function() {
@@ -33,7 +34,7 @@ $(function(){
     pageAll.hover(
         function(){
             pageAll.css({opacity:"1"});
-            $(this).find(".page_all").css({height:"auto", padding:"12rem 0 10rem 0"});
+            $(this).find(".page_all").css({height:"auto", padding:"4rem 0 10rem 0"});
   
         },
         function() {
