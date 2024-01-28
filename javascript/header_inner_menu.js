@@ -9,7 +9,7 @@ $(function(){
             pageAll.css({opacity:"1"});
             var maxHeight = 0;
             var headerHeight = $(".header_box").height();
-            var pagePadding = 100;
+            var pagePadding = 100;//반응형 최적화 필요
 
             $(this).children(pageAll).children("div").each(function(){
                 var currentHeight = $(this).height();

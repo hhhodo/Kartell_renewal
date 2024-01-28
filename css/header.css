@@ -13,22 +13,22 @@
     .header_box > img {
         position: relative;
         float: left;
-        width: 100px;
+        width: 10rem;
         display: flex;
         align-items: center;
     }
     .header_menu_01 {
         width: fit-content;
-        height: 80px;
+        height: 8rem;
         display: flex;
         flex-wrap: nowrap;
     }
     .header_menu_02 {
         position: relative;
         float: right;
-        width: 250px;
-        height: 80px;
-        line-height: 80px;
+        width: 25rem;
+        height: 8rem;
+        line-height: 8rem;
         display: flex;
         flex-wrap: nowrap;
         justify-content: space-between;
@@ -59,7 +59,7 @@
             display: grid;
             grid-template-areas:
             "a b c d e f";
-            grid-template-columns: auto 260px 260px 50px 260px auto;
+            grid-template-columns: auto 26rem 26rem 5rem 26rem auto;
         }
             .shop_img {
                 grid-area: a;

@@ -7,6 +7,10 @@
     --font-light-white: var(--font-100);
     --font-light: var(--font-300);
     --font-medium: var(--font-500);
+    /*slide width calc()*/
+    --slide-width: calc(100vw - 20rem);
+    --slide-con-width: calc(calc(100% - 20rem) / 36);
+    --slide-img-width: calc(100% - 2px);
 }
 
 body {font-family: 'Roboto', sans-serif; font-weight: var(--font-light);}

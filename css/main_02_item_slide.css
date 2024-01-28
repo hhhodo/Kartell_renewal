@@ -21,15 +21,6 @@
             position: relative;
             overflow: hidden;
     }
-        .main_02_item_all {
-            position: absolute;
-            left: 0;
-            top: 0;
-            max-height: 417px;
-        }
-            .main_04_item_all.animated {
-                transition: all 0.5s ease-out;
-            }
             .main_item {
                 width: 286px;
                 height: auto;
@@ -60,104 +51,6 @@
                             text-align: center;
                             font-weight: var(--font-medium);
                     }
-            /*아이템 이미지 및 호버시 이미지 변경 설정*/
-            /*item 01*/
-            .main_02_item_img_01 {
-                width: 284px;
-                height: 313px;
-                background-image: url(../images/shinewhite01.png);
-                object-fit: cover;
-                transition: all 0.3s;
-            }
-                .main_04_img_01:hover {
-                    background-image: url(../images/eyewear01_texture.png);
-                    transition: all 0.3s;
-                }
-            /*item 02*/
-            .main_02_item_img_02 {
-                width: 284px;
-                height: 313px;
-                background-image: url(../images/shinewhite02.png);
-                object-fit: cover;
-                transition: all 0.3s;
-            }
-                .main_04_img_02:hover {
-                    background-image: url(../images/eyewear01_texture.png);
-                    transition: all 0.3s;
-                }
-            /*item 03*/
-            .main_02_item_img_03 {
-                width: 284px;
-                height: 313px;
-                background-image: url(../images/shinewhite03.png);
-                object-fit: cover;
-                transition: all 0.3s;
-            }
-                .main_04_img_03:hover {
-                    background-image: url(../images/eyewear01_texture.png);
-                    transition: all 0.3s;
-                }
-            /*item 04*/
-            .main_02_item_img_04 {
-                width: 284px;
-                height: 313px;
-                background-image: url(../images/shinewhite04.png);
-                object-fit: cover;
-                transition: all 0.3s;
-            }
-                .main_04_img_04:hover {
-                    background-image: url(../images/eyewear01_texture.png);
-                    transition: all 0.3s;
-                }
-            /*item 05*/
-            .main_02_item_img_05 {
-                width: 284px;
-                height: 313px;
-                background-image: url(../images/shinewhite05.png);
-                object-fit: cover;
-                transition: all 0.3s;
-            }
-                .main_04_img_05:hover {
-                    background-image: url(../images/eyewear01_texture.png);
-                    transition: all 0.3s;
-                }
-            /*item 06*/
-            .main_02_item_img_06 {
-                width: 284px;
-                height: 313px;
-                background-image: url(../images/shinewhite06.png);
-                object-fit: cover;
-                transition: all 0.3s;
-            }
-                .main_04_img_06:hover {
-                    background-image: url(../images/eyewear01_texture.png);
-                    transition: all 0.3s;
-                }
-            /*item 07*/
-            .main_02_item_img_07 {
-                width: 284px;
-                height: 313px;
-                background-image: url(../images/shinewhite07.png);
-                object-fit: cover;
-                transition: all 0.3s;
-            }
-                .main_04_img_07:hover {
-                    background-image: url(../images/eyewear01_texture.png);
-                    transition: all 0.3s;
-                }
-            /*item 08*/
-            .main_02_item_img_08 {
-                width: 284px;
-                height: 313px;
-                background-image: url(../images/shinewhite08.png);
-                object-fit: cover;
-                transition: all 0.3s;
-            }
-                .main_04_img_08:hover {
-                    background-image: url(../images/eyewear01_texture.png);
-                    transition: all 0.3s;
-                }
-            
             /*item page bar*/
             .main_02_item_bar_all {
                     width: 100%;
