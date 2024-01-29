@@ -5,6 +5,9 @@
     padding: 0;
 }
 ul {list-style: none;}
+::marker {
+    content: "";
+}
 li, a {text-decoration: none; color: #000;}
 button {
     background-color: transparent;

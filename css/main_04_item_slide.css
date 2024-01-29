@@ -10,7 +10,7 @@
 }
 /*main 04 item 제품 추천---------------*/
 .slide_wrapper {
-    width: calc(100vw - 20rem);
+    width: calc(100vw - 20.4rem);
     height: 42rem;
     margin: 0 auto;
     margin-top: 4rem;
@@ -29,7 +29,7 @@
     transition: all 0.5s ease-out;
 }
     .main_slide_con {
-        width: calc(calc(100vw - 20rem) / 6);
+        width: calc(calc(100vw - 20.4rem) / 6);
         height: fit-content;
         position: relative;
         float: left;
@@ -40,12 +40,16 @@
     }
     /*아이템 이미지 및 호버시 이미지 변경 설정*/
         .content_slide_img {
-            width: calc(100% - 2px);
+            width: 100%;
             height: fit-content;
             margin: 0 auto;
             transition: all 0.3s;
         }
             .content_slide_img img {
+                display: block;
                 width: 100%;
                 object-fit: cover;
+            }
+            .content_slide_img img.remove {
+                display: none;
             }

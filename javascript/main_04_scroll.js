@@ -5,10 +5,10 @@ $(document).ready(function() {
     var slideCount = slide.length;
     var slideWidth = 0;
     /* slide arrows */
-    var prevBtn = $('#main_04_prev');
-    var nextBtn = $('#main_04_next');
+    var prevBtn = $('#main_02_prev');
+    var nextBtn = $('#main_02_next');
 
-    /*slide 코드 */
+    /*slide 코드(개별) */
     makeClone();
 
     function makeClone(){
@@ -29,6 +29,7 @@ $(document).ready(function() {
         },100);
     }
 
+    /* 공통 코드(넓이, 시작 translateX위치) */
     function updateWidth(){
         var newSlideCount = $('.main_slide_con').length;
         slideWidth = parseInt(slide.css('width'));
@@ -44,6 +45,7 @@ $(document).ready(function() {
         slides.css('transform', 'translateX(' + initialTranslateValue + 'px)');
     }
 
+    /* 개별 코드(좌우 버튼) */
     nextBtn.on('click', function(){
         moveSlide(currentIdx + 1);
     });
@@ -51,6 +53,7 @@ $(document).ready(function() {
         moveSlide(currentIdx - 1);
     });
 
+    /* 개별 */
     function moveSlide(num){
         slides.css('left', -num * slideWidth + 'px');
         currentIdx = num;
@@ -67,9 +70,22 @@ $(document).ready(function() {
         }
     }
     //이미지 호버
-    slide.hover(
-        function(){
-            var slideImg = $()
-        }
-    )
+    var slideImgBox = $('.content_slide_img');
+
+        slideImgBox.each(function(){
+            var slideImg = $(this).find('img');
+            slideImg.eq(1).addClass('remove');
+            console.log(slideImg);
+    
+            slideEach.hover(
+                function(){
+                    slideImg.eq(1).removeClass('remove');
+                    slideImg.eq(0).addClass('remove');
+                },
+                function(){
+                    slideImg.eq(0).removeClass('remove');
+                    slideImg.eq(1).addClass('remove');
+                }
+            )
+        })
 });

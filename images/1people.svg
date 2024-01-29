@@ -1,0 +1,8 @@
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="24" height="24" fill="white"/>
+<circle cx="12" cy="6.5" r="4" stroke="black"/>
+<mask id="path-3-inside-1_1446_52" fill="white">
+<path d="M4 17C4 14.7909 5.79086 13 8 13H16C18.2091 13 20 14.7909 20 17V22H4V17Z"/>
+</mask>
+<path d="M3 17C3 14.2386 5.23858 12 8 12H16C18.7614 12 21 14.2386 21 17H19C19 15.3431 17.6569 14 16 14H8C6.34315 14 5 15.3431 5 17H3ZM20 22H4H20ZM3 22V17C3 14.2386 5.23858 12 8 12V14C6.34315 14 5 15.3431 5 17V22H3ZM16 12C18.7614 12 21 14.2386 21 17V22H19V17C19 15.3431 17.6569 14 16 14V12Z" fill="black" mask="url(#path-3-inside-1_1446_52)"/>
+</svg>
