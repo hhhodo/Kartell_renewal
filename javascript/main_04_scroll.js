@@ -7,7 +7,7 @@ $(document).ready(function() {
     /* slide arrows */
     var prevBtn = $('#main_02_prev');
     var nextBtn = $('#main_02_next');
-
+    
     /*slide 코드(개별) */
     makeClone();
 
@@ -70,14 +70,28 @@ $(document).ready(function() {
         }
     }
     //이미지 호버
-    var slideImgBox = $('.content_slide_img');
+        var slideImgBox = $('.content_slide_img');
+
+        slideImgBox.hover(
+            function(){
+            var slideImg = $(this).find('img');
+            slideImg.eq(1).removeClass('remove');
+            slideImg.eq(0).addClass('remove');
+            
+        }, function(){
+            var slideImg = $(this).find('img');
+            slideImg.eq(0).removeClass('remove');
+            slideImg.eq(1).addClass('remove');
+        });
 
         slideImgBox.each(function(){
             var slideImg = $(this).find('img');
             slideImg.eq(1).addClass('remove');
-            console.log(slideImg);
-    
-            slideEach.hover(
+
+            var slideImgBoxs = slideImg
+
+            //이미지 호버시
+            slideImgBoxs.hover(
                 function(){
                     slideImg.eq(1).removeClass('remove');
                     slideImg.eq(0).addClass('remove');
@@ -88,4 +102,5 @@ $(document).ready(function() {
                 }
             )
         })
+        
 });
