@@ -7,6 +7,7 @@
     padding: 0 100px;
     display: flex;
     justify-content: space-between;
+    cursor: pointer;
 }
 /*main page first section------------------------*/
 .main_01 {
@@ -60,28 +61,23 @@
             background: url(../images/panorama_02.png);
         }
         .main_02_con {
-            width: 40rem;
+            width: 44rem;
             height: 60rem;
             padding-left: 6rem;
+            padding-top: 10rem;
         }
-            .main_02_text_01 {
-                font-size: 3rem;
-                line-height: 4rem;
-                padding-top: 16rem;
+            .main_02_text {
+                width: 100%;
+                height: 15rem;
+                display: grid;
+                grid-template-rows: 5rem 7rem 2rem;
             }
-            .main_02_text_02 {
-                font-size: 1.6rem;
-                line-height: 2.2rem;
-                padding-top: 1.5rem;
-                padding-bottom: 1rem;
-            }
-
             .main_02_bar {
                 width: 37rem;
                 height: 2.4rem;
                 display: flex;
                 justify-content: space-between;
-                margin-top: 21.3rem;
+                margin-top: 24rem;
             }
                 .main_02_bar_base {
                     width: 27rem;
@@ -100,6 +96,17 @@
                     width: auto;
                     height: 2.4rem;
                 }
+    .main_02_item {
+            width: 100%;
+            height: auto;
+            position: relative;
+            padding-top: 200px;
+    }
+        .main_02_item_title {
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+        }
 /*main 03 코너 시작---------------------------------------*/
 .main_03 {
     width: 100%;
@@ -123,32 +130,19 @@
     }
         .main_03_img_01 {
             grid-area: a;
-            background: url(../images/main_03_01.png) no-repeat;
         }
         .main_03_text_01 {
             grid-area: b;
             width: 40rem;
-            height: 10.4rem;
+            height: 9.4rem;
             display: flex;
             flex-flow: row wrap;
             align-content: space-between;
 
             margin-top: 3rem;
         }
-            .main_03_text_title {
-                font-size: 3rem;
-                height: 4rem;
-                line-height: 4rem;
-            }
-            .main_03_text_content {
-                width: 40rem;
-                height: 4.4rem;
-                line-height: 2.2rem;
-                font-size: 1.6rem;
-            }
         .main_03_img_02 {
             grid-area: c;
-            background: url(../images/main_03_02.png) no-repeat;
         }
         .main_03_text_02 {
             grid-area: d;
@@ -156,7 +150,7 @@
         }
         .main_03_text_all {
             width: 40rem;
-            height: 10.4rem;
+            height: 9.4rem;
             display: flex;
             flex-flow: row wrap;
             align-content: space-between;
@@ -189,6 +183,7 @@
         background: url(../images/special_project_01.png) no-repeat;
         background-size: cover;
         background-position: center;
+        margin-bottom: 7rem;
     }
         .main_04_dimd {
             position: absolute;
@@ -211,37 +206,20 @@
             height: 23.9rem;
             position: absolute;
             left: 10%;
-            top: 27.5rem;
-        }  
-            .main_04_text_01 {
-                font-size: 3rem;
-                font-weight: 100;
-                line-height: 4rem;
-                transform : rotate(0.04deg);
-                color: #fff;
-
-                width: 36.5rem;
-                height: 4rem;
-            }
-            .main_04_text_02 {
-                font-size: 1.6rem;
-                font-weight: var(--font-light-white);
-                line-height: 2.2rem;
-                transform : rotate(0.04deg);
-                color: #fff;
-
-                width: 36.5rem;
-                height: 4.4rem;
-
-                margin-top: 2rem;
-            }
+            top: 21rem;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            font-weight: var(--font-light-white);
+        }
             .main_04_text_button {
                 margin-top: 12rem;
             }
                 .main_04_text_button span {
                     font-size: 1.6rem;
                     font-weight: var(--font-light-white);
-                    line-height: 22rem;
+                    line-height: 2.2rem;
                     transform : rotate(0.04deg);
                     color: #fff;
                 }
@@ -251,19 +229,21 @@
 
 /*main 05 start---------------------------------*/
 .main_05 {
+    position: relative;
     width: 100%;
-    height: 95rem;
-    padding: 0 10rem;
+    height: 85rem;
+    padding-left: 20rem;
     margin-top: 60rem;
 }
     .main_05_container {
         width: 100%;
-        height: 95rem;
+        height: 85rem;
         display: flex;
+        position: relative;
     }
         .main_05_img {
-            width: 80rem;
-            height: 95rem;
+            width: 70rem;
+            height: 85rem;
             background: url(../images/shop_by_look_01.jpg) no-repeat;
         }
         .main_05_content {
@@ -272,47 +252,16 @@
         }
             .main_05_title {
                 width: 100%;
-                height: 10rem;
-                line-height: 10rem;
-                font-size: 3rem;
+                height: 8rem;
                 padding-left: 9rem;
+                display: flex;
+                align-items: center;
             }
             .main_05_bar {
                 width: 100%;
                 height: 1px;
                 background: #d9d9d9;
             }
-            .main_05_item_01 {
-                width: 100%;
-                height: 84.9rem;
-                position: relative;
-            }
-                .main_05_item_img_01 {
-                    width: 50rem;
-                    height: 55rem;
-                    margin: 0 auto;
-                    margin-top: 5rem;
-                    background: url(../images/shop_by_look_item_01.png);
-                }
-                .main_05_item_title_01 {
-                    width: 50rem;
-                    height: 2.4rem;
-                    line-height: 2.4rem;
-                    text-align: center;
-                    margin: 0 auto;
-                    margin-top: 7rem;
-                    font-size: 1.6rem;
-                }
-                .main_05_item_price_01 {
-                    width: 50rem;
-                    height: 2.2rem;
-                    line-height: 2.2rem;
-                    text-align: center;
-                    margin: 0 auto;
-                    margin-top: 1rem;
-                    font-size: 1.4rem;
-                    font-weight: var(--font-medium);
-                }
 /*main 06 page start---------------------------------------------*/
 .main_06 {
     width: 100%;
@@ -329,6 +278,7 @@
             padding: 0 10rem;
             display: flex;
             justify-content: space-between;
+            align-items: center;
         }
             .main_06_title {
                 height: 8rem;
@@ -338,11 +288,9 @@
             .main_06_bar_page {
                 height: 2.4rem;
                 margin: 2.8rem;
-                display: flex;
-                flex-wrap: nowrap;
-            }
-            .main_06_bar_page li,.main_06_bar_page li img {
-                vertical-align: middle;
+                margin-bottom: 0.5rem;
+                display: grid;
+                grid-template-columns: 2.4rem 1.5rem 2.4rem;
             }
         .main_100_bar {
             width: 100%;
@@ -379,29 +327,21 @@
                 }
                     .main_06_text_01 {
                         width: 20rem;
-                        height: 3.2rem;
-                        font-size: 2.4rem;
-                        margin-top: 3rem;
+                        margin-top: 2.4rem;
                     }
                     .main_06_text_02 {
                         width: 20rem;
                         height: 10rem;
-                        font-size: 1.4rem;
-                        line-height: 2rem;
                         margin-top: 1rem;
+                        color: #505050;
                     }
                     .main_06_text_03 {
                         width: 22.5rem;
-                        height: 2.8rem;
-                        font-size: 2rem;
-                        line-height: 2.8rem;
                         margin-top: 11.4rem;
+                        color: #505050;
                     }
                     .main_06_text_04 {
                         width: 22.5rem;
-                        height: 3.2rem;
-                        font-size: 2.4rem;
-                        line-height: 3.2rem;
                     }
 /*main 07 section start------------------------*/
 .main_07 {

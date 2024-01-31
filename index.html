@@ -17,8 +17,9 @@
     <!--main-->
     <link href="./css/main.css" rel="stylesheet">
     <link href="./css/main_01_slide.css" rel="stylesheet">
-    <link href="./css/main_04_item_slide.css" rel="stylesheet">
     <link href="./css/main_02_item_slide.css" rel="stylesheet">
+    <link href="./css/main_04_item_slide.css" rel="stylesheet">
+    <link href="./css/main_05_item_slide.css" rel="stylesheet">
 
     <!--JQuery------->
     <script src="./javascript/jquery-3.7.1.min.js"></script>
@@ -26,6 +27,7 @@
     <!--javascript-->
     <script src="./javascript/header_inner_menu.js"></script>
     <script src="./javascript/main_04_scroll.js"></script>
+    <script src="./javascript/main_05_scroll.js"></script>
 </head>
 <body>
     <!--header part----------------------------->
@@ -39,7 +41,7 @@
                 </li>
                 <!--shop page all------------>
                 <li>
-                    <a href="#" class="page_up">Shop</a>
+                    <a href="./shop_page.html" class="page_up">Shop</a>
                     <div class="page_all">
                         <!--좌측 이미지-->
                         <div class="shop_img">
@@ -49,7 +51,7 @@
                         <ul class="menu_left">
                             <!--0.Seating-->
                             <li>
-                                <a href="#">Seating<img src="./images/arrow_small_right.svg"></a>
+                                <a href="./shop_page.html">Seating<img src="./images/arrow_small_right.svg"></a>
                             </li>
                             <!--1.Soft Funishings-->
                             <li><a>Soft Funishings and Couches<img src="./images/arrow_small_right.svg"></a>
@@ -345,8 +347,8 @@
                 <div class="main_02_img">이미지</div>
                 <div class="main_02_con">
                     <div class="main_02_text">
-                        <h2 class="main_02_text_01">PANORAMA INFINITE</h2>
-                        <p class="main_02_text_02">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, to</p>
+                        <h2>PANORAMA INFINITE</h2>
+                        <h4>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, to</h4>
                         <div class="main_text_button"><a title="see more" href="#"><span>See More</span><img src="./images/arrow.svg"></a></div>
                     </div>
 
@@ -364,8 +366,9 @@
                 </div>
                 <!--main 2 하단 아이템 슬라이드---------------->
             <div class="main_02_item">
-                <div class="main_02_item_title">SHINE WHITE</div>
+                <span class="main_02_item_title"><h3>SHINE WHITE</h3></span>
 
+                <!--슬라이드 시작-->
                 <div class="slide_wrapper">
                     <ul class="main_item_slides">
                         <!--item 01-------------------->
@@ -375,9 +378,8 @@
                                 <img src="./images/eyewear01_texture.png" class="remove">
                             </div>
                             <div class="main_item_text">
-                                <div class="main_item_text_01">
-                                    Componibili Classic Big</div>
-                                <div class="main_item_text_02">165,000</div>
+                                <h4>Componibili Classic Big</h4>
+                                <h6>165,000</h6>
                             </div>
                         </li>
                         <!--item 02----------------------->
@@ -387,8 +389,8 @@
                                 <img src="./images/eyewear02_texture.png" class="remove">
                             </div>
                             <div class="main_item_text">
-                                <div class="main_item_text_01">Geen-A</div>
-                                <div class="main_item_text_02">165,000</div>
+                                <h4>Geen-A</h4>
+                                <h6>165,000</h6>
                             </div>
                         </li>
                         <!--item 03---------------------->
@@ -398,9 +400,8 @@
                                 <img src="./images/eyewear01_texture.png" class="remove">
                             </div>
                             <div class="main_item_text">
-                                <div class="main_item_text_01">
-                                    K-Waiting Armchair Bouclè</div>
-                                <div class="main_item_text_02">165,000</div>
+                                <h4>K-Waiting Armchair Bouclè</h4>
+                                <h6>165,000</h6>
                             </div>
                         </li>
                         <!--item 04----------------------->
@@ -410,8 +411,8 @@
                                 <img src="./images/eyewear02_texture.png" class="remove">
                             </div>
                             <div class="main_item_text">
-                                <div class="main_item_text_01">Bubble</div>
-                                <div class="main_item_text_02">165,000</div>
+                                <h4>Bubble</h4>
+                                <h6>165,000</h6>
                             </div>
                         </li>
                         <!--item 05------------------------>
@@ -421,8 +422,8 @@
                                 <img src="./images/eyewear02_texture.png" class="remove">
                             </div>
                             <div class="main_item_text">
-                                <div class="main_item_text_01">Goodnight</div>
-                                <div class="main_item_text_02">165,000</div>
+                                <h4>Goodnight</h4>
+                                <h6>165,000</h6>
                             </div>
                         </li>
                         <!--item 06------------------------>
@@ -432,9 +433,8 @@
                                 <img src="./images/eyewear02_texture.png" class="remove">
                             </div>
                             <div class="main_item_text">
-                                <div class="main_item_text_01">
-                                    A.I. Stool Light 65 cm</div>
-                                <div class="main_item_text_02">165,000</div>
+                                <h4>A.I. Stool Light 65 cm</h4>
+                                <h6>165,000</h6>
                             </div>
                         </li>
                         <!--item 07------------------------>
@@ -444,8 +444,8 @@
                                 <img src="./images/eyewear02_texture.png" class="remove">
                             </div>
                             <div class="main_item_text">
-                                <div class="main_item_text_01">DR.No</div>
-                                <div class="main_item_text_02">165,000</div>
+                                <h4>DR.No</h4>
+                                <h6>165,000</h6>
                             </div>
                         </li>
                         <!--item 08------------------------>
@@ -455,8 +455,8 @@
                                 <img src="./images/eyewear02_texture.png" class="remove">
                             </div>
                             <div class="main_item_text">
-                                <div class="main_item_text_01">Shanghai</div>
-                                <div class="main_item_text_02">165,000</div>
+                                <h4>Shanghai</h4>
+                                <h6>165,000</h6>
                             </div>
                         </li>
                     </ul>
@@ -480,18 +480,20 @@
         <section class="main_03">
             <div class="main_03_container">
                 <div class="main_03_img_01">
+                    <img src="./images/main_03_01.png">
                 </div>
-                <ul class="main_03_text_01">
-                    <li class="main_03_text_title">K LOVES THE PLANET</li>
-                    <li class="main_03_text_content">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, to</li>
-                </ul>
+                    <div class="main_03_text_01">
+                        <h2>K LOVES THE PLANET</h2>
+                        <h4>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, to</h4>
+                    </div>
                 <div class="main_03_img_02">
+                    <img src="./images/main_03_02.png">
                 </div>
                 <div class="main_03_text_02">
-                <ul class="main_03_text_all">
-                    <li class="main_03_text_title">KARTELL INSPIRATION</li>
-                    <li class="main_03_text_content">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, to</li>
-                </ul>
+                    <div class="main_03_text_all">
+                        <h2>KARTELL INSPIRATION</h2>
+                        <h4>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, to</h4>
+                    </div>
                 </div>
             </div>
         </section>
@@ -502,11 +504,11 @@
             <div class="main_04_banner">
                 <div class="main_04_dimd">
                     <div class="main_04_title_img"></div>
-                    <ul class="main_04_text_all">
-                        <li class="main_04_text_01">KARTELL EYEWEAR</li>
-                        <li class="main_04_text_02">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed qu</li>
-                        <li class="main_04_text_button"><a title="see more" href="#"><span>See More</span><img src="./images/arrow_white.svg"></a></li>
-                    </ul>
+                    <div class="main_04_text_all">
+                        <h3 class="font_white">KARTELL EYEWEAR</h3>
+                        <h4 class="font_white">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed qu</h4>
+                        <a title="see more" href="#" class="main_04_text_button"><span>See More</span><img src="./images/arrow_white.svg"></a>
+                    </div>
                 </div>
             </div>
 
@@ -517,83 +519,88 @@
                     <li class="main_slide_con">
                         <div class="content_slide_img">
                             <img src="./images/eyewear01.png">
-                            <img src="./images/eyewear01_texture.png">
+                            <img src="./images/eyewear01_texture.png" class="remove">
                         </div>
                         <div class="main_item_text">
-                            <div class="main_item_text_01">Borderino New</div>
-                            <div class="main_item_text_02">165,000</div>
+                            <h4>Borderino New</h4>
+                            <h6>165,000</h6>
                         </div>
                     </li>
                     <!--item 02----------------------->
                     <li class="main_slide_con">
                         <div class="content_slide_img">
                             <img src="./images/eyewear02.png">
-                            <img src="./images/eyewear02_texture.png">
+                            <img src="./images/eyewear02_texture.png" class="remove">
                         </div>
                         <div class="main_item_text">
-                            <div class="main_item_text_01">Borderino New</div>
-                            <div class="main_item_text_02">165,000</div>
+                            <h4>Borderino New</h4>
+                            <h6>165,000</h6>
                         </div>
                     </li>
                     <!--item 03---------------------->
                     <li class="main_slide_con">
                         <div class="content_slide_img">
                             <img src="./images/eyewear03.png">
-                            <img src="./images/eyewear03_texture.png">
+                            <img src="./images/eyewear03_texture.png" class="remove">
                         </div>
                         <div class="main_item_text">
-                            <div class="main_item_text_01">Borderino New</div>
-                            <div class="main_item_text_02">165,000</div>
+                            <h4>Borderino New</h4>
+                            <h6>165,000</h6>
                         </div>
                     </li>
                     <!--item 04----------------------->
                     <li class="main_slide_con">
                         <div class="content_slide_img">
                             <img src="./images/eyewear04.png">
+                            <img src="./images/eyewear04_texture.png" class="remove">
                         </div>
                         <div class="main_item_text">
-                            <div class="main_item_text_01">Borderino New</div>
-                            <div class="main_item_text_02">165,000</div>
+                            <h4>Borderino New</h4>
+                            <h6>165,000</h6>
                         </div>
                     </li>
                     <!--item 05------------------------>
                     <li class="main_slide_con">
                         <div class="content_slide_img">
-                            <img src="./images/eyewear05.png" class="main_02_img_01">
+                            <img src="./images/eyewear05.png">
+                            <img src="./images/eyewear05_texture.png" class="remove">
                         </div>
                         <div class="main_item_text">
-                            <div class="main_item_text_01">Borderino New</div>
-                            <div class="main_item_text_02">165,000</div>
+                            <h4>Borderino New</h4>
+                            <h6>165,000</h6>
                         </div>
                     </li>
                     <!--item 06------------------------>
                     <li class="main_slide_con">
                         <div class="content_slide_img">
-                            <img src="./images/eyewear06.png" class="main_02_img_01">
+                            <img src="./images/eyewear06.png">
+                            <img src="./images/eyewear06_texture.png" class="remove">
                         </div>
                         <div class="main_item_text">
-                            <div class="main_item_text_01">Borderino New</div>
-                            <div class="main_item_text_02">165,000</div>
+                            <h4>Borderino New</h4>
+                            <h6>165,000</h6>
                         </div>
                     </li>
                     <!--item 07------------------------>
                     <li class="main_slide_con">
                         <div class="content_slide_img">
-                            <img src="./images/eyewear07.png" class="main_02_img_01">
+                            <img src="./images/eyewear07.png">
+                            <img src="./images/eyewear07_texture.png" class="remove">
                         </div>
                         <div class="main_item_text">
-                            <div class="main_item_text_01">Borderino New</div>
-                            <div class="main_item_text_02">165,000</div>
+                            <h4>Borderino New</h4>
+                            <h6>165,000</h6>
                         </div>
                     </li>
                     <!--item 08------------------------>
                     <li class="main_slide_con">
                         <div class="content_slide_img">
-                            <img src="./images/eyewear08.png" class="main_02_img_01">
+                            <img src="./images/eyewear08.png">
+                            <img src="./images/eyewear08_texture.png" class="remove">
                         </div>
                         <div class="main_item_text">
-                            <div class="main_item_text_01">Borderino New</div>
-                            <div class="main_item_text_02">165,000</div>
+                            <h4>Borderino New</h4>
+                            <h6>165,000</h6>
                         </div>
                     </li>
 
@@ -611,19 +618,44 @@
             <div class="main_05_container">
                 <div class="main_05_img">이미지</div>
                 <div class="main_05_content">
-                    <div class="main_05_title">SHOP BY LOOK</div>
+                    <div class="main_05_title"><h2>SHOP BY LOOK</h2></div>
                     <div class="main_05_bar"></div>
-                    <ul class="main_05_item_01">
-                        <li class="main_05_item_img_01"></li>
-                        <li class="main_05_item_title_01">LUNAM ARMCHAIR CURLY</li>
-                        <li class="main_05_item_price_01">3,565,000</li>
-                        <div class="main_page_arrow">
-                            <button><img src="./images/left_arrow.svg"></button>
-                            <button><img src="./images/right_arrow.svg"></button>
+                    <!--slide main05-->
+                    <div class="main_05_wrapper">
+                        <ul class="main_05_item_all">
+                            <li class="main_05_item">
+                                <div class="main_05_item_img_01">
+                                    <img src="./images/shop_by_look_item_01.png">
+                                </div>
+                                <div class="main_05_item_text">
+                                    <h4>LUNAM ARMCHAIR CURLY</h4>
+                                    <h6>3,565,000</h6>
+                                </div>
+                            </li>
+                            <li class="main_05_item">
+                                <div class="main_05_item_img_01">
+                                    <img src="./images/shop_by_look_item_02.png">
+                                </div>
+                                <div class="main_05_item_text">
+                                    <h4>KABUKI INDOOR</h4>
+                                    <h6>2,065,000</h6>
+                                </div>
+                            </li>
+                            <li class="main_05_item">
+                                <div class="main_05_item_img_01">
+                                    <img src="./images/shop_by_look_item_03.png">
+                                </div>
+                                <div class="main_05_item_text">
+                                    <h4>PRINCE AHA</h4>
+                                    <h6>260,000</h6>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="main_05_page_arrow">
+                            <button id="prev-05"><img src="./images/left_arrow.svg"></button>
+                            <button id="next-05"><img src="./images/right_arrow.svg"></button>
                         </div>
-                    </ul>
-                    
-                    
+                    </div>
                 </div>
             </div>
         </section>
@@ -632,12 +664,12 @@
         <section class="main_06"> 
             <div class="main_06_container">
                 <div class="main_06_title_all">
-                    <span class="main_06_title">STORIES & NEWS</span>
-                    <ul class="main_06_bar_page">
+                    <h2>STORIES & NEWS</h2>
+                    <!--<ul class="main_06_bar_page">
                         <li><img src="./images/arrow_small_left.svg"></li>
-                        <li>1/6</li>
+                        <li></li>
                         <li><img src="./images/arrow_small_right.svg"></li>
-                    </ul>
+                    </ul>-->
                 </div>
                 <div  class="main_100_bar"></div>
                 <div class="main_06_contents">
@@ -645,40 +677,40 @@
                     <div class="main_06_01_all">
                         <div class="main_06_01_img"></div>
                         <ul class="main_06_01_text">
-                            <li class="main_06_text_01">Wall Paper</li>
-                            <li class="main_06_text_02">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed qu</li>
-                            <li class="main_06_text_03">Italia</li>
-                            <li class="main_06_text_04">11 2023</li>
+                            <h3 class="main_06_text_01">Wall Paper</h3>
+                            <p class="main_06_text_02">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed qu</p>
+                            <h5 class="main_06_text_03">Italia</h5>
+                            <h5 class="main_06_text_04">11 2023</h5>
                         </ul>
                     </div>
                     <!--2번 카탈로그-->
                     <div class="main_06_01_all">
                         <div class="main_06_01_img"></div>
                         <ul class="main_06_01_text">
-                            <li class="main_06_text_01">Wall Paper</li>
-                            <li class="main_06_text_02">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed qu</li>
-                            <li class="main_06_text_03">Italia</li>
-                            <li class="main_06_text_04">11 2023</li>
+                            <h3 class="main_06_text_01">Wall Paper</h3>
+                            <p class="main_06_text_02">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed qu</p>
+                            <h5 class="main_06_text_03">Italia</h5>
+                            <h5 class="main_06_text_04">11 2023</h5>
                         </ul>
                     </div>
                     <!--3번 카탈로그-->
                     <div class="main_06_01_all">
                         <div class="main_06_01_img"></div>
                         <ul class="main_06_01_text">
-                            <li class="main_06_text_01">Wall Paper</li>
-                            <li class="main_06_text_02">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed qu</li>
-                            <li class="main_06_text_03">Italia</li>
-                            <li class="main_06_text_04">11 2023</li>
+                            <h3 class="main_06_text_01">Wall Paper</h3>
+                            <p class="main_06_text_02">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed qu</p>
+                            <h5 class="main_06_text_03">Italia</h5>
+                            <h5 class="main_06_text_04">11 2023</h5>
                         </ul>
                     </div>
                     <!--4번 카탈로그-->
                     <div class="main_06_01_all">
                         <div class="main_06_01_img"></div>
                         <ul class="main_06_01_text">
-                            <li class="main_06_text_01">Wall Paper</li>
-                            <li class="main_06_text_02">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed qu</li>
-                            <li class="main_06_text_03">Italia</li>
-                            <li class="main_06_text_04">11 2023</li>
+                            <h3 class="main_06_text_01">Wall Paper</h3>
+                            <p class="main_06_text_02">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed qu</p>
+                            <h5 class="main_06_text_03">Italia</h5>
+                            <h5 class="main_06_text_04">11 2023</h5>
                         </ul>
                     </div>
                 </div>

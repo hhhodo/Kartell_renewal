@@ -10,6 +10,7 @@
     background: #fff;
     border-bottom: 1px solid #fff;
     transition: all 300ms ease-out;
+    box-shadow: 0;
 }
     .header_menu_01 {
         width: fit-content;
@@ -66,6 +67,7 @@
             grid-template-areas:
             "a b c d e f";
             grid-template-columns: auto 26rem 26rem 5rem 26rem auto;
+            transition: all 300ms ease-in-out;
         }
             .shop_img {
                 grid-area: a;

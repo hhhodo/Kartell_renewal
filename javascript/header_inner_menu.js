@@ -4,18 +4,20 @@ $(function(){
         var scroll = $(window).scrollTop();
         if (scroll > 50) {
             $('.header_box').css({height:"6rem"});
+            $('.page_all').css({top:"6rem"});
         } else {
             $('.header_box').css({height:"8rem"});
+            $('.page_all').css({top:"8rem"});
         }
     })
     /**헤더 메뉴별로 호버시 나오는 내용 ------------------------------------*/
-    //shoppage 호버시
+    //호버시
     var shopPage = $(".header_menu_01 > li")
     var pageAll = $(".page_all")
 
     shopPage.hover(
         function(){
-            pageAll.css({opacity:"1"});
+            pageAll.css({opacity:"1", "box-shadow":"0px 10px 20px rgba(0, 0, 0, 0.04)"});
             var maxHeight = 0;
             var headerHeight = $(".header_box").height();
             var pagePadding = 100;//반응형 최적화 필요

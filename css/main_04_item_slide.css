@@ -1,4 +1,33 @@
-/*main 04 화살표 작성------------*/
+/*하단 아이템 슬라이드 꾸밈요소----------------*/
+.main_item_text {
+    width: 100%;
+    height: 10rem;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+}
+/*item page bar*/
+.main_02_item_bar_all {
+        width: 100%;
+        height: 1px;
+        padding: 0 100px;
+        margin-top: 80px;
+}
+.main_02_item_bar_base {
+        width: 100%;
+        height: 1px;
+        background: #d9d9d9;
+}
+    .main_02_item_bar_con {
+            width: 30%;
+            height: 1px;
+            background: #000;
+    }
+/*js로 product 호버 시 나오도록 설정*/
+
+/*화살표 작성------------*/
 .main_slide_page_arrow {
     width: 100%;
     position: absolute;
@@ -8,7 +37,7 @@
     justify-content: space-between;
     z-index: 10;
 }
-/*main 04 item 제품 추천---------------*/
+/*item 슬라이드 시작---------------*/
 .slide_wrapper {
     width: calc(100vw - 20.4rem);
     height: 42rem;
@@ -46,11 +75,16 @@
             transition: all 0.3s;
         }
             .content_slide_img img {
-                display: block;
                 width: 100%;
+                opacity: 1;
                 object-fit: cover;
                 aspect-ratio: 0.907;
-            }
-            .content_slide_img img.remove {
+                transition: all 300ms ease-out;
                 display: none;
             }
+            .content_slide_img img.hover {
+                display: block;
+                opacity: 0;
+                transition: all 300ms ease-out;
+            }
+/*main 02 개별 슬라이드 내용*/
