@@ -1,0 +1,28 @@
+aside {
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+.shop_nav {
+    position: sticky;
+    left: 0;
+    top: 6rem;
+    z-index: 10;
+
+    width: 100%;
+    height: 5.2rem;
+    padding: 0 10rem;
+    background-color: #fff;
+}
+    .shop_nav_all {
+        width: auto;
+        height: 5.2rem;
+        padding-top: 1rem;
+        display: flex;
+    }
+    .shop_nav_all > li {
+        width: auto;
+        height: fit-content;
+        position: relative;
+        padding: 1rem 2.3rem;
+    }

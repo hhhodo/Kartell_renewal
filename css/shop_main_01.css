@@ -1,0 +1,134 @@
+/*shop main 01-------------------------------------------------*/
+main {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+.shop_main_01 {
+    position: relative;
+    width: 100%;
+    height: 110rem;
+    padding: 0 10rem;
+}
+.shop_main_all {
+    padding-top: 8rem;
+}
+/*category root-----------------*/
+.shop_category {
+    width: auto;
+    height: 4.4rem;
+
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+    .shop_category li {
+        font-size: 1.2rem;
+        color: #767676;
+    }
+    .shop_image {
+        position: relative;
+        float: left;
+        width: 70%;
+        height: 800px;
+        background: url(../images/image\ 48.png) no-repeat;
+    }
+    /*구매창 정보 시작*/
+    .shop_01_box {
+        position: relative;
+        float: left;
+        width: 30rem;
+        height: 74rem;
+
+        display: grid;
+        grid-template-rows: 6.6rem 8.8rem 11rem 3rem 12.8rem 6.5rem auto;
+    }
+        .shop_01_heart {
+            width: 2.4rem;
+            height: 2.4rem;
+            margin-bottom: 4rem;
+        }
+        .shop_01_color_all {
+            margin: 2.9rem 0;
+            width: 100%;
+            height: 5.8rem;
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: space-between;
+        }
+            .shop_01_color_all > h6 {
+                font-weight: var(--font-light);
+            }
+        .shop_01_color {
+            width: 100%;
+            height: 2.5rem;
+            display: flex;
+            flex-flow: row nowrap;
+            margin-left: 0.4rem;
+        }
+            .shop_01_color > li {
+                width: 2rem;
+                height: 2rem;
+                margin-right: 1rem;
+            }
+            .shop_01_color > li::after {
+                content: "";
+                width: 100%;
+                height: 1px;
+                background-color: #000;
+            }
+        /*options--------------------*/
+        .shop_01_option {
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: space-between;
+        }
+            .shop_01_option > h6 {
+                font-weight: var(--font-light);
+                color: #505050;
+            }
+        .quantity {
+            display: flex;
+            flex-flow: row nowrap;
+        }
+        .quantity_button {
+            display: flex;
+            flex-flow: row nowrap;
+        }
+        #add-cart {
+            width: 100%;
+            height: 4.2rem;
+            line-height: 4.2rem;
+            background-color: #000;
+            color: #fff;
+            font-size: 1.6rem;
+            font-weight: var(--font-light-white);
+        }
+        #contact-us {
+            width: 100%;
+            height: 4.2rem;
+            margin: 0.8rem 0;
+
+            font-size: 1.6rem;
+            border: 1px solid #000;
+        }
+        /*additional info-------------*/
+        .shop_01_info_all {
+            width: 100%;
+            height: 4.2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .shop_01_info {
+            width: 100%;
+            height: 20rem;
+        }
+            .shop_01_info > li {
+                width: 100%;
+                height: 3rem;
+                display: flex;
+                justify-content: space-between;
+            }

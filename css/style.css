@@ -13,6 +13,12 @@
     --slide-img-width: calc(100% - 2px);
 }
 
+.red {background-color: #851717;}
+.gray {background-color: #33334A;}
+.ivory {background-color: #EBE6E1;}
+.green {background-color: #3E5542;}
+.blue {background-color: #002950;}
+
 body {font-family: 'Roboto', sans-serif; font-weight: var(--font-light);}
 
 h2 {
@@ -48,3 +54,14 @@ p {
     font-weight: var(--font-light-white);
     transform : rotate(0.04deg);
 }
+/*select all-------*/
+select {
+    width: 16.5rem;
+    height: 3rem;
+    outline: 0;
+    border: 0;
+    border-bottom: 1px solid #d9d9d9;
+    padding: 4px;
+    font-size: 1.6rem;
+    font-weight: var(--font-light);
+  }

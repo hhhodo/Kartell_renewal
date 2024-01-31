@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head> 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kartell</title>
@@ -14,6 +14,9 @@
     <link href="./css/header.css" rel="stylesheet">
     <link href="./css/footer.css" rel="stylesheet">
     <link href="./css/media_responsive.css" rel="stylesheet">
+    <!--shop css-->
+    <link href="./css/shop_main_01.css" rel="stylesheet">
+    <link href="./css/shop_main_else.css" rel="stylesheet">
     <!--main-->
     <link href="./css/main.css" rel="stylesheet">
     <link href="./css/main_01_slide.css" rel="stylesheet">
@@ -33,7 +36,7 @@
         <div class="header_box">
             <ul class="header_menu_01">
                 <li>
-                    <a href="#home">
+                    <a href="./index.html">
                         <img src="./images/kartell_logo.svg">
                     </a>
                 </li>
@@ -313,81 +316,186 @@
     </header>
     <main>
         <section class="shop_main_01">
-            <div>
-                <img>이미지 구간
-            </div>
-            <div>
-                <ul>
-                    <li>Shop<img src="./images/arrow_small_right.svg"></li>
-                    <li>Seating<img src="./images/arrow_small_right.svg"></li>
-                    <li>chairs<img src="./images/arrow_small_right.svg"></li>
-                    <li>Product</li>
-                </ul>
-                <p>Ludovica + Roberto Palomba</p>
-                <p>
-                    HIRAY CHAIR
-                </p>
-                <ul>
-                    <li>colors</li>
-                </ul>
-                <ul>
-                    <li>options</li>
-                </ul>
-                <p>금액</p>
-            </div>
-        </section>
-        <!-- 2번째 네비게이션 메뉴-->
-        <nav>
-            <ul>
+            <div class="shop_main_all">
+            <!-- category root------>
+            <ul class="shop_category">
+                <li>Shop<img src="./images/arrow_small_right.svg"></li>
+                <li>Seating<img src="./images/arrow_small_right.svg"></li>
+                <li>chairs<img src="./images/arrow_small_right.svg"></li>
                 <li>Product</li>
-                <li>Gallery</li>
-                <li>Designers</li>
-                <li>Technical Files</li>
-                <li>additional information</li>
             </ul>
-        </nav>
-        <!--product information-->
-        <section class="shop_main_02">
-            <div>
-                <h2>For The Greening Of The Kartell Catalogue</h2>
-                <h3>The result is an essential and functional product that is nevertheless rich in emotion. Metal wires form well-defined yet lightweight structural parts of the collection’s chair, chair with arms, bistro table, armchair, divan and side table.</h3>
+            <div class="shop_image">
+                <img>
             </div>
-            <ul>
-                <li>
-                    <figure><img></figure>
-                    <h4>metal, one of the most important materials for the greening of the Kartell catalogue</h4>
-                </li>
-                <li>
-                    <figure><img></figure>
-                    <h4>uses the welded wire process to shape it</h4>
-                </li>
-                <li>
-                    <figure><img></figure>
-                    <h4>The various articles come in white, Bordeaux, black and green.</h4>
-                </li>
-            </ul>
-        </section>
-        <!--product gallery----------------->
-        <section class="main_03">
-            <div class="main_03_container">
-                <div class="main_03_img_01">
-                    <img src="./images/shop_03_01.png">
+            <!--우측 상품 구매창------------>
+            <div class="shop_01_box">
+                <button class="shop_01_heart"><img src="./images/heart_s_icon.svg"></button>
+                <!--title-->
+                <div class="shop_01_box_title">
+                    <p>Ludovica + Roberto Palomba</p>
+                    <h3>HIRAY CHAIR</h3>
+                    <h4>$410.00</h4>
                 </div>
-                    <div class="main_03_text_01">
-                        <h2>K LOVES THE PLANET</h2>
-                        <h4>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, to</h4>
-                    </div>
-                <div class="main_03_img_02">
-                    <img src="./images/shop_03_02.png">
+                <!--colors-->
+                <div class="shop_01_color_all">
+                    <h6>Colors</h6>
+                    <ul class="shop_01_color">
+                        <li class="red"></li>
+                        <li class="gray"></li>
+                        <li class="ivory"></li>
+                        <li class="green"></li>
+                        <li class="blue"></li>
+                    </ul>
                 </div>
-                <div class="main_03_text_02">
-                    <div class="main_03_text_all">
-                        <h2>KARTELL INSPIRATION</h2>
-                        <h4>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, to</h4>
+                <!--blank-->
+                <div>&nbsp;</div>
+                <!--options-->
+                <div class="shop_01_option">
+                    <p>Options</p>
+                    <h6>Armrest</h6>
+                    <select name="Armrest">
+                        <option value="Right_side" selected="selected">Right side</option>
+                        <option value="Left_side">Left side</option>
+                    </select>
+                    <!--수량정보-->
+                    <ul>
+                        <li class="quantity">
+                            <p>Quantity</p>
+                            <p>Limited</p>
+                        </li>
+                        <li class="quantity_button">
+                            <button><img src="./images/arrow_small_left.svg"></button>
+                            <div id='result'>1</div>
+                            <button><img src="./images/arrow_small_right.svg"></button>
+                        </li>
+                    </ul>
+                </div>
+                <!--blank-->
+                <div>&nbsp;</div>
+                <!--구매 관련 버튼들-->
+                <div>
+                    <button id="add-cart">Add to Cart</button>
+                    <button id="contact-us">Contact Us</button>
+                    
+                    <!--additional info------>
+                    <div class="shop_01_info_all">
+                        <p>Infotmation</p>
+                        <img src="./images/arrow_small_bottom.svg">
                     </div>
+                    <ul class="shop_01_info">
+                        <li>
+                            <p>Cover</p>
+                            <p>removable</p>
+                        </li>
+                        <li>
+                            <p>Product ID</p>
+                            <p>06283DM</p>
+                        </li>
+                        <li>
+                            <p>Use</p>
+                            <p>Outdoor</p>
+                        </li>
+                        <li>
+                            <p>Size</p>
+                            <p>54 x 67 cm</p>
+                        </li>
+                        <li>
+                            <p>Metarial</p>
+                            <p>Recycled</p>
+                        </li>
+                    </ul>
                 </div>
             </div>
+                
+            </div>
         </section>
+        <aside>
+            <!-- 2번째 네비게이션 메뉴-->
+            <nav class="shop_nav">
+                <ul class="shop_nav_all">
+                    <li><h4>Product</h4></li>
+                    <li><h4>Gallery</h4></li>
+                    <li><h4>Designers</h4></li>
+                    <li><h4>Technical Files</h4></li>
+                    <li><h4>additional information</h4></li>
+                </ul>
+            </nav>
+            <!--product information----------------->
+            <section class="shop_main_02">
+                <div>
+                    <h2>For The Greening Of The Kartell Catalogue</h2>
+                    <h3>The result is an essential and functional product that is nevertheless rich in emotion. Metal wires form well-defined yet lightweight structural parts of the collection’s chair, chair with arms, bistro table, armchair, divan and side table.</h3>
+                </div>
+                <ul>
+                    <li>
+                        <figure><img></figure>
+                        <h4>metal, one of the most important materials for the greening of the Kartell catalogue</h4>
+                    </li>
+                    <li>
+                        <figure><img></figure>
+                        <h4>uses the welded wire process to shape it</h4>
+                    </li>
+                    <li>
+                        <figure><img></figure>
+                        <h4>The various articles come in white, Bordeaux, black and green.</h4>
+                    </li>
+                </ul>
+            </section>
+            <!--product gallery----------------->
+            <section class="main_03">
+                <div class="main_03_container">
+                    <div class="main_03_img_01">
+                        <img src="./images/shop_03_01.png">
+                    </div>
+                        <div class="main_03_text_01">
+                            <h2>K LOVES THE PLANET</h2>
+                            <h4>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, to</h4>
+                        </div>
+                    <div class="main_03_img_02">
+                        <img src="./images/shop_03_02.png">
+                    </div>
+                    <div class="main_03_text_02">
+                        <div class="main_03_text_all">
+                            <h2>KARTELL INSPIRATION</h2>
+                            <h4>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, to</h4>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--Designers info------------------------>
+            <section class="shop_main_04">
+                <div></div>
+                <div>
+                    <h3>KARTELL EYEWEAR</h3>
+                    <h4>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed qu</h4>
+                    <a title="see more" href="#" class="main_text_button"><span>See More</span><img src="./images/arrow.svg"></a>
+                </div>
+            </section>
+            <!--Technical Files--------------------->
+            <section class="main_07">
+                <!--MyKartell@home------------->
+                <div class="main_07_content">
+                    <div class="main_07_text">
+                        <div class="main_07_title">MyKartell@home</div>
+                        <div class="main_07_text_button"><a title="see more" href="#"><span>Custom Order</span><img src="./images/arrow.svg"></a></div>
+                    </div>
+                </div>
+                <!--catalog------------->
+                <div class="main_07_content">
+                    <div class="main_07_text">
+                        <div class="main_07_title">CATALOGS</div>
+                        <div class="main_07_text_button"><a title="see more" href="#"><span>Download</span><img src="./images/arrow.svg"></a></div>
+                    </div>
+                </div>
+                <!--catalog------------->
+                <div class="main_07_content">
+                    <div class="main_07_text">
+                        <div class="main_07_title">Store Rocation</div>
+                        <div class="main_07_text_button"><a title="see more" href="#"><span>Find Shop</span><img src="./images/arrow.svg"></a></div>
+                    </div>
+                </div>
+            </section>
+        </aside>
     </main>
     <!--footer------------->
     <footer>
