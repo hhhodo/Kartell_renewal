@@ -1,4 +1,13 @@
 $(function(){
+    //scroll시 헤더 사이즈 조절
+    $(window).scroll(function(){
+        var scroll = $(window).scrollTop();
+        if (scroll > 50) {
+            $('.header_box').css({height:"6rem"});
+        } else {
+            $('.header_box').css({height:"8rem"});
+        }
+    })
     /**헤더 메뉴별로 호버시 나오는 내용 ------------------------------------*/
     //shoppage 호버시
     var shopPage = $(".header_menu_01 > li")

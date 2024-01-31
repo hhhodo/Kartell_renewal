@@ -70,37 +70,27 @@ $(document).ready(function() {
         }
     }
     //이미지 호버
-        var slideImgBox = $('.content_slide_img');
-
-        slideImgBox.hover(
-            function(){
-            var slideImg = $(this).find('img');
-            slideImg.eq(1).removeClass('remove');
-            slideImg.eq(0).addClass('remove');
-            
-        }, function(){
-            var slideImg = $(this).find('img');
-            slideImg.eq(0).removeClass('remove');
-            slideImg.eq(1).addClass('remove');
-        });
-
-        slideImgBox.each(function(){
-            var slideImg = $(this).find('img');
-            slideImg.eq(1).addClass('remove');
-
-            var slideImgBoxs = slideImg
-
-            //이미지 호버시
-            slideImgBoxs.hover(
+    slideImgBox();
+    function slideImgBox(){
+        $('.main_slide_con').each(function(){
+            var slideBox = $(this);
+            var slideImgAll = slideBox.find('.content_slide_img');
+            console.log(slideImgAll)
+    
+            //box hover
+            slideBox.hover(
                 function(){
+                    var slideImg = slideImgAll.find('img');
                     slideImg.eq(1).removeClass('remove');
                     slideImg.eq(0).addClass('remove');
+                    console.log(slideImg)
                 },
                 function(){
+                    var slideImg = slideImgAll.find('img');
                     slideImg.eq(0).removeClass('remove');
                     slideImg.eq(1).addClass('remove');
                 }
             )
         })
-        
+    }
 });
