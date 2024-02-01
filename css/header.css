@@ -68,6 +68,7 @@
             "a b c d e f";
             grid-template-columns: auto 26rem 26rem 5rem 26rem auto;
             transition: all 300ms ease-in-out;
+            z-index: 20;
         }
             .shop_img {
                 grid-area: a;

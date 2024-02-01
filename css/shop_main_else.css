@@ -3,26 +3,85 @@ aside {
     height: auto;
     position: relative;
 }
+/*navigations---------------*/
 .shop_nav {
     position: sticky;
     left: 0;
     top: 6rem;
-    z-index: 10;
+    z-index: 1;
 
     width: 100%;
-    height: 5.2rem;
+    height: 5.4rem;
     padding: 0 10rem;
     background-color: #fff;
 }
     .shop_nav_all {
         width: auto;
-        height: 5.2rem;
-        padding-top: 1rem;
+        height: 5.4rem;
+        padding-top: 1.2rem;
         display: flex;
     }
-    .shop_nav_all > li {
-        width: auto;
-        height: fit-content;
-        position: relative;
-        padding: 1rem 2.3rem;
+        .shop_nav_list {
+            color: #767676;
+            width: auto;
+            height: fit-content;
+            position: relative;
+            padding: 1rem 2.3rem;
+            border: none;
+        }
+        .shop_nav_list.selected {
+            color: #000;
+            border-bottom: 1px solid #000;
+        }
+/*main 02 start--------------------*/
+.shop_main_02 {
+    width: 100%;
+    height: auto;
+    padding: 0 10rem;
+}
+    .shop_main_02_text {
+        margin-top: 30rem;
+        margin-left: 9rem;
+        margin-bottom: 12.5rem;
+        width: 68rem;
+        height: 12.9rem;
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: space-between;
     }
+    .shop_details {
+        width: 100%;
+        display: flex;
+        flex-flow: row nowrap;
+    }
+/*shop_main_04*/
+.shop_main_04 {
+    width: 100%;
+    height: 100%;
+    margin-top: 44rem;
+    display: grid;
+    grid-template-columns: 35% 65%;
+    overflow: hidden;
+}
+    .shop_04_text_box {
+        width: 40rem;
+        height: 17rem;
+        margin-left: 30%;
+        margin-top: 18.5rem;
+    }
+    .shop_04_img {
+        width: auto;
+        display: flex;
+        flex-flow: row nowrap;
+    }
+        .shop_04_img img {
+            width: 43rem;
+            height: 60rem;
+            background-size: contain;
+        }
+/*shop main 05*/
+.shop_main_05 {
+    width: 100%;
+    height: auto;
+    margin-top: 56rem;
+}

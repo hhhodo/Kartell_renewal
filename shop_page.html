@@ -42,7 +42,7 @@
                 </li>
                 <!--shop page all------------>
                 <li>
-                    <a href="#" class="page_up">Shop</a>
+                    <a class="page_up">Shop</a>
                     <div class="page_all">
                         <!--좌측 이미지-->
                         <div class="shop_img">
@@ -315,128 +315,132 @@
         </div>
     </header>
     <main>
+        <!--shop main 01------------------------------->
         <section class="shop_main_01">
             <div class="shop_main_all">
-            <!-- category root------>
-            <ul class="shop_category">
-                <li>Shop<img src="./images/arrow_small_right.svg"></li>
-                <li>Seating<img src="./images/arrow_small_right.svg"></li>
-                <li>chairs<img src="./images/arrow_small_right.svg"></li>
-                <li>Product</li>
-            </ul>
-            <div class="shop_image">
-                <img>
-            </div>
-            <!--우측 상품 구매창------------>
-            <div class="shop_01_box">
-                <button class="shop_01_heart"><img src="./images/heart_s_icon.svg"></button>
-                <!--title-->
-                <div class="shop_01_box_title">
-                    <p>Ludovica + Roberto Palomba</p>
-                    <h3>HIRAY CHAIR</h3>
-                    <h4>$410.00</h4>
+                <!-- category root------>
+                <ul class="shop_category">
+                    <li>Shop<img src="./images/arrow_small_right.svg"></li>
+                    <li>Seating<img src="./images/arrow_small_right.svg"></li>
+                    <li>chairs<img src="./images/arrow_small_right.svg"></li>
+                    <li>Product</li>
+                </ul>
+                <div class="shop_image">
+                    <img>
                 </div>
-                <!--colors-->
-                <div class="shop_01_color_all">
-                    <h6>Colors</h6>
-                    <ul class="shop_01_color">
-                        <li class="red"></li>
-                        <li class="gray"></li>
-                        <li class="ivory"></li>
-                        <li class="green"></li>
-                        <li class="blue"></li>
-                    </ul>
-                </div>
-                <!--blank-->
-                <div>&nbsp;</div>
-                <!--options-->
-                <div class="shop_01_option">
-                    <p>Options</p>
-                    <h6>Armrest</h6>
-                    <select name="Armrest">
-                        <option value="Right_side" selected="selected">Right side</option>
-                        <option value="Left_side">Left side</option>
-                    </select>
-                    <!--수량정보-->
-                    <ul>
-                        <li class="quantity">
-                            <p>Quantity</p>
-                            <p>Limited</p>
-                        </li>
-                        <li class="quantity_button">
-                            <button><img src="./images/arrow_small_left.svg"></button>
-                            <div id='result'>1</div>
-                            <button><img src="./images/arrow_small_right.svg"></button>
-                        </li>
-                    </ul>
-                </div>
-                <!--blank-->
-                <div>&nbsp;</div>
-                <!--구매 관련 버튼들-->
-                <div>
-                    <button id="add-cart">Add to Cart</button>
-                    <button id="contact-us">Contact Us</button>
-                    
-                    <!--additional info------>
-                    <div class="shop_01_info_all">
-                        <p>Infotmation</p>
-                        <img src="./images/arrow_small_bottom.svg">
+                <!--우측 상품 구매창------------>
+                <div class="shop_01_box">
+                    <div class="shop_01_all">
+                    <!--heart-->
+                    <button class="shop_01_heart"><img src="./images/heart_s_icon.svg"></button>
+                    <!--title-->
+                    <div class="shop_01_box_title">
+                        <p>Ludovica + Roberto Palomba</p>
+                        <h3>HIRAY CHAIR</h3>
+                        <h4 class="font_gray">$ 410.00</h4>
                     </div>
-                    <ul class="shop_01_info">
-                        <li>
-                            <p>Cover</p>
-                            <p>removable</p>
-                        </li>
-                        <li>
-                            <p>Product ID</p>
-                            <p>06283DM</p>
-                        </li>
-                        <li>
-                            <p>Use</p>
-                            <p>Outdoor</p>
-                        </li>
-                        <li>
-                            <p>Size</p>
-                            <p>54 x 67 cm</p>
-                        </li>
-                        <li>
-                            <p>Metarial</p>
-                            <p>Recycled</p>
-                        </li>
-                    </ul>
+                    <!--colors-->
+                    <div class="shop_01_color_all">
+                        <p class="font_gray">Colors</p>
+                        <ul class="shop_01_color">
+                            <li class="red"></li>
+                            <li class="gray"></li>
+                            <li class="ivory"></li>
+                            <li class="green"></li>
+                            <li class="blue"></li>
+                        </ul>
+                    </div>
+                    <!--options start-->
+                    <div class="shop_01_option">  
+                        <p class="font_gray">Armrest</p>
+                        <!--팔걸이선택-->
+                        <div class="shop_armrest">
+                            <button class="armrest_btn">
+                                <ul>
+                                    <li class="armrest_selected">
+                                        <h4>Right side</h4>
+                                        <img src="./images/arrow_small_b_bottom.svg">
+                                    </li>
+                                    <li class="armrest_select">Right side</li>
+                                    <li class="armrest_select">Left side</li>
+                                </ul>
+                            </button>
+                        </div>
+                        <!--수량정보-->
+                        <ul class="shop_quantity">
+                            <li class="quantity_button">
+                                <button><img src="./images/icon_minus.svg"></button>
+                                <div class="quantity_num" id='result'>1</div>
+                                <button><img src="./images/icon_plus.svg"></button>
+                            </li>
+                            <li class="quantity_limited">Limited Edition</li>
+                        </ul>
+                    </div>
+                    <!--구매 관련 버튼들-->
+                    <div>
+                        <button id="add-cart">Add to Cart</button>
+                        <button id="contact-us">Contact Us</button>
+                        
+                        <!--additional info------>
+                        <div class="shop_01_info_all">
+                            <p>Infotmation</p>
+                            <img src="./images/arrow_small_bottom.svg">
+                        </div>
+                        <ul class="shop_01_info">
+                            <li>
+                                <p>Cover</p>
+                                <p>removable</p>
+                            </li>
+                            <li>
+                                <p>Product ID</p>
+                                <p>06283DM</p>
+                            </li>
+                            <li>
+                                <p>Use</p>
+                                <p>Outdoor</p>
+                            </li>
+                            <li>
+                                <p>Size</p>
+                                <p>54 x 67 cm</p>
+                            </li>
+                            <li>
+                                <p>Metarial</p>
+                                <p>Recycled</p>
+                            </li>
+                        </ul>
+                    </div>
+                    </div>
                 </div>
-            </div>
-                
             </div>
         </section>
         <aside>
             <!-- 2번째 네비게이션 메뉴-->
             <nav class="shop_nav">
                 <ul class="shop_nav_all">
-                    <li><h4>Product</h4></li>
-                    <li><h4>Gallery</h4></li>
-                    <li><h4>Designers</h4></li>
-                    <li><h4>Technical Files</h4></li>
-                    <li><h4>additional information</h4></li>
+                    <li class="shop_nav_list selected"><h4>Product</h4></li>
+                    <li class="shop_nav_list"><h4>Gallery</h4></li>
+                    <li class="shop_nav_list"><h4>Designers</h4></li>
+                    <li class="shop_nav_list"><h4>Technical Files</h4></li>
+                    <li class="shop_nav_list"><h4>additional information</h4></li>
                 </ul>
             </nav>
             <!--product information----------------->
             <section class="shop_main_02">
-                <div>
+                <div class="shop_main_02_text">
                     <h2>For The Greening Of The Kartell Catalogue</h2>
-                    <h3>The result is an essential and functional product that is nevertheless rich in emotion. Metal wires form well-defined yet lightweight structural parts of the collection’s chair, chair with arms, bistro table, armchair, divan and side table.</h3>
+                    <h4>The result is an essential and functional product that is nevertheless rich in emotion. Metal wires form well-defined yet lightweight structural parts of the collection’s chair, chair with arms, bistro table, armchair, divan and side table.</h4>
                 </div>
-                <ul>
+                <ul class="shop_details">
                     <li>
-                        <figure><img></figure>
+                        <figure><img src="./images/shop_main02_01.png"></figure>
                         <h4>metal, one of the most important materials for the greening of the Kartell catalogue</h4>
                     </li>
                     <li>
-                        <figure><img></figure>
+                        <figure><img src="./images/shop_main02_02.png"></figure>
                         <h4>uses the welded wire process to shape it</h4>
                     </li>
                     <li>
-                        <figure><img></figure>
+                        <figure><img src="./images/shop_main02_03.png"></figure>
                         <h4>The various articles come in white, Bordeaux, black and green.</h4>
                     </li>
                 </ul>
@@ -464,13 +468,91 @@
             </section>
             <!--Designers info------------------------>
             <section class="shop_main_04">
-                <div></div>
-                <div>
-                    <h3>KARTELL EYEWEAR</h3>
-                    <h4>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed qu</h4>
+                <div class="shop_04_text_box">
+                    <h3>Ludovica + Roberto Palomba</h3>
+                    <h4>They collaborate with several international leading design companies and their projects have been awarded.</h4>
                     <a title="see more" href="#" class="main_text_button"><span>See More</span><img src="./images/arrow.svg"></a>
                 </div>
+                <ul class="shop_04_img">
+                    <li><img src="./images/shop_04_01.png"></li>
+                    <li><img src="./images/shop_04_02.png"></li>
+                    <li><img src="./images/shop_04_03.png"></li>
+                </ul>
             </section>
+            
+            <!--Our Recommend------------------>
+            <div class="shop_main_05">
+                <span class="main_02_item_title"><h3>OUR RECOMMEND</h3></span>
+                <div class="slide_wrapper">
+                    <ul class="main_item_slides">
+                        <!--item 01-------------------->
+                        <li class="main_slide_con">
+                            <div class="content_slide_img">
+                                <img src="./images/eyewear01.png">
+                                <img src="./images/eyewear01_texture.png" class="remove">
+                            </div>
+                            <div class="main_item_text">
+                                <h4>Borderino New</h4>
+                                <h6>165,000</h6>
+                            </div>
+                        </li>
+                        <!--item 02----------------------->
+                        <li class="main_slide_con">
+                            <div class="content_slide_img">
+                                <img src="./images/eyewear02.png">
+                                <img src="./images/eyewear02_texture.png" class="remove">
+                            </div>
+                            <div class="main_item_text">
+                                <h4>Borderino New</h4>
+                                <h6>165,000</h6>
+                            </div>
+                        </li>
+                        <!--item 03---------------------->
+                        <li class="main_slide_con">
+                            <div class="content_slide_img">
+                                <img src="./images/eyewear03.png">
+                                <img src="./images/eyewear03_texture.png" class="remove">
+                            </div>
+                            <div class="main_item_text">
+                                <h4>Borderino New</h4>
+                                <h6>165,000</h6>
+                            </div>
+                        </li>
+                        <!--item 04----------------------->
+                        <li class="main_slide_con">
+                            <div class="content_slide_img">
+                                <img src="./images/eyewear04.png">
+                                <img src="./images/eyewear04_texture.png" class="remove">
+                            </div>
+                            <div class="main_item_text">
+                                <h4>Borderino New</h4>
+                                <h6>165,000</h6>
+                            </div>
+                        </li>
+                        <!--item 05------------------------>
+                        <li class="main_slide_con">
+                            <div class="content_slide_img">
+                                <img src="./images/eyewear05.png">
+                                <img src="./images/eyewear05_texture.png" class="remove">
+                            </div>
+                            <div class="main_item_text">
+                                <h4>Borderino New</h4>
+                                <h6>165,000</h6>
+                            </div>
+                        </li>
+                        <!--item 06------------------------>
+                        <li class="main_slide_con">
+                            <div class="content_slide_img">
+                                <img src="./images/eyewear06.png">
+                                <img src="./images/eyewear06_texture.png" class="remove">
+                            </div>
+                            <div class="main_item_text">
+                                <h4>Borderino New</h4>
+                                <h6>165,000</h6>
+                            </div>
+                        </li>
+                    </ul>
+                </div></div>
             <!--Technical Files--------------------->
             <section class="main_07">
                 <!--MyKartell@home------------->
