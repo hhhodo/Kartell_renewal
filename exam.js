@@ -1,9 +1,24 @@
 import * as THREE from 'three';
+import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 
-const width = window.innerWidth, height = window.innerHeight;
+const loader = new GLTFLoader();
+
+loader.load( './hiray00.gltf', function ( gltf ) {
+
+	scene.add( gltf.scene );
+
+}, undefined, function ( error ) {
+
+	console.error( error );
+
+} );
+
 
 // init
+/*
 
+
+const width = window.innerWidth, height = window.innerHeight;
 const camera = new THREE.PerspectiveCamera( 70, width / height, 0.01, 10 );
 camera.position.z = 1;
 
@@ -30,3 +45,4 @@ function animation( time ) {
 	renderer.render( scene, camera );
 
 }
+*/

@@ -20,7 +20,7 @@
             width: 850px;
             height: 900px;
             background-image: url(../images/main_01.png);
-            background-size: contain;
+            background-size: cover;
         }
         .main_01_slide01_bg {
             position: absolute;
@@ -38,7 +38,7 @@
         width: 850px;
         height: 900px;
         background-image: url(../images/main_01_02-2.png);
-        background-size: contain;
+        background-size: cover;
     }
     .main_01_slide03 {
         display: none;
@@ -47,5 +47,5 @@
         width: 850px;
         height: 900px;
         background-image: url(../images/main_01_03-2.png);
-        background-size: contain;
+        background-size: cover;
     }

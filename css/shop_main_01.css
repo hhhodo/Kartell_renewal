@@ -12,12 +12,12 @@ main {
 .shop_main_all {
     padding-top: 8rem;
     width: 100%;
-    height: 3800px;
+    height: 2000px;
     position: absolute;
 }
 /*category root-----------------*/
 .shop_category {
-    width: 75%;
+    width: fit-content;
     height: 3.4rem;
 
     display: flex;
@@ -40,7 +40,7 @@ main {
     /*구매창 정보 시작------------------------------------*/
     .shop_01_box {
         position: sticky;
-        top: 0px;
+        top: 6rem;
         left: 75%;
         width: 25%;
         height: 80rem;
