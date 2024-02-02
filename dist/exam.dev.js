@@ -15,7 +15,10 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 var scene = new THREE.Scene();
 var renderer = new THREE.WebGLRenderer();
 var camera = new THREE.PerspectiveCamera(30, 1);
-var loader = new _OBJLoader.OBJLoader(); // init
+var loader = new _GLTFLoader.GLTFLoader();
+loader.load("./HIRAY_CHAIR/hiray00.gltf", function (gltf) {
+  scene.add(gltf.scene);
+}); // init
 
 /*
 

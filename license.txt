@@ -1,0 +1,11 @@
+Model Information:
+* title:	Kartell Kabuki
+* source:	https://sketchfab.com/3d-models/kartell-kabuki-5cd1463963bd4f1ebca87f1142bea512
+* author:	cairo_de (https://sketchfab.com/cairo_de)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Kartell Kabuki" (https://sketchfab.com/3d-models/kartell-kabuki-5cd1463963bd4f1ebca87f1142bea512) by cairo_de (https://sketchfab.com/cairo_de) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

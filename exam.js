@@ -5,7 +5,11 @@ import { OBJLoader } from 'three/addons/loaders/OBJLoader.js';
 const scene = new THREE.Scene();
 const renderer = new THREE.WebGLRenderer();
 let camera = new THREE.PerspectiveCamera(30,1);
-const loader = new OBJLoader();
+const loader = new GLTFLoader();
+
+loader.load("./HIRAY_CHAIR/hiray00.gltf", function (gltf) {
+	scene.add(gltf.scene);
+  });
 // init
 /*
 
