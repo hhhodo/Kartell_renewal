@@ -1,17 +1,11 @@
-import * as THREE from '/node_modules/three/build/three.module.js';
-import { GLTFLoader } from '/three/addons/loaders/GLTFLoader.js';
-console.log(GLTFLoader)
-
-const loader = new GLTFLoader();
-loader.load('hiray00.gltf')
+import * as THREE from 'three';
+import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+import { OBJLoader } from 'three/addons/loaders/OBJLoader.js';
 
 const scene = new THREE.Scene();
-const renderer = new THREE.WebGLRenderer({
-	canvas : document.querySelector('#canvas')
-});
-
-renderer.render(scene)
-
+const renderer = new THREE.WebGLRenderer();
+let camera = new THREE.PerspectiveCamera(30,1);
+const loader = new OBJLoader();
 // init
 /*
 
