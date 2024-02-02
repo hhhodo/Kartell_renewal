@@ -1,5 +1,6 @@
-import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
-import * as THREE from 'three';
+import * as THREE from '/node_modules/three/build/three.module.js';
+import { GLTFLoader } from '/three/addons/loaders/GLTFLoader.js';
+console.log(GLTFLoader)
 
 const loader = new GLTFLoader();
 loader.load('hiray00.gltf')
