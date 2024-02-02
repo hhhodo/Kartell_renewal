@@ -1,18 +1,15 @@
-import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+import * as THREE from 'three';
 
 const loader = new GLTFLoader();
+loader.load('hiray00.gltf')
 
-loader.load( './hiray00.gltf', function ( gltf ) {
+const scene = new THREE.Scene();
+const renderer = new THREE.WebGLRenderer({
+	canvas : document.querySelector('#canvas')
+});
 
-	scene.add( gltf.scene );
-
-}, undefined, function ( error ) {
-
-	console.error( error );
-
-} );
-
+renderer.render(scene)
 
 // init
 /*
