@@ -6,29 +6,28 @@
 }
 /*슬라이드 01번--------------------------*/
     .main_01_slide01 {
-        position: relative;
-        float: right;
-        margin-right: 200px;
-        width: 1050px;
+        display: block;
+        position: absolute;
+        left: 0;
+        width: 100%;
         height: 900px;
         overflow: hidden;
+        padding-top: 10rem;
+        transition: all 300ms ease-in-out;
     }
-        .main_01_slide01_img {
+        .main_01_img {
             position: absolute;
-            left: 100px;
-            top: 0px;
+            left: 45%;
+            top: 10rem;
             width: 850px;
-            height: 900px;
-            background-image: url(../images/main_01.png);
-            background-size: cover;
+            height: 700px;
         }
-        .main_01_slide01_bg {
+        .main_01_bg {
             position: absolute;
-            left: 200px;
-            top: 0px;
+            left: 45%;
+            top: 10rem;
             width: 850px;
-            height: 900px;
-            background-image: url(../images/main_01_blur.png);
+            height: 700px;
             z-index: -1;
         }
     .main_01_slide02 {
@@ -37,7 +36,6 @@
         left: 1920px;
         width: 850px;
         height: 900px;
-        background-image: url(../images/main_01_02-2.png);
         background-size: cover;
     }
     .main_01_slide03 {
@@ -46,6 +44,5 @@
         left: -850px;
         width: 850px;
         height: 900px;
-        background-image: url(../images/main_01_03-2.png);
         background-size: cover;
     }
