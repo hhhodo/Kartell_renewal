@@ -2,7 +2,7 @@ aside {
     width: 100%;
     height: auto;
     position: relative;
-    margin-top: 20rem;
+    margin-top: 1.5rem;
 }
 /*navigations---------------*/
 .shop_nav {
@@ -12,14 +12,13 @@ aside {
     z-index: 1;
 
     width: 100%;
-    height: 5.4rem;
-    padding: 0 10rem;
+    height: 4.2rem;
     background-color: #fff;
 }
     .shop_nav_all {
-        width: auto;
-        height: 5.4rem;
-        padding-top: 1.2rem;
+        width: fit-content;
+        height: 4.2rem;
+        margin: 0 auto;
         display: flex;
     }
         .shop_nav_list {
@@ -27,7 +26,10 @@ aside {
             width: auto;
             height: fit-content;
             position: relative;
-            padding: 1rem 2.3rem;
+
+            font-size: 1.5rem;
+            line-height: 2rem;
+            padding: 1.1rem 2rem;
             border: none;
         }
         .shop_nav_list.selected {
@@ -69,7 +71,7 @@ aside {
     .shop_04_text_box {
         width: 40rem;
         height: 15.6rem;
-        padding-left: 6rem;
+        padding-right: 6rem;
         margin-top: 15rem;
 
         display: flex;
