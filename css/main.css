@@ -241,19 +241,19 @@
 .main_05 {
     position: relative;
     width: 100%;
-    height: 85rem;
-    padding-left: 20rem;
+    height: 80rem;
+    padding-left: 10rem;
     margin-top: 60rem;
 }
     .main_05_container {
         width: 100%;
-        height: 85rem;
+        height: 80rem;
         display: flex;
         position: relative;
     }
         .main_05_img {
-            width: 70rem;
-            height: 85rem;
+            width: 75rem;
+            height: 80rem;
             background: url(../images/shop_by_look_01.jpg) no-repeat;
             background-size: cover;
         }
