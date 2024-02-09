@@ -7,22 +7,33 @@ main {
 .shop_main_01 {
     position: relative;
     width: 100%;
-    height: 200vh;
+    height: 300vh;
 }
 .shop_main_all {
-    padding-top: 8rem;
     width: 100%;
-    height: 2000px;
-    position: absolute;
+    height: 100rem;
+    position: sticky;
+    left: 0;
+    top: 8rem;
+    display: grid;
+    grid-template-columns: 25% minmax(40rem, auto) calc(25rem + 12%);
 }
 /*category root-----------------*/
+.shop_main_blank {
+    width: 100%;
+    height: 100rem;
+    position: relative;
+}
 .shop_category {
-    width: fit-content;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 29rem;
     height: 3.4rem;
 
     display: flex;
     flex-flow: row nowrap;
-    padding-left: 10rem;
+    margin-left: 10rem;
     padding-top: 1rem;
     position: relative;
 }
@@ -32,17 +43,15 @@ main {
         color: #767676;
     }
     .shop_image {
-        position: relative;
-        float: left;
-        width: 75%;
-        height: 800px;
+        margin: 0 auto;
+        width: 80rem;
+        height: 80rem;
     }
     /*구매창 정보 시작------------------------------------*/
     .shop_01_box {
-        position: sticky;
-        top: 6rem;
-        left: 75%;
-        width: 25%;
+        position: relative;
+        float: left;
+        width: 25rem;
         height: 80rem;
         display: flex;
     }
@@ -60,12 +69,12 @@ main {
             position: relative;
             width: 100%;
             height: 8.4rem;
-            margin-bottom: 4.2rem;
+            margin-bottom: 3.5rem;
         }
         .shop_01_color_all {
             position: relative;
             width: 100%;
-            height: 8rem;
+            height: 7.5rem;
             display: flex;
             flex-flow: column wrap;
             justify-content: space-between;
@@ -88,7 +97,7 @@ main {
                 height: 2rem;
                 margin-right: 1rem;
             }
-            .red::after {
+            .ivory::after {
                 content: "";
                 display: block;
                 margin-top: 2.4rem;
@@ -121,7 +130,7 @@ main {
         /*팔걸이 파트-----------------*/
         .armrest_btn {
             position: relative;
-            width: 17rem;
+            width: 19rem;
             height: 4rem;
             border-bottom: 1px solid #d9d9d9;
             padding-left: 0.8rem;

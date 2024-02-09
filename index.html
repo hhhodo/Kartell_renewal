@@ -26,8 +26,10 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <!--javascript-->
     <script src="./javascript/header_inner_menu.js"></script>
+    <script src="./javascript/main_01_all.js"></script>
     <script src="./javascript/main_04_scroll.js"></script>
     <script src="./javascript/main_05_scroll.js"></script>
+    <script src="./javascript/main_06_scroll.js"></script>
 </head>
 <body>
     <!--header part----------------------------->
@@ -318,11 +320,17 @@
         <section class="main_01">
             <ul class="main_01_wrapper">
                 <li class="main_01_slide01">
-                    <div class="main_01_slide01_img"></div>
-                    <div class="main_01_slide01_bg"></div>
+                    <div class="main_01_img"><img src="./images/retouch/main_01 copy.png"></div>
+                    <div class="main_01_bg"><img src="./images/retouch/main_01 copy 1.png"></div>
                 </li>
-                <li class="main_01_slide02"></li>
-                <li class="main_01_slide03"></li>
+                <li class="main_01_slide02">
+                    <div class="main_01_img"><img src="./images/retouch/main_01_02 copy.png"></div>
+                    <div class="main_01_bg"><img src="./images/retouch/main_01_02 copy 1.png"></div>
+                </li>
+                <li class="main_01_slide03">
+                    <div class="main_01_img"><img src="./images/retouch/main_01_03 copy.png"></div>
+                    <div class="main_01_bg"><img src="./images/retouch/main_01_03 copy 1.png"></div>
+                </li>
 
                 <!--main background bg------------>
             </ul>
@@ -335,8 +343,8 @@
             </div>
             
             <div class="main_page_arrow">
-                <button><img src="./images/left_arrow.svg"></button>
-                <button><img src="./images/right_arrow.svg"></button>
+                <button><img src="./images/left_arrow.svg" id="main_01_prev"></button>
+                <button><img src="./images/right_arrow.svg" id="main_01_next"></button>
             </div>
         </section>
 
@@ -358,7 +366,7 @@
                         </div>
                         <ul class="main_02_bar_page">
                             <li><img src="./images/arrow_small_left.svg"></li>
-                            <li>정지</li>
+                            <li><img src="./images/stop_button.svg"></li>
                             <li><img src="./images/arrow_small_right.svg"></li>
                         </ul>
                     </div>
@@ -375,7 +383,7 @@
                         <li class="main_slide_con">
                             <div class="content_slide_img">
                                 <img src="./images/shinewhite01.png">
-                                <img src="./images/eyewear01_texture.png" class="remove">
+                                <img src="./images/shinewhite01_texture.png" class="remove">
                             </div>
                             <div class="main_item_text">
                                 <h4>Componibili Classic Big</h4>
@@ -386,7 +394,7 @@
                         <li class="main_slide_con">
                             <div class="content_slide_img">
                                 <img src="./images/shinewhite02.png">
-                                <img src="./images/eyewear02_texture.png" class="remove">
+                                <img src="./images/shinewhite02_texture.png" class="remove">
                             </div>
                             <div class="main_item_text">
                                 <h4>Geen-A</h4>
@@ -397,7 +405,7 @@
                         <li class="main_slide_con">
                             <div class="content_slide_img">
                                 <img src="./images/shinewhite03.png">
-                                <img src="./images/eyewear01_texture.png" class="remove">
+                                <img src="./images/shinewhite03_texture.png" class="remove">
                             </div>
                             <div class="main_item_text">
                                 <h4>K-Waiting Armchair Bouclè</h4>
@@ -408,7 +416,7 @@
                         <li class="main_slide_con">
                             <div class="content_slide_img">
                                 <img src="./images/shinewhite04.png">
-                                <img src="./images/eyewear02_texture.png" class="remove">
+                                <img src="./images/shinewhite04_texture.png" class="remove">
                             </div>
                             <div class="main_item_text">
                                 <h4>Bubble</h4>
@@ -419,7 +427,7 @@
                         <li class="main_slide_con">
                             <div class="content_slide_img">
                                 <img src="./images/shinewhite05.png">
-                                <img src="./images/eyewear02_texture.png" class="remove">
+                                <img src="./images/shinewhite05_texture.png" class="remove">
                             </div>
                             <div class="main_item_text">
                                 <h4>Goodnight</h4>
@@ -430,7 +438,7 @@
                         <li class="main_slide_con">
                             <div class="content_slide_img">
                                 <img src="./images/shinewhite06.png">
-                                <img src="./images/eyewear02_texture.png" class="remove">
+                                <img src="./images/shinewhite06_texture.png" class="remove">
                             </div>
                             <div class="main_item_text">
                                 <h4>A.I. Stool Light 65 cm</h4>
@@ -441,7 +449,7 @@
                         <li class="main_slide_con">
                             <div class="content_slide_img">
                                 <img src="./images/shinewhite07.png">
-                                <img src="./images/eyewear02_texture.png" class="remove">
+                                <img src="./images/shinewhite07_texture.png" class="remove">
                             </div>
                             <div class="main_item_text">
                                 <h4>DR.No</h4>
@@ -452,7 +460,7 @@
                         <li class="main_slide_con">
                             <div class="content_slide_img">
                                 <img src="./images/shinewhite08.png">
-                                <img src="./images/eyewear02_texture.png" class="remove">
+                                <img src="./images/shinewhite08_texture.png" class="remove">
                             </div>
                             <div class="main_item_text">
                                 <h4>Shanghai</h4>
@@ -672,46 +680,97 @@
                     </ul>-->
                 </div>
                 <div  class="main_100_bar"></div>
-                <div class="main_06_contents">
-                    <!--1번 카탈로그-->
-                    <div class="main_06_01_all">
-                        <div class="main_06_01_img"><img src="./images/main_06_01.png"></div>
-                        <ul class="main_06_01_text">
-                            <h3 class="main_06_text_01">Wall Paper</h3>
-                            <p class="main_06_text_02">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed qu</p>
-                            <h5 class="main_06_text_03">Italia</h5>
-                            <h5 class="main_06_text_04">11 2023</h5>
-                        </ul>
+                <div class="main_06_contents_all">
+                    <div class="main_06_contents">
+                        <!--1번 카탈로그-->
+                        <div class="main_06_01_all">
+                            <div class="main_06_01_img"><img src="./images/main_06_01.png"></div>
+                            <ul class="main_06_01_text">
+                                <li>
+                                    <h3 class="main_06_text_01">Kartell 4ARCH</h3>
+                                    <p class="main_06_text_02">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed qu</p>
+                                </li>
+                                <li>
+                                    <h5 class="main_06_text_03">Italia</h5>
+                                    <h5 class="main_06_text_04">11 2023</h5>
+                                </li>
+                            </ul>
+                        </div>
+                        <!--2번 카탈로그-->
+                        <div class="main_06_01_all">
+                            <div class="main_06_01_img"><img src="./images/main_06_02.png"></div>
+                            <ul class="main_06_01_text">
+                                <li>
+                                    <h3 class="main_06_text_01">Kartell Museum for ApritiModa</h3>
+                                    <p class="main_06_text_02">“Kartell Museo and the discreet charm of elegance”</p>
+                                </li>
+                                <li>
+                                    <h5 class="main_06_text_03">Italia</h5>
+                                    <h5 class="main_06_text_04">11 2023</h5>
+                                </li>
+                            </ul>
+                        </div>
+                        <!--3번 카탈로그-->
+                        <div class="main_06_01_all">
+                            <div class="main_06_01_img"><img src="./images/main_06_04.png"></div>
+                            <ul class="main_06_01_text">
+                                <li>
+                                    <h3 class="main_06_text_01">MyKartell – New Collection</h3>
+                                    <p class="main_06_text_02">A real lifestyle where everyone can choose a piece and make it their own.</p>
+                                </li>
+                                <li>
+                                    <h5 class="main_06_text_03">Italia</h5>
+                                    <h5 class="main_06_text_04">11 2023</h5>
+                                </li>
+                            </ul>
+                        </div>
+                        <!--4번 카탈로그-->
+                        <div class="main_06_01_all">
+                            <div class="main_06_01_img"><img src="./images/main_06_03.png"></div>
+                            <ul class="main_06_01_text">
+                                <li>
+                                    <h3 class="main_06_text_01">Eleganza wins Red Dot Award</h3>
+                                    <p class="main_06_text_02">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed qu</p>
+                                </li>
+                                <li>
+                                    <h5 class="main_06_text_03">Italia</h5>
+                                    <h5 class="main_06_text_04">11 2023</h5>
+                                </li>
+                            </ul>
+                        </div>
+                        <!--5번 카탈로그-->
+                        <div class="main_06_01_all">
+                            <div class="main_06_01_img"><img src="./images/main_06_05.png"></div>
+                            <ul class="main_06_01_text">
+                                <li>
+                                    <h3 class="main_06_text_01">Kartell 4ARCH</h3>
+                                    <p class="main_06_text_02">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed qu</p>
+                                </li>
+                                <li>
+                                    <h5 class="main_06_text_03">Italia</h5>
+                                    <h5 class="main_06_text_04">11 2023</h5>
+                                </li>
+                            </ul>
+                        </div>
+                        <!--6번 카탈로그-->
+                        <div class="main_06_01_all">
+                            <div class="main_06_01_img"><img src="./images/main_06_06.png"></div>
+                            <ul class="main_06_01_text">
+                                <li>
+                                    <h3 class="main_06_text_01">Kartell Museum for ApritiModa</h3>
+                                    <p class="main_06_text_02">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed qu</p>
+                                </li>
+                                <li>
+                                    <h5 class="main_06_text_03">Italia</h5>
+                                    <h5 class="main_06_text_04">11 2023</h5>
+                                </li>
+                            </ul>
+                        </div>
+                        
                     </div>
-                    <!--2번 카탈로그-->
-                    <div class="main_06_01_all">
-                        <div class="main_06_01_img"><img src="./images/main_06_01.png"></div>
-                        <ul class="main_06_01_text">
-                            <h3 class="main_06_text_01">Wall Paper</h3>
-                            <p class="main_06_text_02">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed qu</p>
-                            <h5 class="main_06_text_03">Italia</h5>
-                            <h5 class="main_06_text_04">11 2023</h5>
-                        </ul>
-                    </div>
-                    <!--3번 카탈로그-->
-                    <div class="main_06_01_all">
-                        <div class="main_06_01_img"><img src="./images/main_06_01.png"></div>
-                        <ul class="main_06_01_text">
-                            <h3 class="main_06_text_01">Wall Paper</h3>
-                            <p class="main_06_text_02">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed qu</p>
-                            <h5 class="main_06_text_03">Italia</h5>
-                            <h5 class="main_06_text_04">11 2023</h5>
-                        </ul>
-                    </div>
-                    <!--4번 카탈로그-->
-                    <div class="main_06_01_all">
-                        <div class="main_06_01_img"><img src="./images/main_06_01.png"></div>
-                        <ul class="main_06_01_text">
-                            <h3 class="main_06_text_01">Wall Paper</h3>
-                            <p class="main_06_text_02">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed qu</p>
-                            <h5 class="main_06_text_03">Italia</h5>
-                            <h5 class="main_06_text_04">11 2023</h5>
-                        </ul>
+                    <div class="main_page_arrow">
+                        <button><img src="./images/left_arrow.svg" id="main_06_prev"></button>
+                        <button><img src="./images/right_arrow.svg" id="main_06_next"></button>
                     </div>
                 </div>
             </div>

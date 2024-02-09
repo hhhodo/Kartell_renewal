@@ -23,6 +23,9 @@
     <link href="./css/main_04_item_slide.css" rel="stylesheet">
     <link href="./css/main_02_item_slide.css" rel="stylesheet">
 
+    <!--lottie 링크-->
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@1/dist/lottie-player.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
     <!--JQuery------->
     <script src="./javascript/jquery-3.7.1.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
@@ -316,17 +319,42 @@
     </header>
     <main>
         <!--shop main 01------------------------------->
-        <section class="shop_main_01">
+        <section class="shop_main_01" id="shop_container">
             <div class="shop_main_all">
                 <!-- category root------>
-                <ul class="shop_category">
-                    <li>Shop<img src="./images/arrow_small_right.svg"></li>
-                    <li>Seating<img src="./images/arrow_small_right.svg"></li>
-                    <li>chairs<img src="./images/arrow_small_right.svg"></li>
-                    <li>Product</li>
-                </ul>
+                <div class="shop_main_blank">
+                    <ul class="shop_category">
+                        <li>Shop<img src="./images/arrow_small_right_gray.svg"></li>
+                        <li>Seating<img src="./images/arrow_small_right_gray.svg"></li>
+                        <li>chairs<img src="./images/arrow_small_right_gray.svg"></li>
+                        <li>Product</li>
+                    </ul>
+                </div>
                 <div class="shop_image">
-                    <img>
+                    <lottie-player id="kabuki" class="black_kabuki" src="./json/0019.json">
+                    </lottie-player>
+                            <script type="module">
+                                LottieInteractivity.create({
+                                player: '#kabuki',
+                                mode: 'scroll',
+                                container: '#shop_container',
+                                actions: [
+                                    {
+                                    visibility: [0, 0.2],
+                                    type: "stop",
+                                    frames: [1]
+                                    }, {
+                                    visibility: [0.2,0.6],
+                                    type: 'seek',
+                                    frames: [1, 82]
+                                    }, {
+                                    visibility: [0.6, 1],
+                                    type: "stop",
+                                    frames: [83]
+                                    }
+                                ] 
+                                });
+                            </script>
                 </div>
                 <!--우측 상품 구매창------------>
                 <div class="shop_01_box">
@@ -343,11 +371,8 @@
                     <div class="shop_01_color_all">
                         <p class="font_gray">Colors</p>
                         <ul class="shop_01_color">
-                            <li class="red"></li>
-                            <li class="gray"></li>
                             <li class="ivory"></li>
-                            <li class="green"></li>
-                            <li class="blue"></li>
+                            <li class="gray"></li>
                         </ul>
                     </div>
                     <!--options start-->
@@ -417,11 +442,11 @@
             <!-- 2번째 네비게이션 메뉴-->
             <nav class="shop_nav">
                 <ul class="shop_nav_all">
-                    <li class="shop_nav_list selected"><h4>Product</h4></li>
-                    <li class="shop_nav_list"><h4>Gallery</h4></li>
-                    <li class="shop_nav_list"><h4>Designers</h4></li>
-                    <li class="shop_nav_list"><h4>Technical Files</h4></li>
-                    <li class="shop_nav_list"><h4>additional information</h4></li>
+                    <li class="shop_nav_list selected">Product</li>
+                    <li class="shop_nav_list">Gallery</li>
+                    <li class="shop_nav_list">Designers</li>
+                    <li class="shop_nav_list">additional information</li>
+                    <li class="shop_nav_list">Technical Files</li>
                 </ul>
             </nav>
             <!--product information----------------->
@@ -449,14 +474,14 @@
             <section class="main_03">
                 <div class="main_03_container">
                     <div class="main_03_img_01">
-                        <img src="./images/shop_03_01.png">
+                        <img src="./images/retouch/shop_kabuki_gallery01 copy.png">
                     </div>
                         <div class="main_03_text_01">
                             <h2>K LOVES THE PLANET</h2>
                             <h4>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, to</h4>
                         </div>
                     <div class="main_03_img_02">
-                        <img src="./images/shop_03_02.png">
+                        <img src="./images/retouch/shop_kabuki_gallery02.png">
                     </div>
                     <div class="main_03_text_02">
                         <div class="main_03_text_all">
@@ -469,15 +494,13 @@
             <!--Designers info------------------------>
             <section class="shop_main_04">
                 <div class="shop_04_text_box">
-                    <h3>Ludovica + Roberto Palomba</h3>
-                    <h4>They collaborate with several international leading design companies and their projects have been awarded.</h4>
-                    <a title="see more" href="#" class="main_text_button"><span>See More</span><img src="./images/arrow.svg"></a>
+                    <div class="main_02_text">
+                        <h2>Ferruccio Laviani</h2>
+                        <h4>"For 20 years, Kartell has been my second home. What else is there to say?"</h4>
+                        <div class="main_text_button"><a title="see more" href="#"><span>See More</span><img src="./images/arrow.svg"></a></div>
+                    </div>
                 </div>
-                <ul class="shop_04_img">
-                    <li><img src="./images/shop_04_01.png"></li>
-                    <li><img src="./images/shop_04_02.png"></li>
-                    <li><img src="./images/shop_04_03.png"></li>
-                </ul>
+                <div class="main_02_img"><img src="./images/shop_04_01.png"></div>
             </section>
             
             <!--Our Recommend------------------>
@@ -488,92 +511,92 @@
                         <!--item 01-------------------->
                         <li class="main_slide_con">
                             <div class="content_slide_img">
-                                <img src="./images/eyewear01.png">
-                                <img src="./images/eyewear01_texture.png" class="remove">
+                                <img src="./images/shop_05_01.png">
+                                <img src="./images/shop_05_01_texture.png" class="remove">
                             </div>
                             <div class="main_item_text">
-                                <h4>Borderino New</h4>
-                                <h6>165,000</h6>
+                                <h4>Taj</h4>
+                                <h6>540,000</h6>
                             </div>
                         </li>
                         <!--item 02----------------------->
                         <li class="main_slide_con">
                             <div class="content_slide_img">
-                                <img src="./images/eyewear02.png">
-                                <img src="./images/eyewear02_texture.png" class="remove">
+                                <img src="./images/shop_05_02.png">
+                                <img src="./images/shop_05_02_texture.png" class="remove">
                             </div>
                             <div class="main_item_text">
-                                <h4>Borderino New</h4>
-                                <h6>165,000</h6>
+                                <h4>Mini Planet Battery Version</h4>
+                                <h6>410,000</h6>
                             </div>
                         </li>
                         <!--item 03---------------------->
                         <li class="main_slide_con">
                             <div class="content_slide_img">
-                                <img src="./images/eyewear03.png">
-                                <img src="./images/eyewear03_texture.png" class="remove">
+                                <img src="./images/shop_05_03.png">
+                                <img src="./images/shop_05_03_texture.png" class="remove">
                             </div>
                             <div class="main_item_text">
-                                <h4>Borderino New</h4>
-                                <h6>165,000</h6>
+                                <h4>Bourgie</h4>
+                                <h6>520,000</h6>
                             </div>
                         </li>
                         <!--item 04----------------------->
                         <li class="main_slide_con">
                             <div class="content_slide_img">
-                                <img src="./images/eyewear04.png">
-                                <img src="./images/eyewear04_texture.png" class="remove">
+                                <img src="./images/shop_05_04.png">
+                                <img src="./images/shop_05_04_texture.png" class="remove">
                             </div>
                             <div class="main_item_text">
-                                <h4>Borderino New</h4>
-                                <h6>165,000</h6>
+                                <h4>Victoria Goast</h4>
+                                <h6>289,000</h6>
                             </div>
                         </li>
                         <!--item 05------------------------>
                         <li class="main_slide_con">
                             <div class="content_slide_img">
-                                <img src="./images/eyewear05.png">
-                                <img src="./images/eyewear05_texture.png" class="remove">
+                                <img src="./images/shop_05_05.png">
+                                <img src="./images/shop_05_05_texture.png" class="remove">
                             </div>
                             <div class="main_item_text">
-                                <h4>Borderino New</h4>
-                                <h6>165,000</h6>
+                                <h4>Lantern</h4>
+                                <h6>158,000</h6>
                             </div>
                         </li>
                         <!--item 06------------------------>
                         <li class="main_slide_con">
                             <div class="content_slide_img">
-                                <img src="./images/eyewear06.png">
-                                <img src="./images/eyewear06_texture.png" class="remove">
+                                <img src="./images/shop_05_06.png">
+                                <img src="./images/shop_05_06_texture.png" class="remove">
                             </div>
                             <div class="main_item_text">
-                                <h4>Borderino New</h4>
-                                <h6>165,000</h6>
+                                <h4>Aledin Dec</h4>
+                                <h6>179,000</h6>
                             </div>
                         </li>
                     </ul>
                 </div></div>
             <!--Technical Files--------------------->
             <section class="main_07">
-                <!--MyKartell@home------------->
+                <!--Data Sheets------------->
                 <div class="main_07_content">
                     <div class="main_07_text">
-                        <div class="main_07_title">MyKartell@home</div>
-                        <div class="main_07_text_button"><a title="see more" href="#"><span>Custom Order</span><img src="./images/arrow.svg"></a></div>
-                    </div>
-                </div>
-                <!--catalog------------->
-                <div class="main_07_content">
-                    <div class="main_07_text">
-                        <div class="main_07_title">CATALOGS</div>
+                        <div class="main_07_title">Data Sheets</div>
                         <div class="main_07_text_button"><a title="see more" href="#"><span>Download</span><img src="./images/arrow.svg"></a></div>
                     </div>
                 </div>
-                <!--catalog------------->
+                <!--Certifications------------->
                 <div class="main_07_content">
                     <div class="main_07_text">
-                        <div class="main_07_title">Store Rocation</div>
-                        <div class="main_07_text_button"><a title="see more" href="#"><span>Find Shop</span><img src="./images/arrow.svg"></a></div>
+                        <div class="main_07_title">Certifications</div>
+                        <div class="main_07_text_button"><a title="see more" href="#"><span>Download</span><img src="./images/arrow.svg"></a></div>
+                    </div>
+                </div>
+                <!--Instructions & Maintenance------------->
+                <div class="main_07_content">
+                    <div class="main_07_text">
+                        <div class="main_07_title">Instructions & Maintenance</div>
+                        <div class="main_07_text_button"><a title="see more" href="#"><span>Download</span><img src="./images/arrow.svg"></a></div>
                     </div>
                 </div>
             </section>

@@ -3,7 +3,7 @@ $(function(){
     $(window).scroll(function(){
         var scroll = $(window).scrollTop();
         if (scroll > 50) {
-            $('.header_box').css({height:"6rem"});
+            $('.header_box').css({height:"6rem", background:"#fff"});
             $('.page_all').css({top:"6rem"});
         } else {
             $('.header_box').css({height:"8rem"});
