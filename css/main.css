@@ -262,7 +262,7 @@
             height: 95rem;
         }
             .main_05_title {
-                width: 100%;
+                width: auto;
                 height: 8rem;
                 padding-left: 9rem;
                 display: flex;
@@ -312,8 +312,7 @@
         /*main 06 1번 카탈로그*/
         .main_06_contents {
             position: relative;
-            width: 100%;
-            height: 37.6rem;
+            width: 180vw;
             margin: 4rem 0;
             padding-left: 10rem;
             display: flex;
@@ -327,45 +326,42 @@
             overflow: hidden;
         }
             .main_06_01_all {
-                width: 57.3rem;
-                height: 37.6rem;
+                width: 30vw;
                 display: flex;
                 flex-wrap: nowrap;
             }
                 .main_06_01_img {
-                    width: 28.9rem;
-                    height: 37.6rem;
+                    width: 100%;
+                    min-width: 20rem;
                 }
                     .main_06_01_img img {
                         width: 100%;
-                        height: 100%;
                         object-fit: cover;
+                        aspect-ratio: 22 / 29
                     }
                 .main_06_01_text {
-                    width: 28.4rem;
-                    height: 37.6rem;
+                    width: 100%;
                     padding-left: 3.5rem;
                     display: grid;
-                    grid-template-rows: 29.6rem 8rem;
+                    grid-template-rows: auto 8rem;
                 }
                     .main_06_text_01 {
-                        width: 20rem;
+                        max-width: 20rem;
                         margin-top: 2.4rem;
                         line-height: 3.2rem;
                     }
                     .main_06_text_02 {
-                        width: 20rem;
+                        max-width: 20rem;
                         height: 10rem;
                         margin-top: 1rem;
-                        margin-bottom: 7.3rem;
                         color: #505050;
                     }
                     .main_06_text_03 {
-                        width: 22.5rem;
+                        max-width: 22.5rem;
                         color: #505050;
                     }
                     .main_06_text_04 {
-                        width: 22.5rem;
+                        max-width: 22.5rem;
                     }
             /*화살표 호버시 등장 자바스크립트로 할 것*/
 /*main 07 section start------------------------*/
@@ -373,8 +369,8 @@
     position: relative;
     clear: both;
     width: 100%;
-    height: 45rem;
-    margin-top: 46rem;
+    height: 35rem;
+    margin-top: 50rem;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 

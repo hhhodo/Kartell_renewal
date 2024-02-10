@@ -18,14 +18,14 @@
         .main_01_img {
             position: absolute;
             left: 45%;
-            top: 10rem;
+            top: 15rem;
             width: 850px;
             height: 700px;
         }
         .main_01_bg {
             position: absolute;
             left: 45%;
-            top: 10rem;
+            top: 15rem;
             width: 850px;
             height: 700px;
             z-index: -1;
