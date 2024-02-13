@@ -57,30 +57,78 @@ $(document).ready(function () {
 
   nextBtn.on('click', function () {
     moveSlide(currentIdx + 1);
-
-    function moveSlide(num) {
-      idxAll = currentIdx % 3;
-      currentIdx = num;
-      console.log(idxAll);
-
-      if (idxAll === 0) {
-        slide01.animate({
-          left: "-100%"
-        }, 200, "swing", function () {
-          slide01.css({
-            display: "none"
-          });
-          slide02.animate({
-            display: "block"
-          }, 100, function () {
-            left: "0";
-          });
-        });
-      } else if (idxAll === 1) {} else {}
-    }
   });
   prevBtn.on('click', function () {
     moveSlide(currentIdx - 1);
   });
+
+  function moveSlide(num) {
+    var idxAll = Math.abs(currentIdx % 3);
+    currentIdx = num; //양수로 변환
+
+    console.log(idxAll);
+
+    if (idxAll === 0) {
+      //2page
+      slide01.css({
+        left: '-100%'
+      });
+      slide03.css({
+        left: "100%",
+        display: "none"
+      });
+      slide02.css({
+        display: "block"
+      });
+      setTimeout(function () {
+        slide02.css({
+          left: "0%"
+        });
+        slide01.css({
+          display: "none"
+        });
+      }, 200);
+    } else if (idxAll === 1) {
+      //3page
+      slide02.css({
+        left: '-100%'
+      });
+      slide01.css({
+        left: "100%",
+        display: "none"
+      });
+      slide03.css({
+        display: "block"
+      });
+      setTimeout(function () {
+        slide03.css({
+          left: "0%"
+        });
+        slide02.css({
+          display: "none"
+        });
+      }, 200);
+    } else {
+      //1page
+      slide03.css({
+        left: '-100%'
+      });
+      slide02.css({
+        left: "100%",
+        display: "none"
+      });
+      slide01.css({
+        display: "block"
+      });
+      setTimeout(function () {
+        slide01.css({
+          left: "0%"
+        });
+        slide03.css({
+          display: "none"
+        });
+      }, 200);
+    }
+  }
 });
 requestAnimationFrame(animate);

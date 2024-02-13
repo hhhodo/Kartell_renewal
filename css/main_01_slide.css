@@ -34,15 +34,17 @@
         display: none;
         position: absolute;
         left: 1920px;
-        width: 850px;
+        width: 100%;
         height: 900px;
         background-size: cover;
+        transition: all 300ms ease-in-out;
     }
     .main_01_slide03 {
         display: none;
         position: absolute;
         left: -850px;
-        width: 850px;
+        width: 100%;
         height: 900px;
         background-size: cover;
+        transition: all 300ms ease-in-out;
     }
