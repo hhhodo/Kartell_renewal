@@ -51,25 +51,25 @@ $(document).ready(function () {
   var slide02 = $('.main_01_slide02');
   var slide03 = $('.main_01_slide03');
   var currentIdx = 0;
-  var slideWidth = 0;
   var prevBtn = $('#main_01_prev');
   var nextBtn = $('#main_01_next'); // 버튼 클릭 시 슬라이드 애니메이션 실행
 
   nextBtn.on('click', function () {
-    moveSlide(currentIdx + 1);
+    moveSlideNext(currentIdx + 1);
   });
   prevBtn.on('click', function () {
-    moveSlide(currentIdx - 1);
-  });
+    moveSlidePrev(currentIdx - 1);
+  }); //next animation
 
-  function moveSlide(num) {
+  function moveSlideNext(num) {
     var idxAll = Math.abs(currentIdx % 3);
     currentIdx = num; //양수로 변환
 
     console.log(idxAll);
 
     if (idxAll === 0) {
-      //2page
+      currentIdx = 1; //2page
+
       slide01.css({
         left: '-100%'
       });
@@ -89,7 +89,8 @@ $(document).ready(function () {
         });
       }, 200);
     } else if (idxAll === 1) {
-      //3page
+      currentIdx = 2; //3page
+
       slide02.css({
         left: '-100%'
       });
@@ -109,7 +110,8 @@ $(document).ready(function () {
         });
       }, 200);
     } else {
-      //1page
+      currentIdx = 3; //1page
+
       slide03.css({
         left: '-100%'
       });
@@ -128,6 +130,79 @@ $(document).ready(function () {
           display: "none"
         });
       }, 200);
+    }
+  } //prev animation
+
+
+  function moveSlidePrev(num) {
+    var idxAll = Math.abs(currentIdx % 3);
+    currentIdx = num; //양수로 변환
+
+    console.log(idxAll);
+
+    if (idxAll === 0) {
+      //3page
+      slide02.css({
+        left: '-100%',
+        display: "none"
+      });
+      slide01.css({
+        left: "100%"
+      });
+      slide03.css({
+        display: "block"
+      });
+      setTimeout(function () {
+        slide03.css({
+          left: "0%"
+        });
+        slide02.css({
+          display: "none"
+        });
+      }, 200);
+      currentIdx = 1;
+    } else if (idxAll === 1) {
+      //2page
+      slide01.css({
+        left: '-100%',
+        display: "none"
+      });
+      slide03.css({
+        left: "100%"
+      });
+      slide02.css({
+        display: "block"
+      });
+      setTimeout(function () {
+        slide02.css({
+          left: "0%"
+        });
+        slide03.css({
+          display: "none"
+        });
+      }, 200);
+      currentIdx = 2;
+    } else {
+      //1page
+      slide03.css({
+        left: '-100%',
+        display: "none"
+      });
+      slide02.css({
+        left: "100%"
+      });
+      slide01.css({
+        display: "block"
+      });
+      setTimeout(function () {
+        slide01.css({
+          left: "0%"
+        });
+        slide02.css({
+          display: "none"
+        });
+      }, 200);
+      currentIdx = 3;
     }
   }
 });
