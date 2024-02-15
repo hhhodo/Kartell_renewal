@@ -1,6 +1,12 @@
 @media all and (max-width: 7680px) {
-    * { font-size: 0.5vw;}
+    * { font-size: 0.52vw;}
 }
 @media all and (max-width: 1920px) {
     * { font-size: 62.5%;}
+}
+@media all and (max-width: 1024px) {
+
+}
+@media all and (max-width: 768px) {
+    
 }
