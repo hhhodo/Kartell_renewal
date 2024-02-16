@@ -333,6 +333,7 @@
             background-size: cover;
         }
         .main_05_content {
+            position: relative;
             width: 102rem;
             height: 87rem;
         }

@@ -58,7 +58,6 @@ $(document).ready(function(){
         moveSlide(currentIdx - 1);
     });
 
-    updateWidth()
 
     function moveSlide(num){
         slides.css('left', -num * slideWidth + 'px');
@@ -81,6 +80,7 @@ $(document).ready(function(){
         prevBtn.on('click', function(){
             moveSlide(currentIdx - 1);
         });
+        updateWidth()
     }
     
     // 슬라이드 및 버튼 이벤트 해제
