@@ -1,3 +1,35 @@
+/*
+function initializeSlideEvents() {
+        // 버튼 클릭 시 슬라이드 애니메이션 실행
+        nextBtn.on('click', function(){
+            moveSlide(currentIdx + 1);
+        });
+        prevBtn.on('click', function(){
+            moveSlide(currentIdx - 1);
+        });
+    }
+    
+    // 슬라이드 및 버튼 이벤트 해제
+    function removeSlideEvents() {
+        // slide02 관련 코드
+        nextBtn.off('click');
+        prevBtn.off('click');
+    }
+    
+    function checkWindowSize() {
+        var windowWidth = $(window).width();
+        
+        // 일정 사이즈 이하인 경우
+        if (windowWidth <= 1024) {
+            removeSlideEvents(); // 슬라이드 및 버튼 이벤트 해제
+        } else {
+            initializeSlideEvents(); // 슬라이드 및 버튼 이벤트 초기화
+        }
+    }
+
+    // 초기에 한 번 실행하고, 윈도우 크기가 변경될 때마다 다시 실행합니다.
+    checkWindowSize();
+*/
 $(document).ready(function(){
     var slides = $('.main_06_contents')
     var slide = $('.main_06_01_all')
@@ -40,13 +72,36 @@ $(document).ready(function(){
             currentIdx = 3;
         }
     }
-    // 리사이즈 끝나고 0.3초마다 리셋
-    var delay = 300;
-    var timer = null; 
-    $(window).on('resize', function(){
-        clearTimeout(timer);
-        timer = setTimeout(function(){
-        document.location.reload();
-        }, delay);
-    });
+
+    function initializeSlideEvents() {
+        // 버튼 클릭 시 슬라이드 애니메이션 실행
+        nextBtn.on('click', function(){
+            moveSlide(currentIdx + 1);
+        });
+        prevBtn.on('click', function(){
+            moveSlide(currentIdx - 1);
+        });
+    }
+    
+    // 슬라이드 및 버튼 이벤트 해제
+    function removeSlideEvents() {
+        // slide02 관련 코드
+        nextBtn.off('click');
+        prevBtn.off('click');
+    }
+    
+    function checkWindowSize() {
+        var windowWidth = $(window).width();
+        
+        // 일정 사이즈 이하인 경우
+        if (windowWidth <= 1024) {
+            removeSlideEvents();
+            console.log("사이즈변경") // 슬라이드 및 버튼 이벤트 해제
+        } else {
+            initializeSlideEvents(); // 슬라이드 및 버튼 이벤트 초기화
+        }
+    }
+
+    // 초기에 한 번 실행하고, 윈도우 크기가 변경될 때마다 다시 실행합니다.
+    checkWindowSize();
 })

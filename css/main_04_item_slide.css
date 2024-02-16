@@ -8,6 +8,9 @@
     align-items: center;
     justify-content: center;
 }
+    .main_item_text > h4 {
+        text-align: center;
+    }
 /*item page bar*/
 .main_02_item_bar_all {
         width: 100%;

@@ -13,13 +13,13 @@
     <link href="./css/common.css" rel="stylesheet">
     <link href="./css/header.css" rel="stylesheet">
     <link href="./css/footer.css" rel="stylesheet">
-    <link href="./css/media_responsive.css" rel="stylesheet">
     <!--main-->
     <link href="./css/main.css" rel="stylesheet">
     <link href="./css/main_01_slide.css" rel="stylesheet">
     <link href="./css/main_02_item_slide.css" rel="stylesheet">
     <link href="./css/main_04_item_slide.css" rel="stylesheet">
     <link href="./css/main_05_item_slide.css" rel="stylesheet">
+    <link href="./css/media_responsive.css" rel="stylesheet">
 
     <!--JQuery------->
     <script src="./javascript/jquery-3.7.1.min.js"></script>
@@ -27,6 +27,7 @@
     <!--javascript-->
     <script src="./javascript/header_inner_menu.js"></script>
     <script src="./javascript/main_01_all.js"></script>
+    <script src="./javascript/main_02_up.js"></script>
     <script src="./javascript/main_04_scroll.js"></script>
     <script src="./javascript/main_05_scroll.js"></script>
     <script src="./javascript/main_06_scroll.js"></script>
@@ -306,12 +307,13 @@
                 </li>
             </ul>
             <ul class="header_menu_02">
-                <li><img src="./images/search_icon.svg"></li>
+                <li id="search"><img src="./images/search_icon.svg"></li>
                 <li><img src="./images/1global.svg"></li>
                 <li><img src="./images/1name.svg"></li>
                 <li><img src="./images/1heart.svg"></li>
-                <li><img src="./images/1people.svg"></li>
-                <li><img src="./images/1cart.svg"></li>
+                <li id="my-page"><img src="./images/1people.svg"></li>
+                <li id="cart"><img src="./images/1cart.svg"></li>
+                <li id="hamburger-btn"><img src="./images/hamburger_icon.svg"></li>
             </ul>
         </div>
     </header>
@@ -339,7 +341,6 @@
                     <div class="main_text_title">Winter Mood</div>
                     <div class="main_text_button"><a title="see more" href="#"><span>Shop Now</span><img src="./images/arrow.svg"></a></div>
                 </div>
-
             </div>
             
             <div class="main_page_arrow">
@@ -347,16 +348,46 @@
                 <button><img src="./images/right_arrow.svg" id="main_01_next"></button>
             </div>
         </section>
+        <!--m size-->
+        <section class="main_1024">
+            <ul>
+                <li class="main_01_1024_01">
+                    <img class="main_01_1024_01_img" src="./images/main_786_01.png">
+                    <div class="white_dimd"></div>
+                    <div class="main_01_1024_01_text">
+                        <h1>Winter Mood</h1>
+                        <div class="main_text_button_01"><a title="see more" href="#"><h4>Shop Now</h4><img src="./images/arrow.svg"></a></div>    
+                    </div>
+                </li>
+                <li class="main_01_bar">
+                    <div class="main_01_bar_base">
+                        <div class="main_01_bar_con">&nbsp;</div>
+                    </div>
+                </li>
+            </ul>
+        </section>
 
         <!--main 02 start-------------------->
         <section class="main_02">
             <!--상단 내용------------->
             <div class="main_02_box">
+                <div class="main_02_img active"><img src="./images/panorama_01.png"></div>
                 <div class="main_02_img"><img src="./images/panorama_02.png"></div>
+                <div class="main_02_img"><img src="./images/panorama_03.png"></div>
                 <div class="main_02_con">
-                    <div class="main_02_text">
+                    <div class="main_02_text active">
                         <h2>PANORAMA INFINITE</h2>
                         <h4>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, to</h4>
+                        <div class="main_text_button"><a title="see more" href="#"><span>See More</span><img src="./images/arrow.svg"></a></div>
+                    </div>
+                    <div class="main_02_text">
+                        <h2>NATURAL COLORS</h2>
+                        <h4>Natural shades combined with the transparencies of Bourgie and the colors of P/Wood and Glossy</h4>
+                        <div class="main_text_button"><a title="see more" href="#"><span>See More</span><img src="./images/arrow.svg"></a></div>
+                    </div>
+                    <div class="main_02_text">
+                        <h2>I SHINE & U SHINE</h2>
+                        <h4> A precious collection of decorative vases consisting of a vase and a centrepiece, particular for their elegant deco-inspired geometries.</h4>
                         <div class="main_text_button"><a title="see more" href="#"><span>See More</span><img src="./images/arrow.svg"></a></div>
                     </div>
 
@@ -365,13 +396,13 @@
                             <div class="main_02_bar_con">&nbsp;</div>
                         </div>
                         <ul class="main_02_bar_page">
-                            <li><img src="./images/arrow_small_left.svg"></li>
-                            <li><img src="./images/stop_button.svg"></li>
-                            <li><img src="./images/arrow_small_right.svg"></li>
+                            <li id="prev-02"><img src="./images/arrow_small_left.svg"></li>
+                            <li id="stop"><img src="./images/stop_button.svg"></li>
+                            <li id="next-02"><img src="./images/arrow_small_right.svg"></li>
                         </ul>
                     </div>
                 </div>
-                </div>
+            </div>
                 <!--main 2 하단 아이템 슬라이드---------------->
             <div class="main_02_item">
                 <span class="main_02_item_title"><h3>SHINE WHITE</h3></span>
@@ -620,9 +651,11 @@
         <section class="main_05">
             <div class="main_05_container">
                 <div class="main_05_img">이미지</div>
-                <div class="main_05_content">
+                <div class="main_05_title_all">
                     <div class="main_05_title"><h2>SHOP BY LOOK</h2></div>
                     <div class="main_05_bar"></div>
+                </div>
+                <div class="main_05_content">
                     <!--slide main05-->
                     <div class="main_05_wrapper">
                         <ul class="main_05_item_all">

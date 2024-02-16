@@ -6,7 +6,7 @@ $(function(){
             $('.header_box').css({height:"6rem", background:"#fff"});
             $('.page_all').css({top:"6rem"});
         } else {
-            $('.header_box').css({height:"8rem"});
+            $('.header_box').css({height:"8rem", background:"rgba(255, 255, 255, 0)"});
             $('.page_all').css({top:"8rem"});
         }
     })

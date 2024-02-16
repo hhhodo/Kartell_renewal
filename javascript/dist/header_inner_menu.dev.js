@@ -15,7 +15,8 @@ $(function () {
       });
     } else {
       $('.header_box').css({
-        height: "8rem"
+        height: "8rem",
+        background: "rgba(255, 255, 255, 0)"
       });
       $('.page_all').css({
         top: "8rem"

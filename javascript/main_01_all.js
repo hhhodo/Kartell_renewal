@@ -138,6 +138,5 @@ function animate() {
         }
     }
 
-
   });
     requestAnimationFrame(animate);

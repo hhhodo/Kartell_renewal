@@ -21,6 +21,11 @@
 
 html {font-family: 'Roboto', sans-serif; font-weight: var(--font-light);}
 
+h1 {
+    font-size: 4rem;
+    line-height: 5.5rem;
+    font-weight: var(--font-light);
+}
 h2 {
     font-size: 3rem;
     line-height: 4rem;
@@ -32,6 +37,7 @@ h3 {
     font-weight: var(--font-light);
 }
 h4 {
+    height: auto;
     font-size: 1.6rem;
     line-height: 2.2rem;
     font-weight: var(--font-light);
