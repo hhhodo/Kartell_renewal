@@ -81,6 +81,7 @@
 
 }
 @media all and (max-width: 768px) {
+    
     /*slide 03*/
     .main_03_text_01 h2 {font-size: 2.4rem; line-height: 4rem;}
     .main_03_text_01 h4 {font-size: 1.4rem; line-height: 2rem;}

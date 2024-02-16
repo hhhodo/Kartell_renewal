@@ -48,14 +48,17 @@
     height: 73rem;
     position: relative;
     display: none;
+    overflow: hidden;
 }
     .main_01_1024_01 {
-        width: 75rem;
+        width: fit-content;
         margin: 0 auto;
         position: relative;
     }
         .main_01_1024_01_img {
             position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
             z-index: -1;
         }
         .white_dimd {
