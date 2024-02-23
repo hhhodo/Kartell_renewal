@@ -118,3 +118,10 @@
             font-size: 1.4rem;
             color: #555;
         }
+    /*footer 펼쳤다 닫았다그거---------*/
+    .footer_specific {
+        max-height: 50rem;
+        overflow: hidden;
+        transition: all 300ms ease-in-out;
+        margin-bottom: 0;
+    }

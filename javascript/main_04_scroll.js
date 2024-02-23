@@ -83,12 +83,6 @@ $(document).ready(function() {
 
     /* 개별 코드(좌우 버튼) */
     //slide02----------------------------------
-    nextBtn02.on('click', function(){
-        moveSlide02(currentIdx2 + 1);
-    });
-    prevBtn02.on('click', function(){
-        moveSlide02(currentIdx2 - 1);
-    });
     
     /* 개별 */
     function moveSlide02(num){
@@ -108,12 +102,6 @@ $(document).ready(function() {
     }
 
     //slide04--------------------------------
-    nextBtn04.on('click', function(){
-        moveSlide04(currentIdx4 + 1);
-    });
-    prevBtn04.on('click', function(){
-        moveSlide04(currentIdx4 - 1);
-    });
 
     /* 개별 */
     function moveSlide04(num){
@@ -133,46 +121,47 @@ $(document).ready(function() {
     }
     //이미지 호버
     slideImgBox();
-    function slideImgBox(){
-        $('.main_slide_con').each(function(){
-            var slideBox = $(this);
-            var slideImgAll = slideBox.find('.content_slide_img');
+
+function slideImgBox() {
+    $('.main_slide_con, .main_slide_con.clone').each(function() {
+        var slideBox = $(this);
+        var slideImgAll = slideBox.find('.content_slide_img');
+        var slideImg = slideImgAll.find('img');
+        slideImg.eq(0).css({ display: "block" });
+
+        // mouse enter
+        slideBox.on('mouseenter', function() {
             var slideImg = slideImgAll.find('img');
-            slideImg.eq(0).css({display:"block"})
-    
-            //box hover
-            slideBox.hover(
-                function(){
-                    var slideImg = slideImgAll.find('img');
-                    slideImg.eq(0).removeClass('hover').css({display:"none"});
-                    var slideImgs = slideImg.eq(1).addClass('hover');
+            slideImg.eq(0).removeClass('hover').css({ display: "none" });
+            var slideImgs = slideImg.eq(1).addClass('hover');
 
-                    //animation 중간 스톱
-                    slideImgs.stop(true).css({opacity:"0", display:"block"})
-                    //animation line
-                    slideImg.animate({
-                        display:"block"
-                    }, 50, "swing",()=>{
-                        slideImgs.css({opacity:"1"})
-                    })
-                },
-                function(){
-                    var slideImg = slideImgAll.find('img');
-                    var slideImgs = slideImg.eq(0).addClass('hover').css({display:"block"});
-                    slideImg.eq(1).removeClass('hover').css({display:"none"});
-                    
-                    //animation 중간 스톱
-                    slideImgs.stop(true).css({opacity:"0", display:"block"})
-                    //animation line
-                    slideImgs.animate({
-                        opacity:"1"
-                    }, 300, "swing", ()=>{
+            // animation 중간 스톱
+            slideImgs.stop(true).css({ opacity: "0", display: "block" });
+            // animation line
+            slideImg.animate({
+                display: "block"
+            }, 50, "swing", () => {
+                slideImgs.css({ opacity: "1" });
+            });
+        });
 
-                    })
-                }
-            )
-        })
-    }
+        // mouse leave
+        slideBox.on('mouseleave', function() {
+            var slideImg = slideImgAll.find('img');
+            var slideImgs = slideImg.eq(0).addClass('hover').css({ display: "block" });
+            slideImg.eq(1).removeClass('hover').css({ display: "none" });
+
+            // animation 중간 스톱
+            slideImgs.stop(true).css({ opacity: "0", display: "block" });
+            // animation line
+            slideImgs.animate({
+                opacity: "1"
+            }, 300, "swing", () => {
+
+            });
+        });
+    });
+}
 
     // 슬라이드 및 버튼 이벤트 초기화
     function initializeSlideEvents() {
@@ -213,6 +202,8 @@ $(document).ready(function() {
             removeSlideEvents(); // 슬라이드 및 버튼 이벤트 해제
         } else {
             initializeSlideEvents(); // 슬라이드 및 버튼 이벤트 초기화
+            makeClone02()
+            makeClone04()
         }
     }
 

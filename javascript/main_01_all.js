@@ -46,6 +46,7 @@ function animate() {
     var slide01 = $('.main_01_slide01')
     var slide02 = $('.main_01_slide02')
     var slide03 = $('.main_01_slide03')
+    var titleText = $('.main_text_title');
     var currentIdx = 0
     var prevBtn = $('#main_01_prev')
     var nextBtn = $('#main_01_next')
@@ -68,6 +69,7 @@ function animate() {
         if(idxAll === 0){
           currentIdx = 1;
           //2page
+          titleText.text('My Kartell')
           slide01.css({left:'-100%'});
           slide03.css({left:"100%", display:"none"});
           slide02.css({display:"block"});
@@ -78,6 +80,7 @@ function animate() {
         } else if(idxAll === 1){
           currentIdx = 2;
           //3page
+          titleText.text('Shibuya')
           slide02.css({left:'-100%'});
           slide01.css({left:"100%", display:"none"});
           slide03.css({display:"block"});
@@ -88,6 +91,7 @@ function animate() {
         } else {
           currentIdx = 3;
           //1page
+          titleText.text('Winter Mood')
           slide03.css({left:'-100%'});
           slide02.css({left:"100%", display:"none"});
           slide01.css({display:"block"});
@@ -104,9 +108,9 @@ function animate() {
       currentIdx = num;
         
         //양수로 변환
-        console.log(idxAll)
         if(idxAll === 0){
           //3page
+          titleText.text('Shibuya')
           slide02.css({left:'-100%', display:"none"});
           slide01.css({left:"100%"});
           slide03.css({display:"block"});
@@ -117,6 +121,7 @@ function animate() {
           currentIdx = 1;
         } else if(idxAll === 1){
           //2page
+          titleText.text('My Kartell')
           slide01.css({left:'-100%', display:"none"});
           slide03.css({left:"100%"});
           slide02.css({display:"block"});
@@ -127,6 +132,7 @@ function animate() {
           currentIdx = 2;
         } else {
           //1page
+          titleText.text('Winter Mood')
           slide03.css({left:'-100%', display:"none"});
           slide02.css({left:"100%"});
           slide01.css({display:"block"});

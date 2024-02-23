@@ -23,15 +23,16 @@
 }
     .main_text {
         width: 50rem;
-        height: 13rem;
+        height: 15rem;
         position: absolute;
         left: 200px;
         top: 390px;
     }
         .main_text_title {
-            font-size: 6rem;
-            height: 7rem;
-            line-height: 7rem;
+            font-size: 8rem;
+            height: 10rem;
+            line-height: 10rem;
+            word-spacing: -5px;
         }
         .main_text_button {
             display: flex;
@@ -111,12 +112,14 @@
     margin-top: 23rem;
 }
     .main_02_box {
+        max-width: 90rem;
+        min-height: 60rem;
         position: relative;
         margin: 0 auto;
         display: flex;
     }
         .main_02_img {
-            grid-area: a;
+            width: 45%;
             position: absolute;
             transition: all 300ms ease-in;
         }
@@ -315,17 +318,17 @@
     position: relative;
     width: 100%;
     height: 80rem;
-    padding-left: 10rem;
     margin-top: 50rem;
 }
     .main_05_container {
         width: 100%;
         height: 80rem;
+        padding-left: 10rem;
         display: grid;
         grid-template-areas:
         "b a"
         "b c";
-        grid-template-columns: 75rem 102rem;
+        grid-template-columns: 75rem auto;
         grid-template-rows: 8.1rem auto;
     }
         .main_05_img {
@@ -337,7 +340,6 @@
         }
         .main_05_content {
             position: relative;
-            width: 102rem;
             height: 87rem;
         }
             .main_05_title_all {
@@ -446,6 +448,7 @@
                         max-width: 22.5rem;
                     }
             /*화살표 호버시 등장 자바스크립트로 할 것*/
+            #main_06_prev, #main_06_next { opacity: 0; transition: all 300ms ease-in-out;}
 /*main 07 section start------------------------*/
 .main_07 {
     position: relative;

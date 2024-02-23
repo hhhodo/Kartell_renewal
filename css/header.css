@@ -1,8 +1,8 @@
 /*헤더 메뉴 디자인*/
 .header_box {
-    width: 100%;
+    width: 100vw;
     height: 8rem;
-    padding: 0 5.2%;
+    padding: 0 5.2vw;
     position: fixed;
     z-index: 10;
     display: flex;
@@ -13,8 +13,7 @@
     box-shadow: 0;
 }
     .header_menu_01 {
-        width: 50%;
-        height: auto;
+        min-width: 60%;
         display: flex;
         flex-wrap: nowrap;
         justify-content: space-between;
@@ -48,13 +47,14 @@
         #search, #my-page, #cart, #hamburger-btn {
             display: block;
         }
+        #hamburger-btn {display: none;}
 /*헤더 드롭다운 메뉴 코드------------------------*/
 /*page 공통 사이즈 코드 ----------------*/
     .page_up {
         width: fit-content;
         height: auto;
         white-space:nowrap;
-        margin-left: 0.5rem;
+        margin-left: 1rem;
 
         font-size: 1.6rem;
         line-height: 2.2rem;

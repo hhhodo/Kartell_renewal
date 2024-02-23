@@ -39,9 +39,6 @@ $(document).ready(function(){
     var prevBtn = $('#main_06_prev')
     var nextBtn = $('#main_06_next')
 
-
-    console.log(slide.css('width'))
-
     function updateWidth(){
         var newSlideCount = slideCount;
         slideWidth = parseInt(slide.css('width'));
@@ -50,19 +47,11 @@ $(document).ready(function(){
         slides.css('width', newWidth + 'px');
         slides.css('left', '0px')
     }
-    // 버튼 클릭 시 슬라이드 애니메이션 실행
-    nextBtn.on('click', function(){
-        moveSlide(currentIdx + 1);
-    });
-    prevBtn.on('click', function(){
-        moveSlide(currentIdx - 1);
-    });
-
 
     function moveSlide(num){
         slides.css('left', -num * slideWidth + 'px');
         currentIdx = num;
-        console.log(slideWidth)
+        console.log(num)
         if(currentIdx%4 === 0){
             slides.css('left', 0 + 'px');
             currentIdx = 0;
@@ -81,6 +70,15 @@ $(document).ready(function(){
             moveSlide(currentIdx - 1);
         });
         updateWidth()
+        //hover event btn
+        $('.main_06_contents_all').on("mouseenter", function(){
+            prevBtn.css({opacity:"1"})
+            nextBtn.css({opacity:"1"})
+        })
+        $('.main_06_contents_all').on("mouseleave", function(){
+            prevBtn.css({opacity:"0"})
+            nextBtn.css({opacity:"0"})
+        })
     }
     
     // 슬라이드 및 버튼 이벤트 해제
