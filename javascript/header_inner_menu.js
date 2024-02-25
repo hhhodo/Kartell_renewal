@@ -1,6 +1,7 @@
 $(function(){
     //scroll시 헤더 사이즈 조절
     $(window).scroll(function(){
+        pageAll.css({height:"0", padding:"0"})
         var scroll = $(window).scrollTop();
         if (scroll > 50) {
             $('.header_box').css({height:"6rem", background:"#fff"});
@@ -15,8 +16,7 @@ $(function(){
     var shopPage = $(".header_menu_01 > li")
     var pageAll = $(".page_all")
 
-    shopPage.hover(
-        function(){
+    shopPage.on('mouseenter',function(){
             pageAll.css({opacity:"1", "box-shadow":"0px 10px 20px rgba(0, 0, 0, 0.04)"});
             var maxHeight = 0;
             var headerHeight = $(".header_box").height();
@@ -32,15 +32,15 @@ $(function(){
             
 
             $(this).find(".page_all").css({height:autoHeight, padding:"4rem 0 10rem 0"});
-            $(".header_box").css({"border-bottom":"1px solid #d9d9d9"})
-        },
-        function() {
+            $(".header_box").css({background:"#fff","border-bottom":"1px solid #d9d9d9"})
+    })
+
+    shopPage.on('mouseleave', function() {
             // 마우스가 벗어났을 때의 동작
             pageAll.css({height:"0", padding:"0"});
             pageAll.css({opacity:"0"});
-            $(".header_box").css({"border-bottom":"1px solid #fff"})
-        }
-    )
+            $(".header_box").css({background:"rgba(255, 255, 255, 0)","border-bottom":"1px solid rgba(255, 255, 255, 0)"})
+    })
     //호버 이후 페이지 내용들(공통)
     pageAll.hover(
         function(){

@@ -42,6 +42,9 @@ $(document).ready(function() {
         setTimeout(function(){
             slides02.addClass('animated');
         },300);
+
+        //slide hover 이벤트 순서를 위해 안에 넣어둠
+        slideImgBox();
     }
     //slide04
     function makeClone04(){
@@ -120,15 +123,15 @@ $(document).ready(function() {
         }
     }
     //이미지 호버
-    slideImgBox();
 
 function slideImgBox() {
-    $('.main_slide_con, .main_slide_con.clone').each(function() {
+    $('.main_slide_con, .clone').each(function() {
         var slideBox = $(this);
         var slideImgAll = slideBox.find('.content_slide_img');
         var slideImg = slideImgAll.find('img');
         slideImg.eq(0).css({ display: "block" });
 
+        console.log(slideBox)
         // mouse enter
         slideBox.on('mouseenter', function() {
             var slideImg = slideImgAll.find('img');

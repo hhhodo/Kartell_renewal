@@ -3,6 +3,10 @@
 $(function () {
   //scroll시 헤더 사이즈 조절
   $(window).scroll(function () {
+    pageAll.css({
+      height: "0",
+      padding: "0"
+    });
     var scroll = $(window).scrollTop();
 
     if (scroll > 50) {
@@ -28,7 +32,7 @@ $(function () {
 
   var shopPage = $(".header_menu_01 > li");
   var pageAll = $(".page_all");
-  shopPage.hover(function () {
+  shopPage.on('mouseenter', function () {
     pageAll.css({
       opacity: "1",
       "box-shadow": "0px 10px 20px rgba(0, 0, 0, 0.04)"
@@ -48,9 +52,11 @@ $(function () {
       padding: "4rem 0 10rem 0"
     });
     $(".header_box").css({
+      background: "#fff",
       "border-bottom": "1px solid #d9d9d9"
     });
-  }, function () {
+  });
+  shopPage.on('mouseleave', function () {
     // 마우스가 벗어났을 때의 동작
     pageAll.css({
       height: "0",
@@ -60,7 +66,8 @@ $(function () {
       opacity: "0"
     });
     $(".header_box").css({
-      "border-bottom": "1px solid #fff"
+      background: "rgba(255, 255, 255, 0)",
+      "border-bottom": "1px solid rgba(255, 255, 255, 0)"
     });
   }); //호버 이후 페이지 내용들(공통)
 
