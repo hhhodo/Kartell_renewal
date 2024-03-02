@@ -32,6 +32,16 @@
     <!--javascript-->
     <script src="./javascript/header_inner_menu.js"></script>
     <script src="./javascript/main_04_scroll.js"></script>
+    <!--three.js-->
+    <script type="importmap">
+        {
+          "imports": {
+            "three": "https://unpkg.com/three@0.161.0/build/three.module.js",
+            "three/addons/": "https://unpkg.com/three@0.161.0/examples/jsm/"
+          }
+        }
+      </script>
+      <script src="./exam.js" type="module" defer></script>
 </head>
 <body>
     <!--header part----------------------------->
@@ -330,7 +340,8 @@
                         <li>Product</li>
                     </ul>
                 </div>
-                <div class="shop_image">
+                <div class="shop_image" id="webgl-container">
+                    <!--
                     <lottie-player id="kabuki" class="black_kabuki" src="./json/0019.json">
                     </lottie-player>
                             <script type="module">
@@ -355,6 +366,7 @@
                                 ] 
                                 });
                             </script>
+                        -->
                 </div>
                 <!--우측 상품 구매창------------>
                 <div class="shop_01_box">

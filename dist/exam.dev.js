@@ -6,79 +6,210 @@ var THREE = _interopRequireWildcard(require("three"));
 
 var _GLTFLoader = require("three/addons/loaders/GLTFLoader.js");
 
-var _DragControls = require("three/addons/controls/DragControls.js");
-
 var _OrbitControls = require("three/addons/controls/OrbitControls.js");
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
-var scene = new THREE.Scene();
-var renderer = new THREE.WebGLRenderer();
-scene.background = new THREE.Color('white');
-var light = new THREE.HemisphereLight("#b0d8f5", "#bb7a1c", 1);
-var loader = new _GLTFLoader.GLTFLoader();
-renderer.setSize(window.innerWidth, window.innerHeight);
-document.body.appendChild(renderer.domElement);
-loader.load("/kartell_kabuki/scene.gltf", function (gltf) {
-  scene.add(gltf.scene, light);
-  renderer.render(scene, camera);
-  gltf.scene.traverse(function (child) {
-    if (child instanceof THREE.Mesh) {
-      console.log(child.material); // 해당 메쉬의 재질 출력
-    }
-  });
-});
-renderer.setSize(window.innerWidth, window.innerHeight);
-document.body.appendChild(renderer.domElement);
-var camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 10000);
-var controls = new _OrbitControls.OrbitControls(camera, renderer.domElement); //controls.update()는 카메라 변환설정을 수동으로 변경한 후에 호출해야 합니다.
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-camera.position.set(0, 1, 10);
-controls.update();
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
-function animate() {
-  requestAnimationFrame(animate); // 만약 controls.enableDamping, controls.autoRotate 둘 중 하나라도 true로 설정될 경우 필수로 호출되어야 합니다.
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
-  controls.update();
-  renderer.render(scene, camera);
-} // init
+var App =
+/*#__PURE__*/
+function () {
+  function App() {
+    _classCallCheck(this, App);
 
-/*
-loader.load("/path/to/your/model.gltf", function (gltf) {
-    gltf.scene.traverse(function (child) {
-        if (child instanceof THREE.Mesh) {
-            console.log(child.material); // 해당 메쉬의 재질 출력
-        }
+    var divContainer = document.querySelector("#webgl-container");
+    this._divContainer = divContainer;
+    var renderer = new THREE.WebGLRenderer({
+      antialias: true
     });
-});
+    renderer.setPixelRatio(window.devicePixelRatio);
+    divContainer.appendChild(renderer.domElement); //그림자 추가
 
-const width = window.innerWidth, height = window.innerHeight;
-const camera = new THREE.PerspectiveCamera( 70, width / height, 0.01, 10 );
-camera.position.z = 1;
+    renderer.shadowMap.enabled = true;
+    renderer.shadowMap.type = THREE.VSMShadowMap;
+    this._renderer = renderer;
+    var scene = new THREE.Scene();
+    this._scene = scene;
+    scene.background = new THREE.Color(0xffffff);
 
-const scene = new THREE.Scene();
+    this._setupCamera();
 
-const geometry = new THREE.BoxGeometry( 0.2, 0.2, 0.2 );
-const material = new THREE.MeshNormalMaterial();
+    this._setupLight();
 
-const mesh = new THREE.Mesh( geometry, material );
-scene.add( mesh );
+    this._setupModel();
 
-const renderer = new THREE.WebGLRenderer( { antialias: true } );
-renderer.setSize( width, height );
-renderer.setAnimationLoop( animation );
-document.body.appendChild( renderer.domElement );
+    this._setupControls();
 
-// animation
+    window.onresize = this.resize.bind(this);
+    this.resize();
+    requestAnimationFrame(this.render.bind(this));
+  }
 
-function animation( time ) {
+  _createClass(App, [{
+    key: "_setupControls",
+    value: function _setupControls() {
+      this._controls = new _OrbitControls.OrbitControls(this._camera, this._divContainer);
+    }
+  }, {
+    key: "_setupModel",
+    value: function _setupModel() {
+      var _this = this;
 
-	mesh.rotation.x = time / 5000;
-	mesh.rotation.y = time / 1000;
+      //바닥 매쉬
+      var planeGeometry = new THREE.PlaneGeometry(1000, 1000);
+      var planeMaterial = new THREE.MeshPhysicalMaterial({
+        color: 0xffffff
+      });
+      var plane = new THREE.Mesh(planeGeometry, planeMaterial);
+      plane.rotation.x = -Math.PI / 2;
+      plane.position.y = -15;
 
-	renderer.render( scene, camera );
+      this._scene.add(plane);
 
-}
-*/
+      plane.receiveShadow = true; //모델 불러오기
+
+      new _GLTFLoader.GLTFLoader().load("./kartell_kabuki/untitled2.glb", function (gltf) {
+        var model = gltf.scene;
+
+        _this._scene.add(model); //scale설정
+
+
+        model.scale.set(20, 20, 20);
+        model.position.y = -15; // Material 설정
+
+        var meshPhongMaterial = new THREE.MeshPhysicalMaterial({
+          color: 0xFEF7F2,
+          clearcoat: 0.2,
+          clearcoatRoughness: 0.01,
+          emissive: 0xffffff,
+          emissiveIntensity: 0.3
+        }); //spotlight추가
+
+        _this._addSpotLight(1.5, 24, -1, 0x000000, model);
+
+        model.traverse(function (child) {
+          if (child instanceof THREE.Mesh) {
+            child.castShadow = true;
+            child.receiveShadow = true;
+            child.material = meshPhongMaterial;
+          }
+        });
+      });
+    }
+  }, {
+    key: "_setupCamera",
+    value: function _setupCamera() {
+      var camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 5000);
+      camera.position.set(0, 20, 60);
+      this._camera = camera;
+    }
+  }, {
+    key: "_addPointLight",
+    value: function _addPointLight(x, y, z, helperColor) {
+      var color = 0xffffff;
+      var intensity = 50;
+      var pointLight = new THREE.PointLight(color, intensity, 200);
+      pointLight.position.set(x, y, z);
+
+      this._scene.add(pointLight);
+
+      var pointLightHelper = new THREE.PointLightHelper(pointLight, 10, helperColor);
+    }
+  }, {
+    key: "_addSpotLight",
+    value: function _addSpotLight(x, y, z, helperColor, target) {
+      var color = 0xFF8C39;
+      var intensity = 70;
+      var distance = 100;
+      var angle = Math.PI * 2;
+      var penumbra = 1;
+      var decay = 2;
+      var spotLight = new THREE.SpotLight(color, intensity, distance, angle, penumbra, decay);
+      spotLight.position.set(x, y, z);
+      spotLight.castShadow = false;
+      spotLight.receiveShadow = false;
+
+      this._scene.add(spotLight);
+
+      var spotLightHelper = new THREE.SpotLightHelper(spotLight, 10, helperColor);
+
+      if (target) {
+        spotLight.target = target;
+      }
+    }
+  }, {
+    key: "_setupLight",
+    value: function _setupLight() {
+      var AmbientLight = new THREE.AmbientLight(0xffffff, 1); // 주변 조명 강도를 높임
+
+      this._scene.add(AmbientLight);
+
+      this._addPointLight(50, 40, 50, 0xff0000);
+
+      this._addPointLight(-50, 40, 50, 0xffff00);
+
+      this._addPointLight(-50, 40, -50, 0x00ff00);
+
+      this._addPointLight(50, 40, -50, 0x0000ff);
+
+      var shadowLight = new THREE.DirectionalLight(0xffffff, 2.6);
+      shadowLight.position.set(100, 300, 200);
+      shadowLight.target.position.set(0, -10, 0);
+
+      this._scene.add(shadowLight);
+
+      this._scene.add(shadowLight.target);
+
+      shadowLight.castShadow = true;
+      shadowLight.shadow.mapSize.width = 2048 * 2;
+      shadowLight.shadow.mapSize.height = 2048 * 2;
+      shadowLight.shadow.camera.top = shadowLight.shadow.camera.right = 500;
+      shadowLight.shadow.camera.bottom = shadowLight.shadow.camera.left = -500;
+      shadowLight.shadow.camera.near = 10;
+      shadowLight.shadow.camera.far = 500;
+      shadowLight.shadow.bias = -0.001;
+      shadowLight.shadow.radius = 1;
+    }
+  }, {
+    key: "update",
+    value: function update(time) {
+      time *= 0.01; // second unit
+
+      this._controls.update();
+    }
+  }, {
+    key: "render",
+    value: function render(time) {
+      this._renderer.render(this._scene, this._camera);
+
+      this.update(time);
+      requestAnimationFrame(this.render.bind(this));
+    }
+  }, {
+    key: "resize",
+    value: function resize() {
+      var width = this._divContainer.clientWidth;
+      var height = this._divContainer.clientHeight;
+      this._camera.aspect = width / height;
+
+      this._camera.updateProjectionMatrix();
+
+      this._renderer.setSize(width, height);
+
+      console.log(this._renderer.setSize(width, height));
+    }
+  }]);
+
+  return App;
+}();
+
+window.onload = function () {
+  new App();
+};
