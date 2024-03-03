@@ -107,7 +107,7 @@ function () {
     key: "_setupCamera",
     value: function _setupCamera() {
       var camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 5000);
-      camera.position.set(0, 20, 60);
+      camera.position.set(0, 20, 55);
       this._camera = camera;
     }
   }, {

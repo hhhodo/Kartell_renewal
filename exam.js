@@ -87,7 +87,7 @@ class App {
             5000
         );
 
-        camera.position.set(0, 20, 60);
+        camera.position.set(0, 20, 55);
         this._camera = camera;
     }
 
