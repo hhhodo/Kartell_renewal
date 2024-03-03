@@ -112,20 +112,18 @@ function () {
     }
   }, {
     key: "_addPointLight",
-    value: function _addPointLight(x, y, z, helperColor) {
+    value: function _addPointLight(x, y, z) {
       var color = 0xffffff;
       var intensity = 100;
       var pointLight = new THREE.PointLight(color, intensity, 200);
       pointLight.position.set(x, y, z);
 
       this._scene.add(pointLight);
-
-      var pointLightHelper = new THREE.PointLightHelper(pointLight, 10, helperColor);
     }
   }, {
     key: "_addSpotLight",
     value: function _addSpotLight(x, y, z, helperColor, target) {
-      var color = 0xF00000;
+      var color = 0xFF7A00;
       var intensity = 150;
       var distance = 50;
       var angle = Math.PI;
@@ -133,12 +131,9 @@ function () {
       var decay = 2;
       var spotLight = new THREE.SpotLight(color, intensity, distance, angle, penumbra, decay);
       spotLight.position.set(x, y, z);
+      spotLight.castShadow = true;
 
       this._scene.add(spotLight);
-
-      var spotLightHelper = new THREE.SpotLightHelper(spotLight, 10, helperColor);
-
-      this._scene.add(spotLightHelper);
 
       if (target) {
         spotLight.target = target;
@@ -151,13 +146,14 @@ function () {
 
       this._scene.add(AmbientLight);
 
-      this._addPointLight(50, 40, 50, 0xff0000);
+      this._addPointLight(50, 40, 50);
 
-      this._addPointLight(-50, 40, 50, 0xffff00);
+      this._addPointLight(-50, 40, 50);
 
-      this._addPointLight(-50, 40, -50, 0x00ff00);
+      this._addPointLight(-50, 40, -50);
 
-      this._addPointLight(50, 40, -50, 0x0000ff);
+      this._addPointLight(50, 40, -50); //back light
+
 
       var directionalLight = new THREE.DirectionalLight(0xFFFBEF, 2);
       directionalLight.position.set(1.5, 10, 10);
@@ -169,7 +165,16 @@ function () {
       this._scene.add(directionalLight.target);
 
       directionalLight.castShadow = true;
-      var shadowLight = new THREE.DirectionalLight(0xffffff, 2);
+      directionalLight.castShadow = true;
+      directionalLight.shadow.mapSize.width = 2048;
+      directionalLight.shadow.mapSize.height = 2048;
+      directionalLight.shadow.camera.top = directionalLight.shadow.camera.right = 500;
+      directionalLight.shadow.camera.bottom = directionalLight.shadow.camera.left = -500;
+      directionalLight.shadow.camera.near = 10;
+      directionalLight.shadow.camera.far = 1000;
+      directionalLight.shadow.bias = -0.001;
+      directionalLight.shadow.radius = 5;
+      var shadowLight = new THREE.DirectionalLight(0xffffff, 2.5);
       shadowLight.position.set(100, 300, 200);
       shadowLight.target.position.set(1.5, -10, 0); //helper
 
@@ -189,7 +194,8 @@ function () {
       shadowLight.shadow.camera.near = 10;
       shadowLight.shadow.camera.far = 1000;
       shadowLight.shadow.bias = -0.001;
-      shadowLight.shadow.radius = 1;
+      shadowLight.shadow.radius = 3;
+      shadowLight.shadow.blurSamples = 25;
     }
   }, {
     key: "update",
