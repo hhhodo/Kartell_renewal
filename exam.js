@@ -122,7 +122,7 @@ class App {
 
     _setupLight() {
             
-        const AmbientLight = new THREE.AmbientLight( 0xffffff, 1); // 주변 조명 강도를 높임
+        const AmbientLight = new THREE.AmbientLight( 0xffffff, 1.5); // 주변 조명 강도를 높임
         this._scene.add(AmbientLight);
 
         this._addPointLight(50, 40, 50);
@@ -131,7 +131,7 @@ class App {
         this._addPointLight(50, 40, -50);
 
         //back light
-        const directionalLight = new THREE.DirectionalLight(0xFFFBEF, 2);
+        const directionalLight = new THREE.DirectionalLight(0xFFFBEF, 0.8);
         directionalLight.position.set(1.5,10,10);
         directionalLight.target.position.set(1.5, 10, 50);
         directionalLight.target.parent = directionalLight.parent;
@@ -151,13 +151,10 @@ class App {
         directionalLight.shadow.bias = -0.001;
         directionalLight.shadow.radius = 5;
 
-        const shadowLight = new THREE.DirectionalLight(0xffffff, 2.5);
+        const shadowLight = new THREE.DirectionalLight(0xffffff, 2);
         shadowLight.position.set(100, 300, 200);
         shadowLight.target.position.set(1.5, -10, 0);
         
-        //helper
-        const shadowLightHelper = new THREE.DirectionalLightHelper(shadowLight, 10, 0xffff00);
-        this._scene.add(shadowLightHelper);
 
         this._scene.add(shadowLight);
         this._scene.add(shadowLight.target);

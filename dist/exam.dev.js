@@ -142,7 +142,7 @@ function () {
   }, {
     key: "_setupLight",
     value: function _setupLight() {
-      var AmbientLight = new THREE.AmbientLight(0xffffff, 1); // 주변 조명 강도를 높임
+      var AmbientLight = new THREE.AmbientLight(0xffffff, 1.5); // 주변 조명 강도를 높임
 
       this._scene.add(AmbientLight);
 
@@ -155,7 +155,7 @@ function () {
       this._addPointLight(50, 40, -50); //back light
 
 
-      var directionalLight = new THREE.DirectionalLight(0xFFFBEF, 2);
+      var directionalLight = new THREE.DirectionalLight(0xFFFBEF, 0.8);
       directionalLight.position.set(1.5, 10, 10);
       directionalLight.target.position.set(1.5, 10, 50);
       directionalLight.target.parent = directionalLight.parent;
@@ -174,13 +174,9 @@ function () {
       directionalLight.shadow.camera.far = 1000;
       directionalLight.shadow.bias = -0.001;
       directionalLight.shadow.radius = 5;
-      var shadowLight = new THREE.DirectionalLight(0xffffff, 2.5);
+      var shadowLight = new THREE.DirectionalLight(0xffffff, 2);
       shadowLight.position.set(100, 300, 200);
-      shadowLight.target.position.set(1.5, -10, 0); //helper
-
-      var shadowLightHelper = new THREE.DirectionalLightHelper(shadowLight, 10, 0xffff00);
-
-      this._scene.add(shadowLightHelper);
+      shadowLight.target.position.set(1.5, -10, 0);
 
       this._scene.add(shadowLight);
 
