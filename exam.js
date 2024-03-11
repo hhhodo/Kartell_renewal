@@ -39,7 +39,7 @@ class App {
     _setupModel() {
         //바닥 매쉬
         const planeGeometry = new THREE.PlaneGeometry(1000, 1000);
-        const planeMaterial = new THREE.MeshPhysicalMaterial({
+        const planeMaterial = new THREE.MeshBasicMaterial({
             color: 0xffffff
         });
         const plane = new THREE.Mesh(planeGeometry, planeMaterial);
@@ -67,7 +67,7 @@ class App {
             });
 
             //spotlight추가
-            this._addSpotLight(1.5,9,-1, 0xff0000, model);
+            this._addSpotLight(1.5,9,-1, model);
 
             model.traverse(child => {
                 if(child instanceof THREE.Mesh) {
@@ -101,9 +101,9 @@ class App {
         this._scene.add(pointLight);
     }
 
-    _addSpotLight(x, y, z, helperColor, target) {
+    _addSpotLight(x, y, z, target) {
         const color = 0xFF7A00;
-        const intensity = 150;
+        const intensity = 50;
         const distance = 50;
         const angle = Math.PI;
         const penumbra = 1;
@@ -122,7 +122,7 @@ class App {
 
     _setupLight() {
             
-        const AmbientLight = new THREE.AmbientLight( 0xffffff, 1.5); // 주변 조명 강도를 높임
+        const AmbientLight = new THREE.AmbientLight( 0xffffff, 0.8); // 주변 조명 강도를 높임
         this._scene.add(AmbientLight);
 
         this._addPointLight(50, 40, 50);
@@ -131,11 +131,11 @@ class App {
         this._addPointLight(50, 40, -50);
 
         //back light
-        const directionalLight = new THREE.DirectionalLight(0xFFFBEF, 0.8);
-        directionalLight.position.set(1.5,10,10);
-        directionalLight.target.position.set(1.5, 10, 50);
+        const directionalLight = new THREE.DirectionalLight(0xFFF6E9, 1.2);
+        directionalLight.position.set(-20,10,10);
+        directionalLight.target.position.set(1.5,-10,0);
         directionalLight.target.parent = directionalLight.parent;
-
+        
         this._scene.add(directionalLight);
         this._scene.add(directionalLight.target);
         directionalLight.castShadow = true;
@@ -151,11 +151,10 @@ class App {
         directionalLight.shadow.bias = -0.001;
         directionalLight.shadow.radius = 5;
 
-        const shadowLight = new THREE.DirectionalLight(0xffffff, 2);
-        shadowLight.position.set(100, 300, 200);
+        const shadowLight = new THREE.DirectionalLight(0xFEFBF5, 1.5);
+        shadowLight.position.set(50, 20, 20);
         shadowLight.target.position.set(1.5, -10, 0);
         
-
         this._scene.add(shadowLight);
         this._scene.add(shadowLight.target);
 
@@ -169,6 +168,26 @@ class App {
         shadowLight.shadow.bias = -0.001;
         shadowLight.shadow.radius = 3;
         shadowLight.shadow.blurSamples = 25
+
+        
+        const shadow2Light = new THREE.DirectionalLight(0xFFCAAC, 0.3);
+        shadow2Light.position.set(-10, 10, -50);
+        shadow2Light.target.position.set(1.5, -10, 0);
+        
+
+        this._scene.add(shadow2Light);
+        this._scene.add(shadow2Light.target);
+
+        shadow2Light.castShadow = true;
+        shadow2Light.shadow.mapSize.width = 2048*2;
+        shadow2Light.shadow.mapSize.height = 2048*2;
+        shadow2Light.shadow.camera.top = shadow2Light.shadow.camera.right = 500;
+        shadow2Light.shadow.camera.bottom = shadow2Light.shadow.camera.left = -500;
+        shadow2Light.shadow.camera.near = 10;
+        shadow2Light.shadow.camera.far = 1000;
+        shadow2Light.shadow.bias = -0.001;
+        shadow2Light.shadow.radius = 3;
+        shadow2Light.shadow.blurSamples = 25
     }
 
     update(time) {

@@ -64,7 +64,7 @@ function () {
 
       //바닥 매쉬
       var planeGeometry = new THREE.PlaneGeometry(1000, 1000);
-      var planeMaterial = new THREE.MeshPhysicalMaterial({
+      var planeMaterial = new THREE.MeshBasicMaterial({
         color: 0xffffff
       });
       var plane = new THREE.Mesh(planeGeometry, planeMaterial);
@@ -92,7 +92,7 @@ function () {
           emissiveIntensity: 0.3
         }); //spotlight추가
 
-        _this._addSpotLight(1.5, 9, -1, 0xff0000, model);
+        _this._addSpotLight(1.5, 9, -1, model);
 
         model.traverse(function (child) {
           if (child instanceof THREE.Mesh) {
@@ -122,9 +122,9 @@ function () {
     }
   }, {
     key: "_addSpotLight",
-    value: function _addSpotLight(x, y, z, helperColor, target) {
+    value: function _addSpotLight(x, y, z, target) {
       var color = 0xFF7A00;
-      var intensity = 150;
+      var intensity = 50;
       var distance = 50;
       var angle = Math.PI;
       var penumbra = 1;
@@ -142,7 +142,7 @@ function () {
   }, {
     key: "_setupLight",
     value: function _setupLight() {
-      var AmbientLight = new THREE.AmbientLight(0xffffff, 1.5); // 주변 조명 강도를 높임
+      var AmbientLight = new THREE.AmbientLight(0xffffff, 0.8); // 주변 조명 강도를 높임
 
       this._scene.add(AmbientLight);
 
@@ -155,9 +155,9 @@ function () {
       this._addPointLight(50, 40, -50); //back light
 
 
-      var directionalLight = new THREE.DirectionalLight(0xFFFBEF, 0.8);
-      directionalLight.position.set(1.5, 10, 10);
-      directionalLight.target.position.set(1.5, 10, 50);
+      var directionalLight = new THREE.DirectionalLight(0xFFF6E9, 1.2);
+      directionalLight.position.set(-20, 10, 10);
+      directionalLight.target.position.set(1.5, -10, 0);
       directionalLight.target.parent = directionalLight.parent;
 
       this._scene.add(directionalLight);
@@ -174,8 +174,8 @@ function () {
       directionalLight.shadow.camera.far = 1000;
       directionalLight.shadow.bias = -0.001;
       directionalLight.shadow.radius = 5;
-      var shadowLight = new THREE.DirectionalLight(0xffffff, 2);
-      shadowLight.position.set(100, 300, 200);
+      var shadowLight = new THREE.DirectionalLight(0xFEFBF5, 1.5);
+      shadowLight.position.set(50, 20, 20);
       shadowLight.target.position.set(1.5, -10, 0);
 
       this._scene.add(shadowLight);
@@ -192,6 +192,24 @@ function () {
       shadowLight.shadow.bias = -0.001;
       shadowLight.shadow.radius = 3;
       shadowLight.shadow.blurSamples = 25;
+      var shadow2Light = new THREE.DirectionalLight(0xFFCAAC, 0.3);
+      shadow2Light.position.set(-10, 10, -50);
+      shadow2Light.target.position.set(1.5, -10, 0);
+
+      this._scene.add(shadow2Light);
+
+      this._scene.add(shadow2Light.target);
+
+      shadow2Light.castShadow = true;
+      shadow2Light.shadow.mapSize.width = 2048 * 2;
+      shadow2Light.shadow.mapSize.height = 2048 * 2;
+      shadow2Light.shadow.camera.top = shadow2Light.shadow.camera.right = 500;
+      shadow2Light.shadow.camera.bottom = shadow2Light.shadow.camera.left = -500;
+      shadow2Light.shadow.camera.near = 10;
+      shadow2Light.shadow.camera.far = 1000;
+      shadow2Light.shadow.bias = -0.001;
+      shadow2Light.shadow.radius = 3;
+      shadow2Light.shadow.blurSamples = 25;
     }
   }, {
     key: "update",
