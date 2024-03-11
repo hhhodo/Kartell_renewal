@@ -452,7 +452,7 @@
                         max-width: 22.5rem;
                     }
             /*화살표 호버시 등장 자바스크립트로 할 것*/
-            #main_06_prev, #main_06_next { opacity: 0; transition: all 300ms ease-in-out;}
+            #main_06_prev, #main_06_next {width: fit-content; height: fit-content; opacity: 0; transition: all 300ms ease-in-out;}
 /*main 07 section start------------------------*/
 .main_07 {
     position: relative;

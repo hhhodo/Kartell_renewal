@@ -1,6 +1,7 @@
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+import { RectAreaLightHelper } from 'three/addons/helpers/RectAreaLightHelper.js';
 
 class App {
     constructor() {
@@ -131,63 +132,27 @@ class App {
         this._addPointLight(50, 40, -50);
 
         //back light
-        const directionalLight = new THREE.DirectionalLight(0xFFF6E9, 1.2);
-        directionalLight.position.set(-20,10,10);
-        directionalLight.target.position.set(1.5,-10,0);
-        directionalLight.target.parent = directionalLight.parent;
-        
+        const directionalLight = new THREE.RectAreaLight(0xFFF6E9, 1, 40, 40);
+        directionalLight.position.set(-30,10,10);
+        directionalLight.lookAt(1.5,10,0);
+
         this._scene.add(directionalLight);
-        this._scene.add(directionalLight.target);
-        directionalLight.castShadow = true;
 
+        const shadowLight = new THREE.RectAreaLight(0xFfffff, 1.5, 50, 50);
+        shadowLight.position.set(40, 10, 20);
+        shadowLight.lookAt(1.5, -10, 0);
         
-        directionalLight.castShadow = true;
-        directionalLight.shadow.mapSize.width = 2048;
-        directionalLight.shadow.mapSize.height = 2048;
-        directionalLight.shadow.camera.top = directionalLight.shadow.camera.right = 500;
-        directionalLight.shadow.camera.bottom = directionalLight.shadow.camera.left = -500;
-        directionalLight.shadow.camera.near = 10;
-        directionalLight.shadow.camera.far = 1000;
-        directionalLight.shadow.bias = -0.001;
-        directionalLight.shadow.radius = 5;
 
-        const shadowLight = new THREE.DirectionalLight(0xFEFBF5, 1.5);
-        shadowLight.position.set(50, 20, 20);
-        shadowLight.target.position.set(1.5, -10, 0);
-        
         this._scene.add(shadowLight);
         this._scene.add(shadowLight.target);
 
-        shadowLight.castShadow = true;
-        shadowLight.shadow.mapSize.width = 2048*2;
-        shadowLight.shadow.mapSize.height = 2048*2;
-        shadowLight.shadow.camera.top = shadowLight.shadow.camera.right = 500;
-        shadowLight.shadow.camera.bottom = shadowLight.shadow.camera.left = -500;
-        shadowLight.shadow.camera.near = 10;
-        shadowLight.shadow.camera.far = 1000;
-        shadowLight.shadow.bias = -0.001;
-        shadowLight.shadow.radius = 3;
-        shadowLight.shadow.blurSamples = 25
-
-        
-        const shadow2Light = new THREE.DirectionalLight(0xFFCAAC, 0.3);
-        shadow2Light.position.set(-10, 10, -50);
-        shadow2Light.target.position.set(1.5, -10, 0);
+        const shadow2Light = new THREE.RectAreaLight(0xACB9FF, 0.3, 10, 30);
+        shadow2Light.position.set(-10, 0, -50);
+        shadow2Light.lookAt(1.5, 10, 0);
         
 
         this._scene.add(shadow2Light);
         this._scene.add(shadow2Light.target);
-
-        shadow2Light.castShadow = true;
-        shadow2Light.shadow.mapSize.width = 2048*2;
-        shadow2Light.shadow.mapSize.height = 2048*2;
-        shadow2Light.shadow.camera.top = shadow2Light.shadow.camera.right = 500;
-        shadow2Light.shadow.camera.bottom = shadow2Light.shadow.camera.left = -500;
-        shadow2Light.shadow.camera.near = 10;
-        shadow2Light.shadow.camera.far = 1000;
-        shadow2Light.shadow.bias = -0.001;
-        shadow2Light.shadow.radius = 3;
-        shadow2Light.shadow.blurSamples = 25
     }
 
     update(time) {
