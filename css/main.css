@@ -122,6 +122,7 @@
         margin: 0 auto;
         display: flex;
     }
+        .main_02_dimd {display: none;}
         .main_02_img {
             width: 45%;
             position: absolute;

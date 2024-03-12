@@ -10,31 +10,32 @@
     /*main_slides*/
     .main_item_text > h4 {height: fit-content;}
 }
+/*
 @media all and (max-width: 1024px) {
     .header_menu_01>li:first-child img {width: 8rem;}
     .header_menu_01>li {display: none;}
     .header_menu_02 {width: 13.2rem;}
     .header_menu_02 li {display: none;}
     #hamburger-btn {display: block;}
-    /*main 01==========================================================*/
+    /*main 01==========================================================/
     .main_01{display: none;}
     .main_1024 {display: block;}
-    /*main 02=====================================================*/
+    /*main 02====================================================/
     .main_02_box {width: 60rem; height: 41rem;}
     .main_02_img {width: 29.4rem; height: 41rem;}
     .main_02_con {width: 26rem; height: 41rem; left: 33.4rem; padding-top: 3rem;}
         .main_02_text h2 {height: 4.4rem; font-size: 2.4rem; line-height: 4rem;}
         .main_02_text h4 {font-size: 1.4rem;}
     .main_02_bar {width: 26rem; margin-top: 32rem;}
-    /*main_slides================================================*/
+    /*main_slides================================================/
     .main_02_item {padding-top: 8rem;}
     .main_item_text > h4 {height: 4.4rem;}
     .main_slide_page_arrow {display: none;}
-        /*slide items all*/
+        /*slide items all/
         .slide_wrapper {width: 100%; padding: 0 10rem; height: 62rem;}
         .main_item_slides {position: relative; flex-wrap: wrap;}
         .main_slide_con {width: 25%;}
-    /*slide 03=================================================*/
+    /*slide 03=================================================/
     .main_03 {margin-top: 20rem;}
     .main_03_container {
         grid-template-areas:
@@ -49,9 +50,9 @@
     .main_03_text_02 {padding-top: 4rem;}
     .main_03_text_all {height: 10rem; float: left;}
 
-    /*slide 04================================================*/
+    /*slide 04================================================/
     .main_04_text_all {width: 30rem; left: 5rem; top: 25rem;}
-    /*slide 05=========================================*/
+    /*slide 05=========================================/
     .main_05 {
         height: 150rem;
         padding-left: 0;
@@ -66,14 +67,14 @@
     }
         .main_05_img {width: 50rem; height: 56rem; margin: 0 auto; margin-top: 4.5rem;}
     .main_05_content {width: 100%;}
-    /*slide 06========================================*/
+    /*slide 06========================================/
     #main_06_prev, #main_06_next {display: none;}
     .main_06_title_all {width: 100%; padding: 0 5rem;}
     .main_06_contents {width: 100%; flex-wrap: wrap; padding-left: 5rem;}
         .main_06_01_all {width: 50%; margin-bottom: 3rem;}
         .main_06_01_text {padding-left: 2rem;}
 
-    /*footer--------------------------------------------------------*/
+    /*footer--------------------------------------------------------/
     .footer_specific {max-height: 5rem;}
     .footer_left {width: 40%; height: 42rem; margin: 5rem 0 0 0; padding-left: 5rem;}
     .footer_right {width: 60%; height: auto; padding: 5rem 5rem 20rem 5rem; flex-flow: column wrap; justify-content: start;}
@@ -83,8 +84,11 @@
 
 }
 @media all and (max-width: 768px) {
-    
-    /*slide 03*/
+    /*main 02 start/
+    .main_02_dimd {width: 100%;}
+    .main_02_img {width: 100%; height: fit-content;}
+    /*slide 03/
     .main_03_text_01 h2 {font-size: 2.4rem; line-height: 4rem;}
     .main_03_text_01 h4 {font-size: 1.4rem; line-height: 2rem;}
 }
+*/
