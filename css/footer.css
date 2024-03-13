@@ -75,6 +75,7 @@
         }
             .footer_sns_con {
                 min-width: 150px;
+                padding-right: 3rem;
                 height: auto;
                 margin-top: 5px;
                 display: flex;
