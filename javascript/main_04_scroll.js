@@ -131,7 +131,6 @@ function slideImgBox() {
         var slideImg = slideImgAll.find('img');
         slideImg.eq(0).css({ display: "block" });
 
-        console.log(slideBox)
         // mouse enter
         slideBox.on('mouseenter', function() {
             var slideImg = slideImgAll.find('img');

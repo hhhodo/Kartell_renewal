@@ -1,5 +1,6 @@
 @media all and (max-width: 7680px) {
-    * { font-size: 0.52vw;}
+    * { font-size: 0.52vw; box-sizing: border-box;}
+    body {width: 100%;}
 }
 @media all and (max-width: 1920px) {
     * { font-size: 62.5%;}
